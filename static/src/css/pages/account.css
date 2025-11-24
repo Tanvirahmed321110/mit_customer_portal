@@ -1,0 +1,174 @@
+body {
+    background-color: var(--white);
+}
+
+
+/* order-completed */
+.order-completed .area {
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid var(--white-off2);
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.account-btn-bold {
+    font-weight: bold;
+    font-size: var(--fs-lg);
+}
+
+
+.new-border-bottom {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.account-page-nav {
+    border-bottom: 3px solid var(--border-color);
+}
+
+.account-page-nav .item {
+    padding-bottom: 12px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: .2s linear;
+    position: relative;
+}
+
+.account-profile-img {
+    border: 4px solid var(--white-off2);
+}
+
+.account-page-nav .item i {
+    color: var(--gray2);
+    font-size: 18px;
+    transition: .2s linear;
+}
+
+.account-page-nav .item:hover,
+.account-page-nav .item.active {
+    color: var(--green);
+    transition: .2s linear;
+}
+
+.account-page-nav .item:hover::after,
+.account-page-nav .item.active::after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--green);
+}
+
+.account-page-nav .item:hover i,
+.account-page-nav .item.active i {
+    color: var(--green);
+    transition: .2s linear;
+}
+
+.other-card {
+    max-width: 600px;
+}
+
+/*===========  Account Page Here ============*/
+.account-page {
+    background-color: var(--white);
+}
+
+.account-page-btn-wrap {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 36px;
+}
+
+
+.account-page .head .point {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 40px;
+    min-width: 40px;
+}
+
+.account-page .my-card {
+    padding: 40px;
+    box-shadow: var(--shadow-2);
+    border: 1px solid #f4f3f3;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.account-page .my-card:hover {
+    border-color: var(--before);
+}
+
+.account-page .my-card .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--before);
+    background-color: #EBEDF8;
+    color: var(--primary-color);
+    font-size: var(--fs-lg);
+}
+
+
+.mit-point-area .my-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FDEDE9;
+}
+
+.mit-point-area .my-icon i {
+    display: block;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-modal .body i {
+    color: gold;
+}
+
+
+.review-date {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 8px;
+    background-color: #fcedff;
+    color: var(--gray);
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+@media (max-width: 991px) {
+    .account-tables li {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .account-tables li .left {
+        width: 100%;
+    }
+
+    .account-tables li .right {
+        width: 100%;
+        align-items: center;
+    }
+}

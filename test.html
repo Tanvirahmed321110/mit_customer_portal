@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Customer Portal UI</title>
+
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+                background: #f3f6fa;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .portal-head {
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(12px);
+                border-radius: 20px;
+                padding: 25px 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            /* LEFT */
+            .left {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                min-width: 250px;
+            }
+
+            .left img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid white;
+                box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            .name {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 3px;
+            }
+
+            .user-id,
+            .grade {
+                font-size: 14px;
+                color: #555;
+                margin: 2px 0;
+            }
+
+            .grade span {
+                font-weight: 600;
+                color: #2e75ff;
+            }
+
+            /* MIDDLE */
+            .portal-name {
+                font-size: 28px;
+                font-weight: 700;
+                text-align: center;
+                color: #1d1d1d;
+                min-width: 200px;
+            }
+
+            /* RIGHT */
+            .right {
+                text-align: right;
+                min-width: 170px;
+            }
+
+            .point {
+                font-size: 32px;
+                font-weight: 700;
+                color: #ff7b00;
+                line-height: 1;
+            }
+
+            .right div:last-child {
+                font-size: 14px;
+                margin-top: 2px;
+                color: #333;
+                font-weight: 500;
+            }
+
+            /* RESPONSIVE */
+            @media(max-width:700px) {
+                .portal-head {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .right {
+                    text-align: center;
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="portal-head">
+
+            <!-- LEFT -->
+            <div class="left">
+                <img src="https://i.pravatar.cc/150?img=12" alt="">
+                <div>
+                    <div class="name">MD Tanvir Ahmed</div>
+                    <p class="user-id"><span>User ID</span> : 23232</p>
+                    <div class="grade">Grade: <span>A+</span></div>
+                </div>
+            </div>
+
+            <!-- MIDDLE -->
+            <div class="meddle">
+                <h1 class="portal-name">Customer Portal</h1>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right">
+                <div class="point">2002</div>
+                <div>MIT Points</div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,13 @@
+.table-bordered {
+    width: 100%;
+}
+
+.table-bordered tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    width: 50%;
+}
+
+.table-bordered tbody td.bold {
+    font-weight: bold;
+}

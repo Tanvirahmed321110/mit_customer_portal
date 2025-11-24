@@ -1,0 +1,14 @@
+@import url('./variable.css');
+@import url('./custom_class.css');
+
+.full-address{
+ display:none;
+ border: 1px solid var(--primary-color);
+ border-radius: 5px;
+ margin: 10px 0px 25px 0px;
+ padding: 10px;
+}
+
+.full-address.active{
+    display:block;
+}

@@ -1,0 +1,564 @@
+/*____________________________________________________
+  ____||    Product Details Bottom Start Here   ____||
+_____________________________________________________*/
+.product-details-bottom-area {
+    display: grid;
+    grid-template-columns: 70% 28%;
+    gap: 2%;
+}
+
+/* Tab Butons */
+.tab-buttons .tab-button a {
+    padding: 11px 20px;
+    border: 3px solid var(--white);
+    font-weight: 600;
+    transition: .3s linear;
+    color: var(--secondary-hover);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: var(--shadow-2);
+}
+
+.tab-buttons .tab-button a:hover {
+    background-color: var(--secondary-hover);
+    color: var(--border-color);
+}
+
+.tab-buttons .tab-button a.active {
+    background-color: var(--secondary-hover);
+    color: var(--border-color);
+}
+
+
+.right-details .my-border-bottom,
+.right-details .my-border-top {
+    border-color: var(--white-off) !important;
+}
+
+.right-details h1 {
+    line-height: 30px;
+    font-weight: 600;
+}
+
+/* quick-details-desc */
+.quick-details-desc h2 {
+    font-size: var(--fs-lg);
+    line-height: 20px;
+}
+
+.quick-details h4 {
+    font-weight: 500;
+}
+
+.quick-details-desc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.quick-details-desc br {
+    display: none;
+}
+
+.quick-details-desc h4 {
+    margin-bottom: 4px !important;
+}
+
+.quick-details h4 {
+    margin-bottom: 10px !important;
+}
+
+.quick-details-desc ul li {
+    color: var(--dark);
+    position: relative;
+    padding-left: 0px;
+    line-height: 16px;
+    margin-bottom: 2px;
+    /* counter-increment: list-counter; */
+}
+
+/* .quick-details-desc ul li::after {
+    content: counter(list-counter);
+} */
+
+
+
+/*_________________________   P video question , rating section   ________________________*/
+.head {
+    border-bottom: 2px solid var(--secondary-hover);
+    box-shadow: var(--shadow-2);
+}
+
+.head h4 {
+    background-color: var(--secondary-hover);
+    color: var(--white);
+    width: fit-content;
+    padding: 8px 18px;
+    border-radius: 16px;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-500);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/*_____ p specifications _____*/
+.p-specifications h5 {
+    padding: 12px;
+    background-color: var(--border-color);
+    color: var(--primary-color);
+}
+
+.p-specifications li.my-py-2 {
+    padding: 12px;
+}
+
+.p-specifications .value {
+    font-weight: 600;
+    width: 75%;
+}
+
+.p-specifications .value div {
+    line-height: 20px;
+}
+
+.p-specifications .key {
+    font-size: 14px;
+    width: 25%;
+}
+
+.p-specifications ul li {
+    padding: 10px 0;
+}
+
+.p-specifications .my-border-bottom {
+    border-color: var(--border-color);
+}
+
+.p-video .ans {
+    margin-left: 54px;
+}
+
+.p-video .question p {
+    font-weight: 600;
+}
+
+.p-video input,
+.p-review input {
+    max-width: unset;
+}
+
+.rating i {
+    color: var(--green);
+}
+
+.related-products {
+    min-height: 220px;
+}
+
+
+
+/* right-similar-products */
+.right-similar-products .my-card,
+.related-products .my-card {
+    overflow: unset;
+    border-radius: 0px;
+    max-width: 640px;
+    border: none;
+}
+
+.right-similar-products .my-card img {
+    transition: .3s linear;
+}
+
+.right-similar-products .my-card:hover img {
+    transform: scale(1.2);
+    transition: .3s linear;
+}
+
+#big-img {
+    cursor: pointer;
+}
+
+.product-banner img {
+    max-height: 200px;
+    height: 100%;
+    padding: 2px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+
+
+.p-question-ans input {
+    max-width: unset;
+}
+
+.p-specifications p:first-of-type {
+    display: none !important;
+}
+
+.p-specifications .table-bordered thead td {
+    font-size: 18px;
+    color: var(--primary-color);
+    padding: 12px 16px !important;
+    border-radius: 4px !important;
+    background-color: #F5F6FC;
+    /* background-color: #f3f3f3; */
+    width: 100% !important;
+    font-weight: 700 !important;
+}
+
+.p-specifications .table-bordered tbody tr {
+    border-bottom: 1px solid var(--border-color) !important;
+    display: flex;
+    width: 100% !important;
+}
+
+.p-specifications .table-bordered tbody tr:last-child {
+    border-bottom: none !important;
+}
+
+.p-specifications .table-bordered tbody tr {
+    height: fit-content !important;
+}
+
+.p-specifications .table-bordered tbody tr td {
+    padding: 10px 12px;
+    font-size: 15px;
+}
+
+.p-specifications .table-bordered tbody tr:hover {
+    background-color: #f5f6fc70;
+}
+
+.p-specifications .table-bordered tbody tr tr p br {
+    display: none !important;
+}
+
+.p-specifications .table-bordered tbody tr :first-child {
+    color: #666 !important;
+    width: 30% !important;
+}
+
+.p-specifications .table-bordered tbody tr td:first-child {
+    color: #666 !important;
+    width: 30% !important;
+}
+
+.p-specifications .table-bordered tbody tr td:first-child div,
+.p-specifications .table-bordered tbody tr td:first-child p {
+    color: #666 !important;
+    width: 100% !important;
+    display: block !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+}
+
+.p-specifications .table-bordered tbody tr td:last-child div,
+.p-specifications .table-bordered tbody tr td:last-child p {
+    width: 100% !important;
+    color: inherit !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    display: block !important;
+}
+
+.p-specifications .table-bordered tbody tr div {
+    width: 100% !important;
+}
+
+.p-specifications .table-bordered tbody tr td {
+    width: 100% !important;
+    color: inherit !important;
+}
+
+.p-specifications .table-bordered tbody tr :last-child {
+    width: 70%;
+}
+
+
+
+.p-specifications .table-bordered tbody tr tr p {
+    color: inherit !important;
+}
+
+/* .p-specifications .table-bordered tbody tr td div {
+    width: 70%;
+    color: inherit;
+} */
+
+.p-details h2,
+.p-details h3 {
+    font-size: var(--fs-xl);
+    line-height: 30px;
+}
+
+.p-details p {
+    text-align: justify !important;
+}
+
+.rating i {
+    margin-left: -3px;
+    font-size: var(--fs-xs);
+}
+
+.rating:first-child {
+    margin-left: 2px;
+}
+
+@media (max-width:1080px) {
+    .product-details-bottom-area {
+        grid-template-columns: 66% 32%;
+        gap: 2%;
+    }
+}
+
+/* Responsive For 991px */
+@media (max-width:991px) {
+    .quick-details {
+        padding-bottom: 0;
+    }
+
+    .quick-details .share {
+        margin-top: 4px;
+    }
+
+    .right-details .my-border-bottom,
+    .right-details .my-border-top {
+        border-bottom: none;
+    }
+
+    .right-details .my-border-bottom,
+    .right-details .my-border-top {
+        border-color: var(--white-off) !important;
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .product-details-main-area,
+    .product-details-bottom-area {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        max-width: 680px;
+        padding-top: 14px;
+    }
+
+    .product-details-main .my-container {
+        padding-bottom: 0;
+    }
+
+    .profile-details .price {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .image-area {
+        max-width: 649px;
+        padding: 0;
+    }
+
+    .image-area img {
+        max-width: 100%;
+    }
+
+    .price .new-price,
+    .sku-area {
+        width: 260px;
+    }
+
+    .sku-area {
+        padding: 12px;
+    }
+
+    .right-details {
+        padding: 0;
+        padding-left: 0 !important;
+    }
+
+    .product-details-left {
+        max-width: 680px;
+    }
+
+    .right-similar-products .my-card {
+        max-width: 680px;
+    }
+
+    .table.table-bordered.o_table {
+        width: 100% !important;
+    }
+
+
+    .p-specifications .table-bordered tbody tr td {
+        padding: 8px 8px;
+        font-size: var(--fs-sm);
+    }
+
+    .p-specifications .table-bordered tbody tr td:first-child {
+        color: #666 !important;
+        width: 40% !important;
+        font-weight: 600;
+    }
+
+    .p-specifications {
+        padding: 0;
+    }
+}
+
+
+/* Responsive For 769px */
+@media (max-width:769px) {
+    .right-details h1 {
+        line-height: 24px;
+        font-weight: 600;
+        font-size: var(--fs-lg);
+    }
+
+    .product-details-main {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .product-details-left .tab-buttons {
+        margin-bottom: 24px;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .tab-buttons .tab-button a {
+        text-align: center;
+        padding: 8px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        width: fit-content;
+    }
+
+
+    .question:first-child div {
+        width: 75%;
+    }
+
+    .profile-details {
+        width: 75%;
+    }
+
+    .p-video iframe {
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive For 556px */
+@media (max-width:556px) {
+
+    .product-details-main .big-image img {
+        height: unset;
+    }
+
+
+    .product-details-main-area .price-area {
+        flex-direction: column;
+    }
+
+    .image-area {
+        width: 100%;
+    }
+
+
+    .product-details-main .small-images {
+        width: 100%;
+        max-width: 380px;
+    }
+
+
+    .product-details-main .price .new-price,
+    .sku-area {
+        width: 200px;
+    }
+
+    .product-details-main .tab-buttons .tab-button {}
+
+    .product-details-main .tab-buttons .tab-button a {
+        text-align: center;
+    }
+
+    /* right-similar-products */
+    .related-products .my-card img {
+        max-width: 160px;
+    }
+
+
+    .p-specifications .value {
+        width: 70%;
+    }
+
+    .p-specifications .key {
+        width: 30%;
+    }
+}
+
+
+
+
+
+
+@media print {
+
+    /* Hide header and footer */
+    header,
+    footer,
+    .p-question-ans,
+    .p-review,
+    .p-video,
+    .related-products,
+    .right-similar-products {
+        display: none !important;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .print-content {
+        max-height: 891mm !important;
+        overflow: hidden;
+    }
+
+    .print-content>* {
+        page-break-inside: avoid;
+        /* Prevent elements from breaking across pages */
+    }
+
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+}
+
+/* ----------------------- */
+/* .rating i {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating i.filled {
+    color: gold;
+} */
+
+#star-rating .fa-star {
+    cursor: pointer;
+}
+
+.tab-button {
+    cursor: pointer;
+}

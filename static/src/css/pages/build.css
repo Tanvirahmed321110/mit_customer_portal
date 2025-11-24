@@ -1,0 +1,118 @@
+.build-area .head .item {
+    /* color: var(--gray); */
+    text-align: center;
+    font-size: var(--fs-sm);
+    background-color: var(--primary-color);
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.build-area .head .item i {
+    font-size: var(--fs-lg);
+}
+
+.build-area .head .item:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.build-area .select-product h6 {
+    font-size: var(--fs-lg);
+}
+
+
+select,
+option {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-600);
+    color: var(--dark);
+}
+
+
+/* select-product */
+.select-product .left {
+    flex-grow: 1;
+}
+
+/*_____________  select-product ______________*/
+.select-product.none{
+    display:none;
+}
+.select-product .right {
+    width: 300px;
+    min-width: 200px;
+
+}
+
+.select-product .right .my-d-none {
+    display: none;
+}
+
+.select-product {
+    border-color: var(--border-color);
+}
+
+.select-product .required {
+    padding: 2px 4px;
+    border-radius: 2px;
+    background-color: var(--red);
+    color: var(--border-color);
+    font-size: 13px;
+}
+
+/* hide content */
+.build-area .hide {
+    height: 12px;
+    width: 120px;
+    margin-top: 4px;
+    background-color: var(--border-color);
+}
+
+.build-area .left-hide {
+    width: 100%;
+}
+
+.choose-products p {
+    font-size: var(--fs-sm);
+}
+
+
+
+
+
+
+/*___________________  For CC Build Page __________________ */
+.left select {
+    max-width: 300px;
+    border-color: var(--border-color2);
+}
+
+.left select {
+    font-size: var(--fs-sm);
+}
+
+
+
+
+
+
+
+@media (max-width:769px) {
+    .build-area {
+        padding: 12px;
+    }
+
+    .select-product .right {
+        width: fit-content;
+        min-width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0px;
+    }
+
+    .select-product .right .hide {
+        display: none;
+    }
+}

@@ -1,0 +1,30 @@
+/*_____________   compare product   _____________ */
+.compare-product {
+    border: 1px solid var(--border-color2);
+    min-width: 240px;
+    flex: 1;
+}
+
+.compare-product img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+}
+
+
+/* Top */
+.compare-product .top {
+    height: 460px;
+    padding: 16px 24px;
+}
+
+.compare-product .desc li {
+    padding: 12px;
+    border-top: 1px solid var(--border-color2);
+}
+
+.compare-product .table.table-bordered td {
+    padding: 4px 10px !important;
+}
+
+.compare-product .table.table-bordered td {}

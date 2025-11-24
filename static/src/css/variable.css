@@ -1,0 +1,92 @@
+/* Font Awesome Icon CDN */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+
+:root {
+    /*______  Color  _______ */
+    --primary-color: #1878F2;
+    --primary-hover-color: #0554BC;
+    --secondary-color: #081621;
+    --orange: #ffc107;
+    --green: #0aad0a;
+    --gray: #767676;
+    --gray2: #9e9b9bdc;
+    --dark: #212121;
+    --secondary-hover: #001e46;
+    --white: #fff;
+    --white-off: #F0F3F2;
+    --white-off2: #F5F6FC;
+    --border-color: #ededed;
+    --border-color2: #c7c7c7;
+    --red: #EE1B24;
+    --after: #1878F2;
+    --before: #256fd1ca;
+    --input: #1876f25b;
+
+
+    /* ______ bg color in section ______ */
+    --modal-bg: #1a161656;
+
+
+
+    /*______  Font Size  ______ */
+    --fs-xs: 12px;
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 22px;
+    --fs-xxl: 32px;
+    --fs-xxxl: 44px;
+
+
+
+    /*______  Border Radius  ______ */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-pill: 200px;
+    --radius-round: 50%;
+
+
+
+    /*______  Font Weight  ______ */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+
+
+
+    /* ________ Gradient ________ */
+    --gradient-1: linear-gradient(to right, #016bf8, #0f3f83);
+    --gradient-2: linear-gradient(to right, #0f3f83, #016bf8);
+    --gradient-login: linear-gradient(to right, #173e57c9, #919fa7d6);
+
+
+    /*________  shadow  ________*/
+    --shadow-0: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --shadow-1: 0 2px 3px rgba(0, 0, 0, .04);
+    --shadow-2: 0 2px 5px rgba(0, 0, 0, .07);
+    --shadow-3: 1px 3px 9px rgba(40, 40, 41, 0.193);
+}
+
+
+
+
+
+
+/* responsive font */
+@media (max-width:991px) {
+    :root {
+        /*______  Font Size  ______ */
+        --fs-xs: 12px;
+        --fs-sm: 13px;
+        --fs-md: 14px;
+        --fs-lg: 18px;
+        --fs-xl: 20px;
+        --fs-xxl: 26px;
+        --fs-xxxl: 36px;
+    }
+}
