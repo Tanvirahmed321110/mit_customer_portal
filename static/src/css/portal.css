@@ -307,3 +307,95 @@
 footer {
     margin-top: 12px !important;
 }
+
+
+
+.portal .recent-orders {
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.portal .recent-orders-title {
+    color: #333;
+    font-size: var(--fs-lg);
+}
+
+.portal .recent-orders .orders {
+    width: 100%;
+}
+
+.portal .recent-orders .orders {
+    border: 1px solid #ededed;
+    margin-top: 8px;
+}
+
+.portal .recent-orders .orders th {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: #EFF6FF;
+    text-align: left;
+    padding: 18px 16px;
+    border-bottom: 1px solid #f5eeee;
+    text-transform: uppercase;
+}
+
+.portal .recent-orders .orders td {
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+
+.portal .recent-orders .orders .order-number {
+    font-weight: 600;
+}
+
+.portal .recent-orders .orders .order-number a {
+    width: 100%;
+}
+
+.portal .recent-orders .orders .order-number:hover {
+    color: var(--primary-color);
+}
+
+.portal .recent-orders .orders .invoice-btn {
+    padding: 8px 12px;
+    background-color: var(--after);
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.portal .recent-orders tr {
+    border-bottom: 1px solid #ededed;
+}
+
+.portal .recent-orders .orders .status {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.portal .recent-orders .orders .status.delivered {
+    background-color: green;
+    color: white;
+}
+
+.portal .recent-orders .orders .status.pending {
+    background-color: var(--orange);
+    color: white;
+}
+
+.portal .recent-orders .orders .status.canceled {
+    background-color: red;
+    color: white;
+}
+
+.portal .recent-orders .orders tbody tr:nth-child(even),
+.portal .recent-orders .orders tbody tr:hover {
+    background-color: #F9FAFB;
+}
