@@ -27385,7 +27385,7 @@
 
                             <div class="my-bg-white my-radius-md orders-page tab-area flex-1 my-flex-column">
                                 <!--==============|| Body Content Here ||==============-->
-                                <div class="p-body my-radius-md">
+                                <div class="p-body my-radius-md my-flex-column">
 
 
                                     <!--================|| Sub Head OR Tab Buttons ||================-->
@@ -27397,7 +27397,7 @@
                                                 </span>
                                                 Edit Account
                                             </li>
-                                            <li class="item" data-tab="pending-orders">
+                                            <li class="item" data-tab="change-password">
                                                 <span><i class="fa-solid fa-key"></i>
                                                 </span>
                                                 Change Password
@@ -27411,218 +27411,316 @@
 
                                         </ul>
                                     </div>
-                                </div>
 
 
+                                    <!--===================|| Tab Contents ||===================-->
+                                    <div class="tab-contents flex-1 my-d-flex ">
+                                        <!--============|| All Orders ||===========-->
+                                        <div class="tab-content active" data-tab="orders">
+                                            <div class="recent-orders my-mt-0 my-w-100">
+                                                <h3 class="recent-orders-title">All Orders</h3>
+                                                <table class="orders">
+
+                                                    <!-- Head Here -->
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Order Number</th>
+                                                            <th>Order Type</th>
+                                                            <th>Status</th>
+                                                            <th>Total</th>
+                                                            <th>Order Placed</th>
+                                                            <th>Invoice</th>
+                                                            <th>View Details</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <!-- Orders Body Here -->
+                                                    <tbody>
+
+                                                        <!-- single order -->
+                                                        <tr>
+                                                            <td class="order-number"><a href="#">#4532180</a></td>
+                                                            <td>Offline</td>
+                                                            <td>
+                                                                <div class="delivered status">Delivered</div>
+                                                            </td>
+                                                            <td><span class="">TK-</span>3450</td>
+                                                            <td>09 Nov 2025</td>
+                                                            <td>
+                                                                <button class="invoice-btn my-tooltip"> <i
+                                                                        class="fa-regular fa-eye"></i>
+                                                                    <span class="show-text">View Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                            <td><a href="./order-details"
+                                                                    class="my-btn my-btn-sm view-details-btn">View
+                                                                    Details</a></td>
+                                                        </tr>
+
+                                                        <!-- single order -->
+                                                        <tr>
+                                                            <td class="order-number"><a href="#">#2924213</a></td>
+                                                            <td>Online</td>
+                                                            <td>
+                                                                <div class="delivered status">Delivered</div>
+                                                            </td>
+                                                            <td><span class="">TK-</span>1246</td>
+                                                            <td>09 Nov 2025</td>
+                                                            <td>
+                                                                <button class="invoice-btn my-tooltip"> <i
+                                                                        class="fa-regular fa-eye"></i>
+                                                                    <span class="show-text">View Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                            <td><a href="./order-details"
+                                                                    class="my-btn my-btn-sm view-details-btn">View
+                                                                    Details</a></td>
+                                                        </tr>
+
+                                                        <!-- single order -->
+                                                        <tr>
+                                                            <td class="order-number"><a href="#">#2924213</a></td>
+                                                            <td>Online</td>
+                                                            <td>
+                                                                <div class="pending status">Pending</div>
+                                                            </td>
+                                                            <td><span class="">TK-</span>3450</td>
+                                                            <td>09 Nov 2025</td>
+                                                            <td>
+                                                                <button class="invoice-btn my-tooltip"> <i
+                                                                        class="fa-regular fa-eye"></i>
+                                                                    <span class="show-text">View Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                            <td><a href="./order-details"
+                                                                    class="my-btn my-btn-sm view-details-btn">View
+                                                                    Details</a></td>
+                                                        </tr>
+
+                                                        <!-- single order -->
+                                                        <tr>
+                                                            <td class="order-number"><a href="#">#2924214</a></td>
+                                                            <td>Online</td>
+                                                            <td>
+                                                                <div class="canceled status">Canceled</div>
+                                                            </td>
+                                                            <td><span class="">TK-</span>1968</td>
+                                                            <td>09 Nov 2025</td>
+                                                            <td>
+                                                                <button class="invoice-btn my-tooltip"> <i
+                                                                        class="fa-regular fa-eye"></i>
+                                                                    <span class="show-text">View Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                            <td><a href="./order-details"
+                                                                    class="my-btn my-btn-sm view-details-btn">View
+                                                                    Details</a></td>
+                                                        </tr>
+                                                        <!-- single order -->
+                                                        <tr>
+                                                            <td class="order-number"><a href="#">#2924213</a></td>
+                                                            <td>Online</td>
+                                                            <td>
+                                                                <div class="canceled status">Canceled</div>
+                                                            </td>
+                                                            <td><span class="">TK-</span>2150</td>
+                                                            <td>09 Nov 2025</td>
+                                                            <td>
+                                                                <button class="invoice-btn my-tooltip"> <i
+                                                                        class="fa-regular fa-eye"></i>
+                                                                    <span class="show-text">View Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                            <td><a href="./order-details"
+                                                                    class="my-btn my-btn-sm view-details-btn">View
+                                                                    Details</a></td>
+                                                        </tr>
+                                                        <!-- single order -->
+                                                        <tr>
+                                                            <td class="order-number"><a href="#">#2924212</a></td>
+                                                            <td>Online</td>
+                                                            <td>
+                                                                <div class="pending status">Pending</div>
+                                                            </td>
+                                                            <td><span class="">TK-</span>2900</td>
+                                                            <td>09 Nov 2025</td>
+                                                            <td>
+                                                                <button class="invoice-btn my-tooltip"> <i
+                                                                        class="fa-regular fa-eye"></i>
+                                                                    <span class="show-text">View Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                            <td><a href="./order-details"
+                                                                    class="my-btn my-btn-sm view-details-btn">View
+                                                                    Details</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
 
 
-                                <!--===================|| Tab Contents ||===================-->
-                                <div class="tab-contents flex-1 my-d-flex ">
-                                    <!--============|| All Orders ||===========-->
-                                    <div class="tab-content active" data-tab="orders">
-                                        <div class="recent-orders my-mt-0 my-w-100">
-                                            <h3 class="recent-orders-title">All Orders</h3>
-                                            <table class="orders">
+                                                <!--========== Pagination ===========-->
+                                                <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
 
-                                                <!-- Head Here -->
-                                                <thead>
-                                                    <tr>
-                                                        <th>Order Number</th>
-                                                        <th>Order Type</th>
-                                                        <th>Status</th>
-                                                        <th>Total</th>
-                                                        <th>Order Placed</th>
-                                                        <th>Invoice</th>
-                                                        <th>View Details</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <!-- Orders Body Here -->
-                                                <tbody>
-
-                                                    <!-- single order -->
-                                                    <tr>
-                                                        <td class="order-number"><a href="#">#4532180</a></td>
-                                                        <td>Offline</td>
-                                                        <td>
-                                                            <div class="delivered status">Delivered</div>
-                                                        </td>
-                                                        <td><span class="">TK-</span>3450</td>
-                                                        <td>09 Nov 2025</td>
-                                                        <td>
-                                                            <button class="invoice-btn my-tooltip"> <i
-                                                                    class="fa-regular fa-eye"></i>
-                                                                <span class="show-text">View Invoice</span>
-                                                            </button>
-                                                        </td>
-                                                        <td><a href="./order-details"
-                                                                class="my-btn my-btn-sm view-details-btn">View
-                                                                Details</a></td>
-                                                    </tr>
-
-                                                    <!-- single order -->
-                                                    <tr>
-                                                        <td class="order-number"><a href="#">#2924213</a></td>
-                                                        <td>Online</td>
-                                                        <td>
-                                                            <div class="delivered status">Delivered</div>
-                                                        </td>
-                                                        <td><span class="">TK-</span>1246</td>
-                                                        <td>09 Nov 2025</td>
-                                                        <td>
-                                                            <button class="invoice-btn my-tooltip"> <i
-                                                                    class="fa-regular fa-eye"></i>
-                                                                <span class="show-text">View Invoice</span>
-                                                            </button>
-                                                        </td>
-                                                        <td><a href="./order-details"
-                                                                class="my-btn my-btn-sm view-details-btn">View
-                                                                Details</a></td>
-                                                    </tr>
-
-                                                    <!-- single order -->
-                                                    <tr>
-                                                        <td class="order-number"><a href="#">#2924213</a></td>
-                                                        <td>Online</td>
-                                                        <td>
-                                                            <div class="pending status">Pending</div>
-                                                        </td>
-                                                        <td><span class="">TK-</span>3450</td>
-                                                        <td>09 Nov 2025</td>
-                                                        <td>
-                                                            <button class="invoice-btn my-tooltip"> <i
-                                                                    class="fa-regular fa-eye"></i>
-                                                                <span class="show-text">View Invoice</span>
-                                                            </button>
-                                                        </td>
-                                                        <td><a href="./order-details"
-                                                                class="my-btn my-btn-sm view-details-btn">View
-                                                                Details</a></td>
-                                                    </tr>
-
-                                                    <!-- single order -->
-                                                    <tr>
-                                                        <td class="order-number"><a href="#">#2924214</a></td>
-                                                        <td>Online</td>
-                                                        <td>
-                                                            <div class="canceled status">Canceled</div>
-                                                        </td>
-                                                        <td><span class="">TK-</span>1968</td>
-                                                        <td>09 Nov 2025</td>
-                                                        <td>
-                                                            <button class="invoice-btn my-tooltip"> <i
-                                                                    class="fa-regular fa-eye"></i>
-                                                                <span class="show-text">View Invoice</span>
-                                                            </button>
-                                                        </td>
-                                                        <td><a href="./order-details"
-                                                                class="my-btn my-btn-sm view-details-btn">View
-                                                                Details</a></td>
-                                                    </tr>
-                                                    <!-- single order -->
-                                                    <tr>
-                                                        <td class="order-number"><a href="#">#2924213</a></td>
-                                                        <td>Online</td>
-                                                        <td>
-                                                            <div class="canceled status">Canceled</div>
-                                                        </td>
-                                                        <td><span class="">TK-</span>2150</td>
-                                                        <td>09 Nov 2025</td>
-                                                        <td>
-                                                            <button class="invoice-btn my-tooltip"> <i
-                                                                    class="fa-regular fa-eye"></i>
-                                                                <span class="show-text">View Invoice</span>
-                                                            </button>
-                                                        </td>
-                                                        <td><a href="./order-details"
-                                                                class="my-btn my-btn-sm view-details-btn">View
-                                                                Details</a></td>
-                                                    </tr>
-                                                    <!-- single order -->
-                                                    <tr>
-                                                        <td class="order-number"><a href="#">#2924212</a></td>
-                                                        <td>Online</td>
-                                                        <td>
-                                                            <div class="pending status">Pending</div>
-                                                        </td>
-                                                        <td><span class="">TK-</span>2900</td>
-                                                        <td>09 Nov 2025</td>
-                                                        <td>
-                                                            <button class="invoice-btn my-tooltip"> <i
-                                                                    class="fa-regular fa-eye"></i>
-                                                                <span class="show-text">View Invoice</span>
-                                                            </button>
-                                                        </td>
-                                                        <td><a href="./order-details"
-                                                                class="my-btn my-btn-sm view-details-btn">View
-                                                                Details</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-
-                                            <!--========== Pagination ===========-->
-                                            <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
-
-                                                <!-- disabled -->
-                                                <!-- <button class="prev next-prev disabled" disabled>
+                                                    <!-- disabled -->
+                                                    <!-- <button class="prev next-prev disabled" disabled>
                                                     <i class="fa-solid fa-angle-left"></i>
                                                 </button> -->
-                                                <button class="prev next-prev ">
-                                                    <i class="fa-solid fa-angle-left"></i>
-                                                </button>
+                                                    <button class="prev next-prev ">
+                                                        <i class="fa-solid fa-angle-left"></i>
+                                                    </button>
 
-                                                <ul class="wrap my-flex-center my-gap-1">
-                                                    <li><a class="page " href="#">1</a></li>
-                                                    <li><a class="page active" href="#">2</a></li>
-                                                    <li><a class="page jump" href="#">...</a></li>
-                                                    <li><a class="page" href="#">8</a></li>
-                                                    <li><a class="page" href="#">9</a></li>
-                                                </ul>
+                                                    <ul class="wrap my-flex-center my-gap-1">
+                                                        <li><a class="page " href="#">1</a></li>
+                                                        <li><a class="page active" href="#">2</a></li>
+                                                        <li><a class="page jump" href="#">...</a></li>
+                                                        <li><a class="page" href="#">8</a></li>
+                                                        <li><a class="page" href="#">9</a></li>
+                                                    </ul>
 
-                                                <button class="next next-prev">
-                                                    <i class="fa-solid fa-angle-right"></i>
-                                                </button>
+                                                    <button class="next next-prev">
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </button>
 
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <!--==========  When Empty =========-->
-                                        <!-- <div class="no-result">
+                                            <!--==========  When Empty =========-->
+                                            <!-- <div class="no-result">
                                             <img src="/static/src/images/no-results.png" alt="no result icon"
                                                 loading="lazy">
                                         </div> -->
-                                    </div>
-
-
-                                    <!--============|| Pending Orders ||===========-->
-                                    <div class="tab-content" data-tab="pending-orders">
-
-                                        <!--==========  When Empty =========-->
-                                        <div class="no-result">
-                                            <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                loading="lazy">
                                         </div>
-                                    </div>
 
 
-                                    <!--============|| Canceled Orders ||===========-->
-                                    <div class="tab-content" data-tab="canceled-orders">
+                                        <!--============|| Change Password ||===========-->
+                                        <div class="tab-content" data-tab="change-password">
+                                            <div
+                                                class="my-p-4 other-card my-flex-column my-pt-3 my-border my-shadow-2  my-radius-md">
+                                                <h3 class="my-text-primary">Change Password</h3>
+                                                <p class="my-text-gray">Please type and confirm to change your current
+                                                    password.</p>
 
-                                        <!--==========  When Empty =========-->
-                                        <div class="no-result">
-                                            <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                loading="lazy">
+
+                                                <form action="" method="post" class="my-flex-column my-mt-5 my-gap-3">
+                                                    <!-- New Password -->
+                                                    <div class="my-input-control">
+                                                        <label for="new-password">New Password</label>
+                                                        <input class="my-mt-2" name="new_password" id="new-password"
+                                                            type="password" placeholder="New Password *">
+                                                    </div>
+
+                                                    <!-- Confrim Password -->
+                                                    <div class="my-input-control">
+                                                        <label for="confirm-password">Confirm Password</label>
+                                                        <input class="my-mt-2" name="confirm_new_password"
+                                                            id="confirm-password" type="password"
+                                                            placeholder="Confirm New Password *">
+                                                    </div>
+
+                                                    <!-- Error Message -->
+                                                    <div class="error-message active">Error Message Here</div>
+
+                                                    <div class="my-d-flex my-justify-end">
+                                                        <button class="my-btn my-mt-1  my-primary-btn my-fs-lg ">Change
+                                                            Password</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <!--============|| Completed Orders ||===========-->
-                                    <div class="tab-content" data-tab="completed-orders">
 
-                                        <!--==========  When Empty =========-->
-                                        <div class="no-result">
-                                            <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                loading="lazy">
+                                        <!--============|| Address Content Here ||===========-->
+                                        <div class="tab-content" data-tab="canceled-orders">
+
+                                            <div
+                                                class="my-p-4 other-card my-flex-column my-pt-3  my-border  my-radius-md">
+                                                <h3 class="my-text-primary">Address</h3>
+                                                <p class="my-text-gray ">Please enter the required details to add a new
+                                                    address.
+                                                </p>
+
+
+                                                <form action="" method="post"
+                                                    class="my-flex-column account-form my-mt-5 my-gap-3">
+                                                    <!-- For Name -->
+                                                    <div class="my-input-control ">
+                                                        <label for="name">Name</label>
+                                                        <input name="name" id="name" type="text" placeholder="Name *"
+                                                            required="1" value="">
+
+                                                    </div>
+                                                    <!-- Address 1 -->
+                                                    <div class="my-input-control">
+                                                        <label for="address-1">Address 1</label>
+                                                        <input name="street" type="text" id="address-1"
+                                                            placeholder="Address1 *" required="1" value="">
+                                                    </div>
+
+                                                    <!-- Address 2 -->
+                                                    <div class="my-input-control">
+                                                        <label for="address-2">Address 2</label>
+                                                        <input name="street2" id="address-2" type="text"
+                                                            placeholder="Address2" value="">
+                                                    </div>
+
+                                                    <!-- For City and ZIp Code -->
+                                                    <div class="my-grid-2 my-grid-md-1 my-gap-3">
+                                                        <!-- For City -->
+                                                        <div class="my-input-control">
+                                                            <label for="city">City</label>
+                                                            <input name="city" id="city" type="text" placeholder="City"
+                                                                value="">
+                                                        </div>
+
+                                                        <!-- Zip Code -->
+                                                        <div class="my-input-control">
+                                                            <label for="zip-code">Zip Code</label>
+                                                            <input name="zip-code" id="zip-code" type="text"
+                                                                placeholder="Zip Code">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- For Phone OR Email -->
+                                                    <div class=" my-grid-2 my-grid-md-1 my-gap-3">
+                                                        <!-- For Phone -->
+                                                        <div class="my-input-control">
+                                                            <label for="phone">Phone</label>
+                                                            <input name="phone" id="phone" type="text"
+                                                                placeholder="Phone" value="">
+                                                        </div>
+
+                                                        <!-- For Email -->
+                                                        <div class="my-input-control">
+                                                            <label for="email">Email</label>
+                                                            <input name="email" id="email" type="text"
+                                                                placeholder="Email">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- Error Message -->
+                                                    <div class="error-message active">Error Message Here</div>
+
+                                                    <!-- Submit Button -->
+                                                    <div class="my-d-flex my-align-end my-justify-end">
+                                                        <button type="submit"
+                                                            class="my-btn my-mt-1  my-primary-btn my-fs-lg account-btn-bold">
+                                                            SAVE
+                                                        </button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <!--============|| Completed Orders ||===========-->
+                                        <div class="tab-content" data-tab="completed-orders">
+
+                                            <!--==========  When Empty =========-->
+                                            <div class="no-result">
+                                                <img src="/static/src/images/no-results.png" alt="no result icon"
+                                                    loading="lazy">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
