@@ -4,133 +4,280 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Customer Portal UI</title>
+        <title>Sidebar Menu</title>
 
         <style>
-            body {
-                font-family: "Roboto", sans-serif;
-                background: #f3f6fa;
+            * {
                 margin: 0;
-                padding: 20px;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
             }
 
-            .portal-head {
-                background: rgba(255, 255, 255, 0.7);
-                backdrop-filter: blur(12px);
-                border-radius: 20px;
-                padding: 25px 30px;
+            body {
+                background: #f5f6fa;
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-                gap: 20px;
-                flex-wrap: wrap;
             }
 
-            /* LEFT */
-            .left {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                min-width: 250px;
+            /* Sidebar */
+            .sidebar {
+                width: 250px;
+                height: 100vh;
+                background: #2f3640;
+                padding: 20px 0;
+                position: fixed;
+                left: 0;
+                top: 0;
+                color: #fff;
+                transition: 0.3s;
             }
 
-            .left img {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 3px solid white;
-                box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-            }
-
-            .name {
-                font-size: 20px;
-                font-weight: 600;
-                margin-bottom: 3px;
-            }
-
-            .user-id,
-            .grade {
-                font-size: 14px;
-                color: #555;
-                margin: 2px 0;
-            }
-
-            .grade span {
-                font-weight: 600;
-                color: #2e75ff;
-            }
-
-            /* MIDDLE */
-            .portal-name {
-                font-size: 28px;
-                font-weight: 700;
+            .sidebar h2 {
                 text-align: center;
-                color: #1d1d1d;
-                min-width: 200px;
+                font-size: 24px;
+                margin-bottom: 25px;
+                font-weight: 600;
             }
 
-            /* RIGHT */
-            .right {
-                text-align: right;
-                min-width: 170px;
+            .sidebar ul {
+                list-style: none;
             }
 
-            .point {
+            .sidebar ul li {
+                width: 100%;
+                margin: 8px 0;
+            }
+
+            .sidebar ul li a {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: 12px 24px;
+                color: #dcdde1;
+                font-size: 16px;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+            .sidebar ul li a:hover {
+                background: #4070f4;
+                color: #fff;
+                padding-left: 30px;
+                border-radius: 6px;
+            }
+
+            /* Icons */
+            .sidebar ul li a svg {
+                width: 20px;
+                margin-right: 12px;
+                stroke: #dcdde1;
+                transition: 0.3s;
+            }
+
+            .sidebar ul li a:hover svg {
+                stroke: #fff;
+            }
+
+            /* Main content */
+            .main-content {
+                margin-left: 250px;
+                padding: 40px;
+                width: calc(100% - 250px);
+            }
+
+            .main-content h1 {
                 font-size: 32px;
-                font-weight: 700;
-                color: #ff7b00;
-                line-height: 1;
-            }
-
-            .right div:last-child {
-                font-size: 14px;
-                margin-top: 2px;
                 color: #333;
-                font-weight: 500;
+                margin-bottom: 20px;
             }
 
-            /* RESPONSIVE */
-            @media(max-width:700px) {
-                .portal-head {
-                    flex-direction: column;
-                    text-align: center;
-                }
-
-                .right {
-                    text-align: center;
-                }
+            .main-content p {
+                font-size: 18px;
+                color: #555;
+                line-height: 1.6;
             }
         </style>
-
     </head>
 
     <body>
 
-        <div class="portal-head">
+        <!--========================|| Sidebar Pages Here ||========================-->
+        <aside class="my-radius-md">
+            <div class="sidebar">
 
-            <!-- LEFT -->
-            <div class="left">
-                <img src="https://i.pravatar.cc/150?img=12" alt="">
+                <!-- General -->
                 <div>
-                    <div class="name">MD Tanvir Ahmed</div>
-                    <p class="user-id"><span>User ID</span> : 23232</p>
-                    <div class="grade">Grade: <span>A+</span></div>
+                    <p class="slidebar-title-name">General</p>
+                    <ul class="my-flex-column my-mt-1">
+
+                        <!-- Overview -->
+                        <li>
+                            <a class="item active" href="index.html">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1878F2"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                    </svg>
+                                    Overview
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+
+                        <!-- Orders -->
+                        <li>
+                            <a class="item" href="./orders.html">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1878F2"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"></path>
+                                        <path d="M3 7l9 4 9-4"></path>
+                                    </svg>
+                                    Orders
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+
+                        <!-- Wishlist -->
+                        <li>
+                            <a class="item" href="#">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                                    </svg>
+                                    Wishlist
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+
+                        <!-- Saved PC / Saved Items -->
+                        <li>
+                            <a class="item" href="#">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                                    </svg>
+                                    Saved PC
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+
+                        <!-- My Points -->
+                        <li>
+                            <a class="item" href="#">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v12M8 10h8M8 14h8"></path>
+                                    </svg>
+                                    My Points
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+
+                        <!-- My Reviews -->
+                        <li>
+                            <a class="item" href="#">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2l2.5 6.5L21 9l-5 4.5L17 21l-5-3-5 3 1-7.5L3 9l6.5-.5L12 2z" />
+                                    </svg>
+                                    My Reviews
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
+
+                    </ul>
                 </div>
-            </div>
 
-            <!-- MIDDLE -->
-            <div class="meddle">
-                <h1 class="portal-name">Customer Portal</h1>
-            </div>
+                <!-- Accounts -->
+                <div>
+                    <p class="slidebar-title-name">Accounts</p>
+                    <ul class="account-menus my-mt-1">
 
-            <!-- RIGHT -->
-            <div class="right">
-                <div class="point">2002</div>
-                <div>MIT Points</div>
-            </div>
+                        <!-- Settings -->
+                        <li>
+                            <a class="item" href="#">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2
+                                2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65
+                                0 0 0-1.82-.33 1.65 1.65 0 0 0-1
+                                1.51V21a2 2 0 0 1-4 0v-.09a1.65
+                                1.65 0 0 0-1-1.51 1.65 1.65 0 0
+                                0-1.82.33l-.06.06a2 2 0 1
+                                1-2.83-2.83l.06-.06a1.65 1.65
+                                0 0 0 .33-1.82 1.65 1.65 0 0
+                                0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65
+                                1.65 0 0 0 1.51-1 1.65 1.65 0 0
+                                0-.33-1.82l-.06-.06a2 2 0 1
+                                1 2.83-2.83l.06.06a1.65 1.65
+                                0 0 0 1.82.33h.03A1.65 1.65
+                                0 0 0 11 3.09V3a2 2 0 0 1
+                                4 0v.09a1.65 1.65 0 0 0
+                                1 1.51h.03a1.65 1.65 0 0
+                                0 1.82-.33l.06-.06a2
+                                2 0 1 1 2.83 2.83l-.06.06a1.65
+                                1.65 0 0 0-.33 1.82v.03a1.65
+                                1.65 0 0 0 1.51 1H21a2
+                                2 0 0 1 0 4h-.09a1.65 1.65
+                                0 0 0-1.51 1z"></path>
+                                    </svg>
+                                    Settings
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </li>
 
+                        <!-- Logout -->
+                        <li>
+                            <div class="item">
+                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                    <svg aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" class="icon login-outline">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor"
+                                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16 17l4-5-4-5" stroke="currentColor" stroke-width="1.6"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M20 12H9" stroke="currentColor" stroke-width="1.6"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Logout
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Welcome!</h1>
+            <p>
+                This is your dashboard.
+                You can modify the sidebar, add dropdown menus, animation, dark mode, or mobile hamburger menu — just
+                tell me!
+            </p>
         </div>
 
     </body>

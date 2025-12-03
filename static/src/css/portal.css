@@ -12,7 +12,7 @@
     align-items: stretch;
 }
 
-
+/* #2F3640 */
 /*
   =================    Portal Sidebar  ===================
 */
@@ -27,27 +27,40 @@
     position: sticky;
     top: 120px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100dvh - 160px);
 }
 
+.slidebar-title-name {
+    color: #999;
+    font-size: 13px;
+}
 
 .portal .sidebar .item {
-    padding: 10px 12px;
+    padding: 8px 12px;
     background-color: #fff;
     color: #222;
     color: var(--primary-color);
+    color: #666;
     width: 100%;
     border-radius: 6px;
-    font-size: var(--fs-md);
-    border-bottom: 1px solid var(--white-off);
+    font-size: var(--fs-sm);
+    font-size: 15px;
+    /* border-bottom: 1px solid var(--white-off); */
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 2px;
 }
 
+
 .portal .sidebar .item i {
-    color: #888;
-    color: var(--primary-color);
+    /* color: var(--primary-color);
+    color: #666;
+    color: var(--gray2); */
+    color: #999;
     font-size: var(--fs-xs);
 }
 
@@ -55,6 +68,16 @@
 .portal .sidebar .item:hover {
     background-color: var(--primary-color);
     color: var(--white);
+}
+
+.portal .sidebar .item svg {
+    stroke: #666;
+    width: 18px;
+    height: 18px;
+    /* padding: 3px;
+    background-color: rgba(255, 0, 0, 0.23);
+    background-color: rgba(200, 0, 255, 0.093);
+    border-radius: 50%; */
 }
 
 .portal .sidebar .item.active svg,
@@ -259,8 +282,9 @@
 .portal .p-body .cart-item .cart-title {
     margin-top: 4px;
     color: #777;
-    font-size: 14px;
+    font-size: 13px;
     word-spacing: 2px;
+    font-weight: 400 !important;
 }
 
 .portal .p-body .cart-item .left .icon {
@@ -496,16 +520,18 @@ footer {
 .sub-head .item {
     display: flex;
     gap: 8px;
-    color: #222;
     padding-bottom: 10px;
     padding-right: 4px;
     position: relative;
     align-items: center;
     cursor: pointer;
     user-select: none;
+    font-size: 14px;
+    color: #444;
 }
 
 .sub-head .item i {
+    color: #cdcdcd;
     color: var(--gray2);
     font-size: 18px;
 }
@@ -654,8 +680,8 @@ footer {
 /* pagination 2 */
 .pagination-2 .page,
 .pagination-2 .next-prev {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     border: 1px solid #ededed;
     display: flex;
@@ -664,6 +690,7 @@ footer {
     transition: .2s ease;
     font-weight: 600;
     color: #333;
+    font-size: 13px;
 }
 
 
