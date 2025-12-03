@@ -318,7 +318,7 @@ footer {
 }
 
 .portal .recent-orders-title {
-    color: #333;
+    color: #111;
     font-size: var(--fs-lg);
 }
 
@@ -328,7 +328,7 @@ footer {
 
 .portal .recent-orders .orders {
     border: 1px solid #ededed;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .portal .recent-orders .orders th {
@@ -490,7 +490,7 @@ footer {
 /* Orders Page */
 .sub-head {
     border-bottom: 4px solid #EFF6FF;
-    padding-top: 8px;
+    padding-top: 0px;
 }
 
 .sub-head .item {
@@ -635,4 +635,59 @@ footer {
 
 .feature-category .all-category-btn:hover {
     color: var(--primary-color) !important
+}
+
+.orders-page .tab-content {
+    margin-top: 8px;
+}
+
+.orders-page .recent-orders {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+
+
+
+
+/* pagination 2 */
+.pagination-2 .page,
+.pagination-2 .next-prev {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease;
+    font-weight: 600;
+    color: #333;
+}
+
+
+
+.pagination-2 .page:hover,
+.pagination-2 .page.active {
+    background-color: #f2f4f8;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.pagination-2 .page.jump:hover {
+    background-color: transparent;
+    color: unset;
+    cursor: auto;
+}
+
+.pagination-2 .next-prev {
+    background-color: #EFF6FF;
+    border: none;
+    color: #777;
+}
+
+.pagination-2 .disabled {
+    cursor: no-drop;
+    opacity: .6;
 }

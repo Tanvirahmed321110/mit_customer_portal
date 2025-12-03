@@ -27337,13 +27337,14 @@
                                     <!--============|| Recent 10 Orders ||===========-->
                                     <div class="tab-content active" data-tab="orders">
                                         <div class="recent-orders my-mt-0">
-                                            <h3 class="recent-orders-title">Recent Orders</h3>
+                                            <h3 class="recent-orders-title">All Orders</h3>
                                             <table class="orders">
 
                                                 <!-- Head Here -->
                                                 <thead>
                                                     <tr>
                                                         <th>Order Number</th>
+                                                        <th>Order Type</th>
                                                         <th>Status</th>
                                                         <th>Total</th>
                                                         <th>Order Placed</th>
@@ -27358,6 +27359,7 @@
                                                     <!-- single order -->
                                                     <tr>
                                                         <td class="order-number"><a href="#">#4532180</a></td>
+                                                        <td>Offline</td>
                                                         <td>
                                                             <div class="delivered status">Delivered</div>
                                                         </td>
@@ -27377,6 +27379,7 @@
                                                     <!-- single order -->
                                                     <tr>
                                                         <td class="order-number"><a href="#">#2924213</a></td>
+                                                        <td>Online</td>
                                                         <td>
                                                             <div class="delivered status">Delivered</div>
                                                         </td>
@@ -27396,6 +27399,7 @@
                                                     <!-- single order -->
                                                     <tr>
                                                         <td class="order-number"><a href="#">#2924213</a></td>
+                                                        <td>Online</td>
                                                         <td>
                                                             <div class="pending status">Pending</div>
                                                         </td>
@@ -27415,6 +27419,7 @@
                                                     <!-- single order -->
                                                     <tr>
                                                         <td class="order-number"><a href="#">#2924214</a></td>
+                                                        <td>Online</td>
                                                         <td>
                                                             <div class="canceled status">Canceled</div>
                                                         </td>
@@ -27433,6 +27438,7 @@
                                                     <!-- single order -->
                                                     <tr>
                                                         <td class="order-number"><a href="#">#2924213</a></td>
+                                                        <td>Online</td>
                                                         <td>
                                                             <div class="canceled status">Canceled</div>
                                                         </td>
@@ -27451,6 +27457,7 @@
                                                     <!-- single order -->
                                                     <tr>
                                                         <td class="order-number"><a href="#">#2924212</a></td>
+                                                        <td>Online</td>
                                                         <td>
                                                             <div class="pending status">Pending</div>
                                                         </td>
@@ -27468,6 +27475,32 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+
+
+                                            <!--========== Pagination ===========-->
+                                            <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
+
+                                                <!-- disabled -->
+                                                <!-- <button class="prev next-prev disabled" disabled>
+                                                    <i class="fa-solid fa-angle-left"></i>
+                                                </button> -->
+                                                <button class="prev next-prev ">
+                                                    <i class="fa-solid fa-angle-left"></i>
+                                                </button>
+
+                                                <ul class="wrap my-flex-center my-gap-1">
+                                                    <li><a class="page " href="#">1</a></li>
+                                                    <li><a class="page active" href="#">2</a></li>
+                                                    <li><a class="page jump" href="#">...</a></li>
+                                                    <li><a class="page" href="#">8</a></li>
+                                                    <li><a class="page" href="#">9</a></li>
+                                                </ul>
+
+                                                <button class="next next-prev">
+                                                    <i class="fa-solid fa-angle-right"></i>
+                                                </button>
+
+                                            </div>
                                         </div>
                                     </div>
 
