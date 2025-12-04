@@ -45,7 +45,7 @@
 
 .portal .sidebar .item {
     padding: 8px 12px;
-    background-color: #fff;
+    background-color: var(--white);
     color: var(--primary-color);
     color: #666;
     color: var(--n-dark);
@@ -53,7 +53,7 @@
     border-radius: 6px;
     font-size: var(--fs-sm);
     font-size: 15px;
-    /* border-bottom: 1px solid var(--white-off); */
+    /* border-bottom: 1px solid var(--input); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -214,12 +214,19 @@
     /* height: 100%; */
     color: var(--orange);
     box-shadow: var(--shadow-2);
-    padding-bottom: 6px;
-    margin-top: -40px;
+    padding-bottom: 2px;
+    margin-top: -44px;
 }
 
 .portal .head .meddle .portal-name {
-    color: var(--primary-color);
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: var(--fs-lg);
+    word-spacing: 4PX;
+    color: var(--green);
+    color: #e79702;
+    letter-spacing: .5px;
 }
 
 /*
