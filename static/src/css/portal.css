@@ -1,3 +1,8 @@
+:root {
+    --n-dark: #222;
+    --n-dark2: #444;
+}
+
 .portal {
 
     /* background-color: var(--white); */
@@ -43,7 +48,7 @@
     background-color: #fff;
     color: var(--primary-color);
     color: #666;
-    color: #222;
+    color: var(--n-dark);
     width: 100%;
     border-radius: 6px;
     font-size: var(--fs-sm);
@@ -144,7 +149,7 @@
 .portal .head .name {
     font-size: var(--fs-lg);
     font-weight: 600;
-    color: #333;
+    color: var(--n-dark);
 }
 
 .portal .head .grade {
@@ -168,7 +173,7 @@
 }
 
 .portal .head .mit-point {
-    color: #333;
+    color: var(--n-dark);
     font-weight: 600;
     text-align: center;
     font-size: var(--fs-md);
@@ -189,6 +194,9 @@
     line-height: 16px;
 }
 
+.filter-head .info {
+    /* color: var(--before); */
+}
 
 .portal .head .right {
     display: flex;
@@ -235,8 +243,9 @@
 /* Body single cart */
 .portal .p-body .cart-item {
     padding: 20px 16px;
-    background-color: #EBEDF8;
+    background-color: var(--input);
     background-color: #EFF6FF;
+    background-color: #fff;
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
@@ -244,7 +253,7 @@
     cursor: pointer;
     transition: .3s ease;
     border: 1px solid transparent;
-
+    box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.076);
 }
 
 .portal .p-body .cart-item:hover .left.icon {
@@ -253,9 +262,12 @@
 
 /* On hover of the card */
 .portal .p-body .cart-item:hover {
-    background-color: var(--white);
-    border: 2px solid var(--white-off2);
-    border: 1px solid #f3f3f3;
+    background-color: var(--input);
+}
+
+.portal .p-body .cart-item:hover .cart-title,
+.portal .p-body .cart-item:hover .val {
+    /* color: var(--white-off2); */
 }
 
 .portal .p-body .cart-item:hover svg {
@@ -279,7 +291,7 @@
 
 .portal .p-body .cart-item .val {
     color: var(--primary-color);
-    color: #333;
+    color: var(--n-dark);
     font-size: 22px;
     font-weight: 600;
 }
@@ -311,9 +323,11 @@
 /* payment-date */
 .portal .payment-date .cart-item {
     padding: 40px 16px;
-    background: linear-gradient(120deg, #ff7b001c, #ff2e621b);
+    background-color: #EFF6FF;
+    background: linear-gradient(130deg, #ff7b001c, #ff2e621b);
     border: 1px solid transparent;
     transition: .3s ease;
+    box-shadow: unset;
 }
 
 .portal .payment-date .cart-item .cart-title {
@@ -325,7 +339,7 @@
 }
 
 .portal .payment-date .cart-item:nth-child(2) {
-    background: linear-gradient(120deg, #ed32611e, #ff7b0020);
+    background: linear-gradient(130deg, #ed32611e, #ff7b0020);
 }
 
 .portal .payment-date .cart-item:hover {
@@ -367,8 +381,8 @@ footer {
 .portal .recent-orders .orders th {
     font-size: 13px;
     font-weight: 600;
+    color: var(--n-dark);
     color: var(--primary-color);
-    color: #222;
     background-color: #ffcdcd89;
     background-color: #EFF6FF;
     text-align: left;
