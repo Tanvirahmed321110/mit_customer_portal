@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Orders</title>
+        <title>Save PC</title>
         <link rel="stylesheet" href="/static/src/css/variable.css">
         <link rel="stylesheet" href="/static/src/css/custom_class.css">
         <link rel="stylesheet" href="/static/src/css/component.css">
@@ -27128,7 +27128,7 @@
                     <div class="p-wrapper">
                         <!--========================|| Sidebar Pages Here ||========================-->
                         <aside class="my-radius-md">
-                            <div class="sidebar my-has-scrollbar-sm">
+                            <div class="sidebar  my-has-scrollbar-sm">
                                 <div>
                                     <p class="slidebar-title-name">Genaral</p>
                                     <ul class="my-flex-column my-mt-1">
@@ -27153,7 +27153,7 @@
 
                                         <!-- Orders -->
                                         <li>
-                                            <a class="item active" href="./orders.html">
+                                            <a class="item " href="./orders.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27169,7 +27169,7 @@
 
                                         <!-- Accounts -->
                                         <li>
-                                            <a class="item" href="./account.html">
+                                            <a class="item " href="./account.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27274,7 +27274,7 @@
 
                                         <!-- Save PC -->
                                         <li>
-                                            <a class="item" href="./save_pc.html">
+                                            <a class="item active" href="./save_pc.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" fill="none" viewBox="0 0 24 24"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27283,6 +27283,26 @@
                                                         </path>
                                                     </svg>
                                                     Save PC
+                                                </div>
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </a>
+                                        </li>
+
+
+                                        <!-- Mit Point -->
+                                        <li>
+                                            <a class="item " href="./mit_point.html">
+                                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                        stroke="#1878F2" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <circle cx="12" cy="12" r="10" />
+                                                        <path d="M12 6v12" />
+                                                        <path d="M8 10h8" />
+                                                        <path d="M8 14h8" />
+                                                    </svg>
+
+                                                    Mit Point
                                                 </div>
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </a>
@@ -27392,260 +27412,245 @@
 
                             <div class="my-bg-white my-radius-md orders-page tab-area flex-1 my-flex-column">
                                 <!--==============|| Body Content Here ||==============-->
-                                <div class="p-body my-radius-md">
+                                <div class="p-body my-radius-md my-flex-column">
 
+                                    <!--=============  When Empty  ==============-->
+                                    <div class="my-flex-column flex-1">
+                                        <h3 class="my-text-primary">PC Build List</h3>
+                                        <p class="small">You have not PC Build item</p>
 
-                                    <!--================|| Sub Head OR Tab Buttons ||================-->
-                                    <div class="sub-head ">
-                                        <ul class="my-flex-center tab-buttons my-gap-4">
-                                            <li class="item active" data-tab="orders">
-                                                <span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </span>
-                                                Orders
-                                            </li>
-                                            <li class="item" data-tab="pending-orders">
-                                                <span><i class="fa-solid fa-hourglass-half"></i>
-                                                </span>
-                                                Pending Orders
-                                            </li>
-                                            <li class="item " data-tab="canceled-orders">
-                                                <span>
-                                                    <i class="fa-solid fa-circle-xmark"></i>
-
-                                                </span>
-                                                Canceled Orders
-                                            </li>
-
-                                            <li class="item" data-tab="completed-orders">
-                                                <span>
-                                                    <i class="fa-solid fa-check-to-slot"></i>
-                                                </span>
-                                                Completed Orders
-                                            </li>
-
-                                        </ul>
+                                        <div class="flex-1 my-flex-column my-align-center my-justify-center">
+                                            <div class="no-result">
+                                                <img src="/static/src/images/no-results.png" alt="no result icon"
+                                                    loading="lazy">
+                                            </div>
+                                        </div>
                                     </div>
 
 
+                                    <!--=========  When Data Have  ===========  -->
+                                    <div class="my-flex-column flex-1">
+                                        <h3 class="my-text-primary">PC Build List</h3>
+                                        <p class="small">You have 5 PC Build items</p>
+
+
+                                        <ul class="account-tables my-mt-5 ">
+
+                                            <li
+                                                class="my-d-flex my-gap-4 my-border-bottom account-tables my-flex-between my-flex-sm-column  my-py-3">
+
+                                                <a href="./product.html" class="left">
+                                                    <div class="my-d-flex my-align-center my-gap-4 col name-img">
+                                                        <img class="w-15 my-border my-p-1 my-radius-sm"
+                                                            src="/static/src/images/icon/save-icon.png"
+                                                            alt="save pc icon" loading="lazy">
+                                                        <div>
+                                                            <h5 class="text-hover-primary my-fw-medium">New gaming
+                                                                pc
+                                                                for
+                                                                Bangladesh New
+                                                                gamin
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+
+                                                <div class="my-d-flex my-gap-6 my-align-center right ">
+
+                                                    <div class="my-flex-column details my-gap-0 col">
+                                                        <p class="my-fw-bold ">Date Added</p>
+                                                        <div class="my-text-gray2 my-fs-xs">
+                                                            20 jan 2025
+                                                            <span>11:44:22</span>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="my-d-flex my-gap-2 my-align-center buttons col">
+                                                        <button class="my-btn my-primary-btn my-btn-sm">View</button>
+                                                    </div>
+
+                                                    <div>
+
+                                                        <button
+                                                            class="my-text-gray2 my-fs-md text-hover-primary delete-btn">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="my-d-flex my-gap-4 my-border-bottom account-tables my-flex-between my-flex-sm-column  my-py-3">
+
+                                                <a href="./product.html" class="left">
+                                                    <div class="my-d-flex my-align-center my-gap-4 col name-img">
+                                                        <img class="w-15 my-border my-p-1 my-radius-sm"
+                                                            src="/static/src/images/icon/save-icon.png"
+                                                            alt="save pc icon" loading="lazy">
+                                                        <div>
+                                                            <h5 class="text-hover-primary my-fw-medium">New gaming
+                                                                pc
+                                                                for
+                                                                Bangladesh New
+                                                                gamin
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+
+                                                <div class="my-d-flex my-gap-6 my-align-center right ">
+
+                                                    <div class="my-flex-column details my-gap-0 col">
+                                                        <p class="my-fw-bold ">Date Added</p>
+                                                        <div class="my-text-gray2 my-fs-xs">
+                                                            20 jan 2025
+                                                            <span>11:44:22</span>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="my-d-flex my-gap-2 my-align-center buttons col">
+                                                        <button class="my-btn my-primary-btn my-btn-sm">View</button>
+                                                    </div>
+
+                                                    <div>
+
+                                                        <button
+                                                            class="my-text-gray2 my-fs-md text-hover-primary delete-btn">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="my-d-flex my-gap-4 my-border-bottom account-tables my-flex-between my-flex-sm-column  my-py-3">
+
+                                                <a href="./product.html" class="left">
+                                                    <div class="my-d-flex my-align-center my-gap-4 col name-img">
+                                                        <img class="w-15 my-border my-p-1 my-radius-sm"
+                                                            src="/static/src/images/icon/save-icon.png"
+                                                            alt="save pc icon" loading="lazy">
+                                                        <div>
+                                                            <h5 class="text-hover-primary my-fw-medium">New gaming
+                                                                pc
+                                                                for
+                                                                Bangladesh New
+                                                                gamin
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+
+                                                <div class="my-d-flex my-gap-6 my-align-center right ">
+
+                                                    <div class="my-flex-column details my-gap-0 col">
+                                                        <p class="my-fw-bold ">Date Added</p>
+                                                        <div class="my-text-gray2 my-fs-xs">
+                                                            20 jan 2025
+                                                            <span>11:44:22</span>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="my-d-flex my-gap-2 my-align-center buttons col">
+                                                        <button class="my-btn my-primary-btn my-btn-sm">View</button>
+                                                    </div>
+
+                                                    <div>
+
+                                                        <button
+                                                            class="my-text-gray2 my-fs-md text-hover-primary delete-btn">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="my-d-flex my-gap-4 my-border-bottom account-tables my-flex-between my-flex-sm-column  my-py-3">
+
+                                                <a href="./product.html" class="left">
+                                                    <div class="my-d-flex my-align-center my-gap-4 col name-img">
+                                                        <img class="w-15 my-border my-p-1 my-radius-sm"
+                                                            src="/static/src/images/icon/save-icon.png"
+                                                            alt="save pc icon" loading="lazy">
+                                                        <div>
+                                                            <h5 class="text-hover-primary my-fw-medium">New gaming
+                                                                pc
+                                                                for
+                                                                Bangladesh New
+                                                                gamin
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+
+                                                <div class="my-d-flex my-gap-6 my-align-center right ">
+
+                                                    <div class="my-flex-column details my-gap-0 col">
+                                                        <p class="my-fw-bold ">Date Added</p>
+                                                        <div class="my-text-gray2 my-fs-xs">
+                                                            20 jan 2025
+                                                            <span>11:44:22</span>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="my-d-flex my-gap-2 my-align-center buttons col">
+                                                        <button class="my-btn my-primary-btn my-btn-sm">View</button>
+                                                    </div>
+
+                                                    <div>
+
+                                                        <button
+                                                            class="my-text-gray2 my-fs-md text-hover-primary delete-btn">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
 
 
 
-                                    <!--===================|| Tab Contents ||===================-->
-                                    <div class="tab-contents flex-1 my-d-flex ">
-                                        <!--============|| All Orders ||===========-->
-                                        <div class="tab-content active" data-tab="orders">
-                                            <div class="recent-orders my-mt-0 my-w-100">
-                                                <h3 class="recent-orders-title">All Orders</h3>
-                                                <table class="orders">
-
-                                                    <!-- Head Here -->
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Order Number</th>
-                                                            <th>Order Type</th>
-                                                            <th>Status</th>
-                                                            <th>Total</th>
-                                                            <th>Order Placed</th>
-                                                            <th>Invoice</th>
-                                                            <th>View Details</th>
-                                                        </tr>
-                                                    </thead>
-
-                                                    <!-- Orders Body Here -->
-                                                    <tbody>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#4532180</a></td>
-                                                            <td>Offline</td>
-                                                            <td>
-                                                                <div class="delivered status">Delivered</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>3450</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="delivered status">Delivered</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>1246</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="pending status">Pending</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>3450</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924214</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>1968</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>2150</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924212</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="pending status">Pending</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>2900</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
 
 
-                                                <!--========== Pagination ===========-->
-                                                <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
 
-                                                    <!-- disabled -->
-                                                    <!-- <button class="prev next-prev disabled" disabled>
+                                        <!--===============|| Pagination Here ||==============-->
+                                        <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
+
+                                            <!-- disabled -->
+                                            <!-- <button class="prev next-prev disabled" disabled>
                                                     <i class="fa-solid fa-angle-left"></i>
                                                 </button> -->
-                                                    <button class="prev next-prev ">
-                                                        <i class="fa-solid fa-angle-left"></i>
-                                                    </button>
+                                            <button class="prev next-prev ">
+                                                <i class="fa-solid fa-angle-left"></i>
+                                            </button>
 
-                                                    <ul class="wrap my-flex-center my-gap-1">
-                                                        <li><a class="page " href="#">1</a></li>
-                                                        <li><a class="page active" href="#">2</a></li>
-                                                        <li><a class="page jump" href="#">...</a></li>
-                                                        <li><a class="page" href="#">8</a></li>
-                                                        <li><a class="page" href="#">9</a></li>
-                                                    </ul>
+                                            <ul class="wrap my-flex-center my-gap-1">
+                                                <li><a class="page " href="#">1</a></li>
+                                                <li><a class="page active" href="#">2</a></li>
+                                                <li><a class="page jump" href="#">...</a></li>
+                                                <li><a class="page" href="#">8</a></li>
+                                                <li><a class="page" href="#">9</a></li>
+                                            </ul>
 
-                                                    <button class="next next-prev">
-                                                        <i class="fa-solid fa-angle-right"></i>
-                                                    </button>
+                                            <button class="next next-prev">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </button>
 
-                                                </div>
-                                            </div>
-
-                                            <!--==========  When Empty =========-->
-                                            <!-- <div class="no-result">
-                                            <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                loading="lazy">
-                                        </div> -->
                                         </div>
 
 
-                                        <!--============|| Pending Orders ||===========-->
-                                        <div class="tab-content" data-tab="pending-orders">
-
-                                            <!--==========  When Empty =========-->
-                                            <div class="no-result">
-                                                <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
-
-
-                                        <!--============|| Canceled Orders ||===========-->
-                                        <div class="tab-content" data-tab="canceled-orders">
-
-                                            <!--==========  When Empty =========-->
-                                            <div class="no-result">
-                                                <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
-
-                                        <!--============|| Completed Orders ||===========-->
-                                        <div class="tab-content" data-tab="completed-orders">
-
-                                            <!--==========  When Empty =========-->
-                                            <div class="no-result">
-                                                <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </section>
         </main>
@@ -28173,10 +28178,6 @@
 
             </div>
         </footer>
-
-
-
-        <script src="/static/src/js/portal/portal-common.js"></script>
     </body>
 
 </html>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Orders</title>
+        <title>Reviews</title>
         <link rel="stylesheet" href="/static/src/css/variable.css">
         <link rel="stylesheet" href="/static/src/css/custom_class.css">
         <link rel="stylesheet" href="/static/src/css/component.css">
@@ -27128,7 +27128,7 @@
                     <div class="p-wrapper">
                         <!--========================|| Sidebar Pages Here ||========================-->
                         <aside class="my-radius-md">
-                            <div class="sidebar my-has-scrollbar-sm">
+                            <div class="sidebar  my-has-scrollbar-sm">
                                 <div>
                                     <p class="slidebar-title-name">Genaral</p>
                                     <ul class="my-flex-column my-mt-1">
@@ -27153,7 +27153,7 @@
 
                                         <!-- Orders -->
                                         <li>
-                                            <a class="item active" href="./orders.html">
+                                            <a class="item " href="./orders.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27169,7 +27169,7 @@
 
                                         <!-- Accounts -->
                                         <li>
-                                            <a class="item" href="./account.html">
+                                            <a class="item " href="./account.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27274,7 +27274,7 @@
 
                                         <!-- Save PC -->
                                         <li>
-                                            <a class="item" href="./save_pc.html">
+                                            <a class="item " href="./save_pc.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" fill="none" viewBox="0 0 24 24"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27283,6 +27283,26 @@
                                                         </path>
                                                     </svg>
                                                     Save PC
+                                                </div>
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </a>
+                                        </li>
+
+
+                                        <!-- Mit Point -->
+                                        <li>
+                                            <a class="item " href="./mit_point.html">
+                                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                        stroke="#1878F2" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <circle cx="12" cy="12" r="10" />
+                                                        <path d="M12 6v12" />
+                                                        <path d="M8 10h8" />
+                                                        <path d="M8 14h8" />
+                                                    </svg>
+
+                                                    Mit Point
                                                 </div>
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </a>
@@ -27307,7 +27327,7 @@
 
                                         <!-- Reviews -->
                                         <li>
-                                            <a class="item" href="./reviews.html">
+                                            <a class="item active" href="./reviews.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="24" height="24" viewBox="0 0 24 24">
                                                         <defs>
@@ -27392,257 +27412,266 @@
 
                             <div class="my-bg-white my-radius-md orders-page tab-area flex-1 my-flex-column">
                                 <!--==============|| Body Content Here ||==============-->
-                                <div class="p-body my-radius-md">
+                                <div class="p-body my-radius-md my-flex-column">
+
+                                    <!--=============  When Empty  ==============-->
+                                    <!-- <div class="my-flex-column flex-1">
+                                        <h3 class="my-text-primary">My Reviews</h3>
+                                        <p class="small">You have not review</p>
+
+                                        <div class="flex-1 my-flex-column my-align-center my-justify-center">
+                                            <div class="no-result">
+                                                <img src="/static/src/images/no-results.png" alt="no result icon"
+                                                    loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div> -->
 
 
-                                    <!--================|| Sub Head OR Tab Buttons ||================-->
-                                    <div class="sub-head ">
-                                        <ul class="my-flex-center tab-buttons my-gap-4">
-                                            <li class="item active" data-tab="orders">
-                                                <span>
-                                                    <i class="fa-solid fa-cart-shopping"></i>
-                                                </span>
-                                                Orders
+                                    <!--=========  When Data Have  ===========  -->
+                                    <div class="my-flex-column flex-1">
+                                        <h3 class="my-text-primary">My Reviews</h3>
+                                        <p class="small">You’ve submitted 2 reviews.</p>
+
+
+                                        <ul class="account-tables my-mt-5 my-flex-column my-gap-4">
+
+                                            <!-- single review item -->
+                                            <li class="my-border my-p-3 my-radius-md my-p-relative review-item">
+
+                                                <!-- review date -->
+                                                <div class="review-date small my-d-flex my-align-center my-gap-2"><span
+                                                        class="small"><i class="fa-regular fa-calendar-days"></i></span>
+                                                    04 Dec 2025
+                                                </div>
+
+                                                <div class="my-d-flex my-align-center my-gap-3">
+
+                                                    <!-- product image -->
+                                                    <a
+                                                        href="&lt;bound method InheritProductTemplate.url of product.template(1721,)&gt;">
+                                                        <img class="w-15 my-p-1 my-border my-radius-sm" alt=""
+                                                            src="data:image/webp;base64,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">
+                                                    </a>
+
+                                                    <div class="my-w-90">
+
+                                                        <a class="my-w-90"
+                                                            href="&lt;bound method InheritProductTemplate.url of product.template(1721,)&gt;">
+                                                            <h5 class="text-hover-primary ">Intel 13th Gen Core i9
+                                                                13900K Raptor Lake Processor</h5>
+                                                        </a>
+                                                        <div>
+
+                                                            <div
+                                                                class="rating my-mt-1 my-align-center my-w-100 my-d-flex my-gap-2">
+                                                                <a class="stars">
+
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="total-avg my-align-center my-d-flex my-gap-2">
+                                                                    <div class="avg">5.0</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="my-flex-between  my-flex-md-column my-align-start my-gap-2 my-mt-1">
+
+                                                    <!-- review content here -->
+                                                    <div class="my-p-2 review-text-wrap my-mt-1 my-d-flex">"
+                                                        <p class=" ">Your Item Quality very well. Thanks you so
+                                                            much</p>"
+                                                    </div>
+
+
+                                                    <div>
+
+                                                        <!-- delete button -->
+                                                        <a href="/account/my-reviews/delete?id=2">
+                                                            <button class="my-btn my-btn-sm  my-text-red">
+                                                                <i class="fa-regular fa-trash-can"></i>
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </li>
-                                            <li class="item" data-tab="pending-orders">
-                                                <span><i class="fa-solid fa-hourglass-half"></i>
-                                                </span>
-                                                Pending Orders
-                                            </li>
-                                            <li class="item " data-tab="canceled-orders">
-                                                <span>
-                                                    <i class="fa-solid fa-circle-xmark"></i>
+                                            <!-- single review item -->
+                                            <li class="my-border my-p-3 my-radius-md my-p-relative review-item">
 
-                                                </span>
-                                                Canceled Orders
-                                            </li>
+                                                <!-- review date -->
+                                                <div class="review-date small my-d-flex my-align-center my-gap-2"><span
+                                                        class="small"><i class="fa-regular fa-calendar-days"></i></span>
+                                                    04 Dec 2025
+                                                </div>
 
-                                            <li class="item" data-tab="completed-orders">
-                                                <span>
-                                                    <i class="fa-solid fa-check-to-slot"></i>
-                                                </span>
-                                                Completed Orders
-                                            </li>
+                                                <div class="my-d-flex my-align-center my-gap-3">
 
+                                                    <!-- product image -->
+                                                    <a
+                                                        href="&lt;bound method InheritProductTemplate.url of product.template(1721,)&gt;">
+                                                        <img class="w-15 my-p-1 my-border my-radius-sm" alt=""
+                                                            src="data:image/webp;base64,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">
+                                                    </a>
+
+                                                    <div class="my-w-90">
+
+                                                        <a class="my-w-90"
+                                                            href="&lt;bound method InheritProductTemplate.url of product.template(1721,)&gt;">
+                                                            <h5 class="text-hover-primary ">Intel 13th Gen Core i9
+                                                                13900K Raptor Lake Processor</h5>
+                                                        </a>
+                                                        <div>
+
+                                                            <div
+                                                                class="rating my-mt-1 my-align-center my-w-100 my-d-flex my-gap-2">
+                                                                <a class="stars">
+
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="total-avg my-align-center my-d-flex my-gap-2">
+                                                                    <div class="avg">5.0</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="my-flex-between  my-flex-md-column my-align-start my-gap-2 my-mt-1">
+
+                                                    <!-- review content here -->
+                                                    <div class="my-p-2 review-text-wrap my-mt-1 my-d-flex">"
+                                                        <p class=" ">Your Item Quality very well. Thanks you so
+                                                            much</p>"
+                                                    </div>
+
+
+                                                    <div>
+
+                                                        <!-- delete button -->
+                                                        <a href="/account/my-reviews/delete?id=2">
+                                                            <button class="my-btn my-btn-sm  my-text-red">
+                                                                <i class="fa-regular fa-trash-can"></i>
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- single review item -->
+                                            <li class="my-border my-p-3 my-radius-md my-p-relative review-item">
+
+                                                <!-- review date -->
+                                                <div class="review-date small my-d-flex my-align-center my-gap-2"><span
+                                                        class="small"><i class="fa-regular fa-calendar-days"></i></span>
+                                                    04 Dec 2025
+                                                </div>
+
+                                                <div class="my-d-flex my-align-center my-gap-3">
+
+                                                    <!-- product image -->
+                                                    <a
+                                                        href="&lt;bound method InheritProductTemplate.url of product.template(1721,)&gt;">
+                                                        <img class="w-15 my-p-1 my-border my-radius-sm" alt=""
+                                                            src="data:image/webp;base64,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">
+                                                    </a>
+
+                                                    <div class="my-w-90">
+
+                                                        <a class="my-w-90"
+                                                            href="&lt;bound method InheritProductTemplate.url of product.template(1721,)&gt;">
+                                                            <h5 class="text-hover-primary ">Intel 13th Gen Core i9
+                                                                13900K Raptor Lake Processor</h5>
+                                                        </a>
+                                                        <div>
+
+                                                            <div
+                                                                class="rating my-mt-1 my-align-center my-w-100 my-d-flex my-gap-2">
+                                                                <a class="stars">
+
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                </a>
+                                                                <div
+                                                                    class="total-avg my-align-center my-d-flex my-gap-2">
+                                                                    <div class="avg">5.0</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="my-flex-between  my-flex-md-column my-align-start my-gap-2 my-mt-1">
+
+                                                    <!-- review content here -->
+                                                    <div class="my-p-2 review-text-wrap my-mt-1 my-d-flex">"
+                                                        <p class=" ">Your Item Quality very well. Thanks you so
+                                                            much</p>"
+                                                    </div>
+
+
+                                                    <div>
+
+                                                        <!-- delete button -->
+                                                        <a href="/account/my-reviews/delete?id=2">
+                                                            <button class="my-btn my-btn-sm  my-text-red">
+                                                                <i class="fa-regular fa-trash-can"></i>
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
-                                    </div>
 
 
 
 
 
-                                    <!--===================|| Tab Contents ||===================-->
-                                    <div class="tab-contents flex-1 my-d-flex ">
-                                        <!--============|| All Orders ||===========-->
-                                        <div class="tab-content active" data-tab="orders">
-                                            <div class="recent-orders my-mt-0 my-w-100">
-                                                <h3 class="recent-orders-title">All Orders</h3>
-                                                <table class="orders">
 
-                                                    <!-- Head Here -->
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Order Number</th>
-                                                            <th>Order Type</th>
-                                                            <th>Status</th>
-                                                            <th>Total</th>
-                                                            <th>Order Placed</th>
-                                                            <th>Invoice</th>
-                                                            <th>View Details</th>
-                                                        </tr>
-                                                    </thead>
+                                        <!--===============|| Pagination Here ||==============-->
+                                        <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
 
-                                                    <!-- Orders Body Here -->
-                                                    <tbody>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#4532180</a></td>
-                                                            <td>Offline</td>
-                                                            <td>
-                                                                <div class="delivered status">Delivered</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>3450</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="delivered status">Delivered</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>1246</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="pending status">Pending</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>3450</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924214</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>1968</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>2150</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924212</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="pending status">Pending</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>2900</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-
-
-                                                <!--========== Pagination ===========-->
-                                                <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
-
-                                                    <!-- disabled -->
-                                                    <!-- <button class="prev next-prev disabled" disabled>
+                                            <!-- disabled -->
+                                            <!-- <button class="prev next-prev disabled" disabled>
                                                     <i class="fa-solid fa-angle-left"></i>
                                                 </button> -->
-                                                    <button class="prev next-prev ">
-                                                        <i class="fa-solid fa-angle-left"></i>
-                                                    </button>
+                                            <button class="prev next-prev ">
+                                                <i class="fa-solid fa-angle-left"></i>
+                                            </button>
 
-                                                    <ul class="wrap my-flex-center my-gap-1">
-                                                        <li><a class="page " href="#">1</a></li>
-                                                        <li><a class="page active" href="#">2</a></li>
-                                                        <li><a class="page jump" href="#">...</a></li>
-                                                        <li><a class="page" href="#">8</a></li>
-                                                        <li><a class="page" href="#">9</a></li>
-                                                    </ul>
+                                            <ul class="wrap my-flex-center my-gap-1">
+                                                <li><a class="page " href="#">1</a></li>
+                                                <li><a class="page active" href="#">2</a></li>
+                                                <li><a class="page jump" href="#">...</a></li>
+                                                <li><a class="page" href="#">8</a></li>
+                                                <li><a class="page" href="#">9</a></li>
+                                            </ul>
 
-                                                    <button class="next next-prev">
-                                                        <i class="fa-solid fa-angle-right"></i>
-                                                    </button>
+                                            <button class="next next-prev">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </button>
 
-                                                </div>
-                                            </div>
-
-                                            <!--==========  When Empty =========-->
-                                            <!-- <div class="no-result">
-                                            <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                loading="lazy">
-                                        </div> -->
                                         </div>
 
 
-                                        <!--============|| Pending Orders ||===========-->
-                                        <div class="tab-content" data-tab="pending-orders">
-
-                                            <!--==========  When Empty =========-->
-                                            <div class="no-result">
-                                                <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
-
-
-                                        <!--============|| Canceled Orders ||===========-->
-                                        <div class="tab-content" data-tab="canceled-orders">
-
-                                            <!--==========  When Empty =========-->
-                                            <div class="no-result">
-                                                <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
-
-                                        <!--============|| Completed Orders ||===========-->
-                                        <div class="tab-content" data-tab="completed-orders">
-
-                                            <!--==========  When Empty =========-->
-                                            <div class="no-result">
-                                                <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -28173,10 +28202,6 @@
 
             </div>
         </footer>
-
-
-
-        <script src="/static/src/js/portal/portal-common.js"></script>
     </body>
 
 </html>
