@@ -2,284 +2,389 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sidebar Menu</title>
-
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Profile / Contact Form</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
         <style>
+            :root {
+                --bg: #f5f7fb;
+                --card: #ffffff;
+                --accent: #ff6b3d;
+                --muted: #7b8596;
+                --input: #f0f3f7;
+                --radius: 12px;
+                --shadow: 0 6px 18px rgba(20, 30, 50, 0.08);
+            }
+
             * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: "Poppins", sans-serif;
+                box-sizing: border-box
             }
 
             body {
-                background: #f5f6fa;
+                font-family: Inter, system-ui, Arial, sans-serif;
+                background: var(--bg);
+                margin: 24px;
+                color: #10203a
+            }
+
+            .container {
+                max-width: 980px;
+                margin: 0 auto
+            }
+
+            .card {
+                background: var(--card);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                padding: 22px
+            }
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 18px
+            }
+
+            @media(min-width:880px) {
+                .form-grid {
+                    grid-template-columns: 320px 1fr
+                }
+            }
+
+            /* left column (image card) */
+            .profile-card {
                 display: flex;
-            }
-
-            /* Sidebar */
-            .sidebar {
-                width: 250px;
-                height: 100vh;
-                background: #2f3640;
-                padding: 20px 0;
-                position: fixed;
-                left: 0;
-                top: 0;
-                color: #fff;
-                transition: 0.3s;
-            }
-
-            .sidebar h2 {
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
-                font-size: 24px;
-                margin-bottom: 25px;
-                font-weight: 600;
+                padding: 18px;
+                border-radius: 10px;
+                background: linear-gradient(180deg, #fff, #fbfcff)
             }
 
-            .sidebar ul {
-                list-style: none;
+            .avatar-wrap {
+                position: relative;
+                width: 180px;
+                height: 180px;
+                border-radius: 14px;
+                background: linear-gradient(180deg, #fff, #f8f9fb);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                overflow: hidden;
+                border: 1px solid #e6e9ef
             }
 
-            .sidebar ul li {
+            .avatar {
                 width: 100%;
-                margin: 8px 0;
+                height: 100%;
+                object-fit: cover;
+                display: block
             }
 
-            .sidebar ul li a {
-                width: 100%;
+            .avatar-placeholder {
                 display: flex;
                 align-items: center;
-                padding: 12px 24px;
-                color: #dcdde1;
-                font-size: 16px;
-                text-decoration: none;
-                transition: 0.3s;
+                justify-content: center;
+                height: 100%;
+                color: var(--muted)
             }
 
-            .sidebar ul li a:hover {
-                background: #4070f4;
+            .upload-btn {
+                margin-top: 12px;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 8px 12px;
+                border-radius: 10px;
+                background: var(--accent);
                 color: #fff;
-                padding-left: 30px;
-                border-radius: 6px;
+                font-weight: 600;
+                border: none;
+                cursor: pointer
             }
 
-            /* Icons */
-            .sidebar ul li a svg {
-                width: 20px;
-                margin-right: 12px;
-                stroke: #dcdde1;
-                transition: 0.3s;
+            .upload-input {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                cursor: pointer
             }
 
-            .sidebar ul li a:hover svg {
-                stroke: #fff;
+            .hint {
+                font-size: 13px;
+                color: var(--muted);
+                margin-top: 8px
             }
 
-            /* Main content */
-            .main-content {
-                margin-left: 250px;
-                padding: 40px;
-                width: calc(100% - 250px);
+            /* right column (fields) */
+            .fields {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px
             }
 
-            .main-content h1 {
-                font-size: 32px;
-                color: #333;
-                margin-bottom: 20px;
+            .fields .full {
+                grid-column: 1/-1
             }
 
-            .main-content p {
-                font-size: 18px;
-                color: #555;
-                line-height: 1.6;
+            label {
+                display: block;
+                font-size: 13px;
+                color: #26384f;
+                margin-bottom: 6px;
+                font-weight: 600
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea,
+            select {
+                width: 100%;
+                padding: 12px 12px;
+                border-radius: 10px;
+                border: 1px solid #e6e9ef;
+                background: var(--input);
+                font-size: 14px;
+                color: #10203a;
+                outline: none
+            }
+
+            textarea {
+                min-height: 100px;
+                resize: vertical
+            }
+
+            .actions {
+                display: flex;
+                gap: 12px;
+                justify-content: flex-end;
+                margin-top: 10px
+            }
+
+            .btn {
+                padding: 10px 14px;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                font-weight: 700
+            }
+
+            .btn-ghost {
+                background: transparent;
+                border: 1px solid #d7dbe2;
+                color: #344154
+            }
+
+            .btn-primary {
+                background: var(--accent);
+                color: #fff
+            }
+
+            .small {
+                font-size: 13px;
+                color: var(--muted)
+            }
+
+            /* subtle form footer */
+            .form-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 14px
+            }
+
+            /* validation styles */
+            .error {
+                border-color: #ff4d67 !important
+            }
+
+            .error-text {
+                color: #ff4d67;
+                font-size: 13px;
+                margin-top: 6px
             }
         </style>
     </head>
 
     <body>
+        <div class="container">
+            <div class="card">
+                <form id="contactForm" action="" method="post" class="my-flex-column my-mt-5 my-gap-3">
 
-        <!--========================|| Sidebar Pages Here ||========================-->
-        <aside class="my-radius-md">
-            <div class="sidebar">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+                        <h2 style="margin:0;font-size:18px">Profile & Address</h2>
+                        <div class="small">Please fill the details</div>
+                    </div>
 
-                <!-- General -->
-                <div>
-                    <p class="slidebar-title-name">General</p>
-                    <ul class="my-flex-column my-mt-1">
+                    <div class="form-grid">
 
-                        <!-- Overview -->
-                        <li>
-                            <a class="item active" href="index.html">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1878F2"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="3" y="3" width="7" height="7"></rect>
-                                        <rect x="14" y="3" width="7" height="7"></rect>
-                                        <rect x="14" y="14" width="7" height="7"></rect>
-                                        <rect x="3" y="14" width="7" height="7"></rect>
-                                    </svg>
-                                    Overview
+                        <!-- LEFT: avatar + upload -->
+                        <div>
+                            <div class="profile-card">
+                                <div class="avatar-wrap" id="avatarWrap">
+                                    <div class="avatar-placeholder" id="avatarPlaceholder">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"
+                                                stroke="#97a0b5" stroke-width="1.2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M4 20c0-3.3137 2.6863-6 6-6h4c3.3137 0 6 2.6863 6 6"
+                                                stroke="#97a0b5" stroke-width="1.2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <img id="avatarImg" class="avatar" alt="Uploaded avatar" style="display:none" />
+                                    <input id="avatarInput" class="upload-input" type="file" accept="image/*"
+                                        aria-label="Upload profile image" />
                                 </div>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
 
-                        <!-- Orders -->
-                        <li>
-                            <a class="item" href="./orders.html">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1878F2"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"></path>
-                                        <path d="M3 7l9 4 9-4"></path>
-                                    </svg>
-                                    Orders
-                                </div>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
-
-                        <!-- Wishlist -->
-                        <li>
-                            <a class="item" href="#">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path
-                                            d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
-                                    </svg>
-                                    Wishlist
-                                </div>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
-
-                        <!-- Saved PC / Saved Items -->
-                        <li>
-                            <a class="item" href="#">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-                                    </svg>
-                                    Saved PC
-                                </div>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
-
-                        <!-- My Points -->
-                        <li>
-                            <a class="item" href="#">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M12 6v12M8 10h8M8 14h8"></path>
-                                    </svg>
-                                    My Points
-                                </div>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
-
-                        <!-- My Reviews -->
-                        <li>
-                            <a class="item" href="#">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 2l2.5 6.5L21 9l-5 4.5L17 21l-5-3-5 3 1-7.5L3 9l6.5-.5L12 2z" />
-                                    </svg>
-                                    My Reviews
-                                </div>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!-- Accounts -->
-                <div>
-                    <p class="slidebar-title-name">Accounts</p>
-                    <ul class="account-menus my-mt-1">
-
-                        <!-- Settings -->
-                        <li>
-                            <a class="item" href="#">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#1878F2"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2
-                                2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65
-                                0 0 0-1.82-.33 1.65 1.65 0 0 0-1
-                                1.51V21a2 2 0 0 1-4 0v-.09a1.65
-                                1.65 0 0 0-1-1.51 1.65 1.65 0 0
-                                0-1.82.33l-.06.06a2 2 0 1
-                                1-2.83-2.83l.06-.06a1.65 1.65
-                                0 0 0 .33-1.82 1.65 1.65 0 0
-                                0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65
-                                1.65 0 0 0 1.51-1 1.65 1.65 0 0
-                                0-.33-1.82l-.06-.06a2 2 0 1
-                                1 2.83-2.83l.06.06a1.65 1.65
-                                0 0 0 1.82.33h.03A1.65 1.65
-                                0 0 0 11 3.09V3a2 2 0 0 1
-                                4 0v.09a1.65 1.65 0 0 0
-                                1 1.51h.03a1.65 1.65 0 0
-                                0 1.82-.33l.06-.06a2
-                                2 0 1 1 2.83 2.83l-.06.06a1.65
-                                1.65 0 0 0-.33 1.82v.03a1.65
-                                1.65 0 0 0 1.51 1H21a2
-                                2 0 0 1 0 4h-.09a1.65 1.65
-                                0 0 0-1.51 1z"></path>
-                                    </svg>
-                                    Settings
-                                </div>
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </li>
-
-                        <!-- Logout -->
-                        <li>
-                            <div class="item">
-                                <div class="left my-gap-2 my-d-flex my-align-center">
-                                    <svg aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg" class="icon login-outline">
-                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor"
-                                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M16 17l4-5-4-5" stroke="currentColor" stroke-width="1.6"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M20 12H9" stroke="currentColor" stroke-width="1.6"
+                                <button type="button" class="upload-btn" id="chooseBtn">Upload Photo
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="opacity:0.95">
+                                        <path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="1.6"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                    Logout
-                                </div>
-                                <i class="fa-solid fa-angle-right"></i>
+                                </button>
+
+                                <div class="hint">Supported: PNG, JPG. Max 3MB</div>
                             </div>
-                        </li>
+                        </div>
 
-                    </ul>
-                </div>
+                        <!-- RIGHT: input fields -->
+                        <div>
+                            <div class="fields">
+                                <div>
+                                    <label for="fullName">Full name</label>
+                                    <input id="fullName" name="fullName" type="text" placeholder="John Doe" required />
+                                </div>
 
+                                <div>
+                                    <label for="company">Company name</label>
+                                    <input id="company" name="company" type="text" placeholder="Acme Inc." />
+                                </div>
+
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" type="email" placeholder="you@example.com"
+                                        required />
+                                </div>
+
+                                <div>
+                                    <label for="phone">Phone</label>
+                                    <input id="phone" name="phone" type="tel" placeholder="+88 01234 567890" />
+                                </div>
+
+                                <div class="full">
+                                    <label for="address1">Address Line 1</label>
+                                    <input id="address1" name="address1" type="text"
+                                        placeholder="Street, building, floor" />
+                                </div>
+
+                                <div class="full">
+                                    <label for="address2">Address Line 2</label>
+                                    <input id="address2" name="address2" type="text"
+                                        placeholder="Apt, suite, landmark (optional)" />
+                                </div>
+
+                                <div>
+                                    <label for="city">City</label>
+                                    <input id="city" name="city" type="text" placeholder="Chittagong" />
+                                </div>
+
+                                <div>
+                                    <label for="postal">Postal / ZIP</label>
+                                    <input id="postal" name="postal" type="text" placeholder="4000" />
+                                </div>
+
+                                <div class="full">
+                                    <label for="notes">Notes (optional)</label>
+                                    <textarea id="notes" name="notes" placeholder="Anything else..."></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="form-footer">
+                                <div class="small">We respect your data privacy.</div>
+                                <div class="actions">
+                                    <button type="button" class="btn btn-ghost" id="resetBtn">Reset</button>
+                                    <button type="submit" class="btn btn-primary">Save profile</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
             </div>
-        </aside>
-
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <h1>Welcome!</h1>
-            <p>
-                This is your dashboard.
-                You can modify the sidebar, add dropdown menus, animation, dark mode, or mobile hamburger menu — just
-                tell me!
-            </p>
         </div>
 
+        <script>
+            // Elements
+            const avatarInput = document.getElementById('avatarInput');
+            const avatarImg = document.getElementById('avatarImg');
+            const avatarPlaceholder = document.getElementById('avatarPlaceholder');
+            const chooseBtn = document.getElementById('chooseBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const form = document.getElementById('contactForm');
+
+            // Click on the visible button triggers the file input
+            chooseBtn.addEventListener('click', () => avatarInput.click());
+
+            // Preview selected image
+            avatarInput.addEventListener('change', (e) => {
+                const file = e.target.files && e.target.files[0];
+                if (!file) return;
+
+                // basic size validation (3MB)
+                if (file.size > 3 * 1024 * 1024) {
+                    alert('Image too large. Max 3MB.');
+                    avatarInput.value = '';
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function (ev) {
+                    avatarImg.src = ev.target.result;
+                    avatarImg.style.display = 'block';
+                    avatarPlaceholder.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            });
+
+            // Reset form including avatar
+            resetBtn.addEventListener('click', () => {
+                form.reset();
+                avatarImg.style.display = 'none';
+                avatarImg.src = '';
+                avatarPlaceholder.style.display = 'flex';
+            });
+
+            // Simple client-side validation on submit
+            form.addEventListener('submit', (e) => {
+                // example: require full name and email
+                const name = document.getElementById('fullName');
+                const email = document.getElementById('email');
+                let ok = true;
+
+                [name, email].forEach(el => el.classList.remove('error'));
+
+                if (!name.value.trim()) { ok = false; name.classList.add('error'); }
+                if (!email.value.trim() || !/^\S+@\S+\.\S+$/.test(email.value)) { ok = false; email.classList.add('error'); }
+
+                if (!ok) {
+                    e.preventDefault();
+                    alert('Please fill required fields correctly.');
+                } else {
+                    // proceed — you can add AJAX submission here
+                    e.preventDefault();
+                    alert('Form submitted (demo).');
+                }
+            });
+        </script>
     </body>
 
 </html>

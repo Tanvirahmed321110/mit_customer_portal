@@ -1,6 +1,7 @@
 :root {
     --n-dark: #222;
     --n-dark2: #444;
+    --gray2: #777
 }
 
 .portal {
@@ -36,19 +37,20 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(100dvh - 160px);
+    overflow-y: auto;
 }
 
 .slidebar-title-name {
-    color: var(--after);
+    color: var(--gray2);
     font-size: 13px;
 }
 
 .portal .sidebar .item {
-    padding: 8px 12px;
+    padding: 10px 12px;
     background-color: var(--white);
+    /* color: var(--n-dark);
+    color: #999; */
     color: var(--primary-color);
-    color: #666;
-    color: var(--n-dark);
     width: 100%;
     border-radius: 6px;
     font-size: var(--fs-sm);
@@ -62,12 +64,8 @@
 
 
 .portal .sidebar .item i {
-    /* color: var(--primary-color);
-    color: #666;
-    color: var(--gray2); */
-    color: var(--before);
     color: #999;
-    color: #222;
+    color: var(--primary-color);
     font-size: var(--fs-xs);
 }
 
@@ -78,8 +76,8 @@
 }
 
 .portal .sidebar .item svg {
-    stroke: var(--primary-color);
     stroke: #222;
+    stroke: var(--primary-color);
     width: 18px;
     height: 18px;
     /* padding: 3px;
@@ -242,7 +240,7 @@
 
 
 .portal .p-body {
-    padding: 16px;
+    padding: 20px;
 }
 
 
@@ -368,7 +366,7 @@ footer {
 }
 
 .overview.recent-orders {
-    padding: 16px;
+    padding: 20px;
 }
 
 .portal .recent-orders-title {
@@ -626,6 +624,11 @@ footer {
     display: inline-block;
     font-size: 15px;
     color: #000;
+    color: var(--n-dark);
+}
+
+.my-input-control textarea {
+    background-color: var(--white-off);
 }
 
 .my-input-control input {
@@ -633,7 +636,20 @@ footer {
     padding: 9px;
     border-radius: 6px;
     border-color: #ddd;
-    border-color: var(--border-color);
+    border-color: #e6e9ef;
+    background-color: var(--white-off);
+
+    /* width: 100%;
+    border: 1px solid #e6e9ef;
+    background: #f0f3f7;
+    font-size: 14px;
+    color: #10203a;
+    outline: none; */
+
+}
+
+.my-input-control input:focus {
+    padding-left: 10px;
 }
 
 .my-input-control input::placeholder {
@@ -655,20 +671,97 @@ footer {
 .other-card {
     width: 540px;
     border-width: 0px;
-    box-shadow: 0px 4px 14px 0px #00000017;
+    /* box-shadow: 0px 4px 16px 0px #00000019; */
+    border: 1px solid var(--border-color);
+}
 
+.other-card.edit-profile {
+    width: 100%;
+    box-shadow: unset;
+}
+
+.other-card .small {
+    font-size: 14px;
+    color: var(--gray2);
+}
+
+.other-card.edit-profile .form-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 320px 1fr;
+}
+
+.other-card .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #fff, #fbfcff);
+}
+
+.avatar-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background: var(--white-off);
+    border-radius: 12px;
 }
 
 
 
+.other-card .avatar-wrap {
+    position: relative;
+    display: flex;
+    width: 180px;
+    height: 180px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #fff, #f8f9fb);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    border: 2px dashed var(--red);
+}
 
+.other-card .upload-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
 
+.my-danger-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 3px solid #eae6e6;
+    font-weight: 600;
+}
 
+.other-card .upload-btn {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
 
-
-
-
-
+.other-card .hint {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 8px;
+}
 
 
 .feature-category-area .item {

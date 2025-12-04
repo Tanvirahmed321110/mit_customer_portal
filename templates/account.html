@@ -27153,7 +27153,7 @@
 
                                         <!-- Orders -->
                                         <li>
-                                            <a class="item active" href="./orders.html">
+                                            <a class="item " href="./orders.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27169,7 +27169,7 @@
 
                                         <!-- Accounts -->
                                         <li>
-                                            <a class="item" href="./account.html">
+                                            <a class="item active" href="./account.html">
                                                 <div class="left my-gap-2 my-d-flex my-align-center">
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                                         stroke="#1878F2" stroke-width="2" stroke-linecap="round"
@@ -27415,180 +27415,148 @@
 
                                     <!--===================|| Tab Contents ||===================-->
                                     <div class="tab-contents flex-1 my-d-flex ">
-                                        <!--============|| All Orders ||===========-->
+
+                                        <!--============||  Edit Profile ||===========-->
                                         <div class="tab-content active" data-tab="orders">
-                                            <div class="recent-orders my-mt-0 my-w-100">
-                                                <h3 class="recent-orders-title">All Orders</h3>
-                                                <table class="orders">
+                                            <div
+                                                class="my-p-4 other-card edit-profile my-flex-column my-pt-4 my-border my-shadow-2  my-radius-md">
+                                                <form id="contactForm" action="" method="post"
+                                                    class="my-flex-column  my-gap-3">
 
-                                                    <!-- Head Here -->
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Order Number</th>
-                                                            <th>Order Type</th>
-                                                            <th>Status</th>
-                                                            <th>Total</th>
-                                                            <th>Order Placed</th>
-                                                            <th>Invoice</th>
-                                                            <th>View Details</th>
-                                                        </tr>
-                                                    </thead>
+                                                    <div
+                                                        style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+                                                        <h3 class="my-text-primary">Profile & Address</h3>
+                                                        <div class="small">Please fill the details</div>
+                                                    </div>
 
-                                                    <!-- Orders Body Here -->
-                                                    <tbody>
+                                                    <div class="form-grid">
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#4532180</a></td>
-                                                            <td>Offline</td>
-                                                            <td>
-                                                                <div class="delivered status">Delivered</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>3450</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
+                                                        <!-- LEFT: avatar + upload -->
+                                                        <div>
+                                                            <div class="profile-card">
+                                                                <div class="avatar-wrap" id="avatarWrap">
+                                                                    <div class="avatar-placeholder"
+                                                                        id="avatarPlaceholder">
+                                                                        <svg width="48" height="48" viewBox="0 0 24 24"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"
+                                                                                stroke="#97a0b5" stroke-width="1.2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round" />
+                                                                            <path
+                                                                                d="M4 20c0-3.3137 2.6863-6 6-6h4c3.3137 0 6 2.6863 6 6"
+                                                                                stroke="#97a0b5" stroke-width="1.2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round" />
+                                                                        </svg>
+                                                                    </div>
+                                                                    <img id="avatarImg" class="avatar"
+                                                                        alt="Uploaded avatar" style="display:none" />
+                                                                    <input id="avatarInput" class="upload-input"
+                                                                        type="file" accept="image/*"
+                                                                        aria-label="Upload profile image" />
+                                                                </div>
+
+                                                                <button type="button"
+                                                                    class="my-btn my-primary-btn my-mt-4"
+                                                                    id="chooseBtn">Upload Photo
+                                                                    <svg width="16" height="16" viewBox="0 0 24 24"
+                                                                        fill="none" style="opacity:0.95">
+                                                                        <path d="M12 5v14M5 12h14" stroke="#fff"
+                                                                            stroke-width="1.6" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
                                                                 </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="delivered status">Delivered</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>1246</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
+                                                                <div class="hint">Supported: PNG, JPG. Max 3MB</div>
+                                                            </div>
+                                                        </div>
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="pending status">Pending</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>3450</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
+                                                        <!-- RIGHT: input fields -->
+                                                        <div class="">
+                                                            <div class="fields my-flex-column my-gap-2">
+                                                                <div class="my-grid-2 my-gap-4">
+                                                                    <div class="my-input-control">
+                                                                        <label for="fullName">Full name</label>
+                                                                        <input id="fullName" name="fullName" type="text"
+                                                                            placeholder="John Doe" required />
+                                                                    </div>
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924214</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>1968</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>2150</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924212</a></td>
-                                                            <td>Online</td>
-                                                            <td>
-                                                                <div class="pending status">Pending</div>
-                                                            </td>
-                                                            <td><span class="">TK-</span>2900</td>
-                                                            <td>09 Nov 2025</td>
-                                                            <td>
-                                                                <button class="invoice-btn my-tooltip"> <i
-                                                                        class="fa-regular fa-eye"></i>
-                                                                    <span class="show-text">View Invoice</span>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                                    <div class="my-input-control">
+                                                                        <label for="company">Company name</label>
+                                                                        <input id="company" name="company" type="text"
+                                                                            placeholder="Acme Inc." />
+                                                                    </div>
+                                                                </div>
 
+                                                                <div class="my-grid-2 my-gap-4">
+                                                                    <div class="my-input-control">
+                                                                        <label for="email">Email</label>
+                                                                        <input id="email" name="email" type="email"
+                                                                            placeholder="you@example.com" required />
+                                                                    </div>
 
-                                                <!--========== Pagination ===========-->
-                                                <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
+                                                                    <div class="my-input-control">
+                                                                        <label for="phone">Phone</label>
+                                                                        <input id="phone" name="phone" type="tel"
+                                                                            placeholder="+88 01234 567890" />
+                                                                    </div>
+                                                                </div>
 
-                                                    <!-- disabled -->
-                                                    <!-- <button class="prev next-prev disabled" disabled>
-                                                    <i class="fa-solid fa-angle-left"></i>
-                                                </button> -->
-                                                    <button class="prev next-prev ">
-                                                        <i class="fa-solid fa-angle-left"></i>
-                                                    </button>
+                                                                <div class="my-input-control">
+                                                                    <label for="address1">Address Line 1</label>
+                                                                    <input id="address1" name="address1" type="text"
+                                                                        placeholder="Street, building, floor" />
+                                                                </div>
 
-                                                    <ul class="wrap my-flex-center my-gap-1">
-                                                        <li><a class="page " href="#">1</a></li>
-                                                        <li><a class="page active" href="#">2</a></li>
-                                                        <li><a class="page jump" href="#">...</a></li>
-                                                        <li><a class="page" href="#">8</a></li>
-                                                        <li><a class="page" href="#">9</a></li>
-                                                    </ul>
+                                                                <div class="my-input-control">
+                                                                    <label for="address2">Address Line 2</label>
+                                                                    <input id="address2" name="address2" type="text"
+                                                                        placeholder="Apt, suite, landmark (optional)" />
+                                                                </div>
 
-                                                    <button class="next next-prev">
-                                                        <i class="fa-solid fa-angle-right"></i>
-                                                    </button>
+                                                                <div class="my-grid-2 my-gap-4">
+                                                                    <div class="my-input-control">
+                                                                        <label for="city">City</label>
+                                                                        <input id="city" name="city" type="text"
+                                                                            placeholder="Chittagong" />
+                                                                    </div>
 
-                                                </div>
+                                                                    <div class="my-input-control">
+                                                                        <label for="postal">Postal / ZIP</label>
+                                                                        <input id="postal" name="postal" type="text"
+                                                                            placeholder="4000" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="my-input-control">
+                                                                    <label for="notes">Notes (optional)</label>
+                                                                    <textarea id="notes" name="notes"
+                                                                        placeholder="Anything else..."></textarea>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="form-footer my-flex-between my-gap-4 my-mt-4">
+                                                                <div class="my-text-primary">We respect your data
+                                                                    privacy.</div>
+                                                                <div class="actions my-d-flex my-align-center my-gap-4">
+                                                                    <button type="button" class="my-btn my-danger-btn"
+                                                                        id="resetBtn">Reset</button>
+                                                                    <button type="submit"
+                                                                        class="my-btn  my-primary-btn">Save
+                                                                        profile</button>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </form>
                                             </div>
-
-                                            <!--==========  When Empty =========-->
-                                            <!-- <div class="no-result">
-                                            <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                loading="lazy">
-                                        </div> -->
                                         </div>
 
 
@@ -27597,7 +27565,8 @@
                                             <div
                                                 class="my-p-4 other-card my-flex-column my-pt-3 my-border my-shadow-2  my-radius-md">
                                                 <h3 class="my-text-primary">Change Password</h3>
-                                                <p class="my-text-gray">Please type and confirm to change your current
+                                                <p class="my-text-gray">Please type and confirm to change your
+                                                    current
                                                     password.</p>
 
 
@@ -27635,7 +27604,8 @@
                                             <div
                                                 class="my-p-4 other-card my-flex-column my-pt-3  my-border  my-radius-md">
                                                 <h3 class="my-text-primary">Address</h3>
-                                                <p class="my-text-gray ">Please enter the required details to add a new
+                                                <p class="my-text-gray ">Please enter the required details to add a
+                                                    new
                                                     address.
                                                 </p>
 
@@ -28256,45 +28226,8 @@
         </footer>
 
 
-        <script>
-            // Tab Function (data-tab version)
-            function newTabF() {
-                const allTabArea = document.querySelectorAll(".tab-area");
-
-                if (allTabArea) {
-                    allTabArea.forEach(tabArea => {
-
-                        const buttons = tabArea.querySelectorAll(".tab-buttons .item");
-                        const contents = tabArea.querySelectorAll(".tab-content");
-
-                        if (!buttons || !contents) { return }
-
-                        buttons.forEach(btn => {
-                            btn.addEventListener("click", () => {
-
-                                const tabName = btn.getAttribute("data-tab");
-
-                                // remove active from buttons & contents
-                                buttons.forEach(b => b.classList.remove("active"));
-                                contents.forEach(c => c.classList.remove("active"));
-
-                                // activate clicked button
-                                btn.classList.add("active");
-
-                                // activate matched content
-                                const target = tabArea.querySelector(`.tab-content[data-tab="${tabName}"]`);
-                                if (target) target.classList.add("active");
-                            });
-                        });
-
-                    });
-                }
-            }
-
-            newTabF();
-
-
-        </script>
+        <script src="/static/src/js/portal/portal-common.js"></script>
+        <script src="/static/src/js/portal/ac"></script>
     </body>
 
 </html>
