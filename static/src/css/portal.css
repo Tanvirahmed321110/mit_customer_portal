@@ -75,7 +75,10 @@
     color: var(--white);
 }
 
-.portal .sidebar .item svg {
+.portal .sidebar .item svg,
+.portal .sidebar .item svg g,
+.portal .sidebar .item svg line,
+.portal .sidebar .item svg circle {
     stroke: #222;
     stroke: var(--primary-color);
     width: 18px;
@@ -87,7 +90,9 @@
 }
 
 .portal .sidebar .item.active svg,
-.portal .sidebar .item:hover svg {
+.portal .sidebar .item.active svg circle,
+.portal .sidebar .item:hover svg,
+.portal .sidebar .item:hover svg circle {
     stroke: #fff;
 }
 
@@ -232,7 +237,6 @@
 */
 .p-body {
     background-color: #ffffff;
-    margin-top: 16px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -895,4 +899,59 @@ footer {
 .pagination-2 .disabled {
     cursor: no-drop;
     opacity: .6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MIT Point Page */
+.mit-point-area .my-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FDEDE9;
+}
+
+.mit-point-area .my-icon i {
+    display: block;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mit-point-area .reward-img {
+    border: 1px solid var(--white-off);
+    padding: 12px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.mit-point-area .reward-img img {
+    width: 220px;
+    animation: rotateIcon 15s linear infinite;
+
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
