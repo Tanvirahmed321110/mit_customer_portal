@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recent Orders</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f4f6f9;
+                margin: 0;
+                padding: 40px;
+            }
+
+            .overview {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .recent-orders-title {
+                font-size: 22px;
+                margin-bottom: 16px;
+            }
+
+            /* ⭐ Scroll Wrapper */
+            .orders-scroll {
+                width: 100%;
+                overflow-x: auto;
+                overflow-y: hidden;
+                padding-bottom: 10px;
+                border-radius: 6px;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            }
+
+            /* ⭐ Table Layout */
+            .orders {
+                min-width: 900px;
+                /* Forces scroll */
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .orders th,
+            .orders td {
+                padding: 14px 18px;
+                white-space: nowrap;
+                text-align: left;
+                border-bottom: 1px solid #ececec;
+            }
+
+            .orders thead {
+                background: #f7f9fc;
+                font-weight: bold;
+            }
+
+            /* Status Colors */
+            .status {
+                padding: 4px 10px;
+                border-radius: 4px;
+                font-size: 13px;
+                display: inline-block;
+            }
+
+            .delivered {
+                background: #d4f4dd;
+                color: #1f8c3c;
+            }
+
+            .pending {
+                background: #fff4c4;
+                color: #a88600;
+            }
+
+            .canceled {
+                background: #ffdce1;
+                color: #d1273d;
+            }
+
+            /* Invoice Button */
+            .invoice-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                position: relative;
+            }
+
+            .invoice-btn .show-text {
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.2s;
+                position: absolute;
+                background: #000;
+                color: #fff;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                left: 50%;
+                top: -28px;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+
+            .invoice-btn:hover .show-text {
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="recent-orders overview my-mt-4">
+
+            <h3 class="recent-orders-title">Recent Orders</h3>
+
+            <!-- ⭐ Scroll Wrapper Added -->
+            <div class="orders-scroll">
+
+                <table class="orders">
+
+                    <thead>
+                        <tr>
+                            <th>Order Number</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                            <th>Order Placed</th>
+                            <th>Invoice</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="order-number"><a href="#">#4532180</a></td>
+                            <td>
+                                <div class="delivered status">Delivered</div>
+                            </td>
+                            <td>TK-3450</td>
+                            <td>09 Nov 2025</td>
+                            <td>
+                                <button class="invoice-btn">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span class="show-text">View Invoice</span>
+                                </button>
+                            </td>
+                            <td>Other</td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#">#2924213</a></td>
+                            <td>
+                                <div class="delivered status">Delivered</div>
+                            </td>
+                            <td>TK-1246</td>
+                            <td>09 Nov 2025</td>
+                            <td>
+                                <button class="invoice-btn">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span class="show-text">View Invoice</span>
+                                </button>
+                            </td>
+                            <td>Other</td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#">#2924213</a></td>
+                            <td>
+                                <div class="pending status">Pending</div>
+                            </td>
+                            <td>TK-3450</td>
+                            <td>09 Nov 2025</td>
+                            <td>
+                                <button class="invoice-btn">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span class="show-text">View Invoice</span>
+                                </button>
+                            </td>
+                            <td>Other</td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#">#2924214</a></td>
+                            <td>
+                                <div class="canceled status">Canceled</div>
+                            </td>
+                            <td>TK-1968</td>
+                            <td>09 Nov 2025</td>
+                            <td>
+                                <button class="invoice-btn">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span class="show-text">View Invoice</span>
+                                </button>
+                            </td>
+                            <td>Other</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <!-- END Scroll Wrapper -->
+
+        </div>
+
+    </body>
+
+</html>

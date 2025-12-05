@@ -324,6 +324,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: var(--shadow-2);
+    box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.07);
     border: 1px solid transparent;
 }
 
@@ -940,7 +941,9 @@ footer {
     opacity: .6;
 }
 
-
+.delete-btn i {
+    color: var(--red);
+}
 
 
 
@@ -1015,4 +1018,74 @@ footer {
 .account-tables .review-item .review-text-wrap p {
     color: var(--green);
     font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1281px) {
+
+    .portal .head .left,
+    .portal .head .meddle,
+    .portal .head .right {
+        flex-basis: 33%;
+    }
+
+    .portal .head .right {
+        flex-basis: 25%;
+    }
+
+    .portal .head .meddle {
+        flex: 1;
+    }
+
+    .p-body .carts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portal aside .sidebar {
+        padding: 12px;
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .portal .recent-orders .orders td {
+        padding: 8px 12px;
+        font-size: 14PX;
+    }
+
+    .portal .p-body {
+        padding: 16px;
+    }
+
+    .overview.recent-orders {
+        padding: 16px;
+    }
+
+    .orders-page .recent-orders {
+        padding-top: 0;
+        margin-top: 0;
+        overflow-x: auto;
+    }
+
+    .portal .recent-orders .orders {
+        border-collapse: collapse;
+        width: 1000px;
+        min-width: 800px;
+        overflow-x: auto;
+    }
+
 }
