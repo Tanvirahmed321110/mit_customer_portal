@@ -1089,3 +1089,21 @@ footer {
     }
 
 }
+
+@media (max-width:991px) {
+    .p-body .carts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .p-wrapper {
+        gap: 0px;
+    }
+
+    .portal aside .sidebar {
+        padding: 12px;
+        width: 260px;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
