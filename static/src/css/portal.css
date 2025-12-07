@@ -1075,10 +1075,18 @@ footer {
 
 .account-tables .review-item .review-text-wrap p {
     color: var(--green);
-    font-size: 15px;
+    font-size: 14px;
 }
 
+/* .account-tables .review-item .my-text-red {
+    padding: 4px 5px;
+    background-color: red;
+    border-radius: 2px;
+}
 
+.account-tables .review-item .my-text-red i {
+    color: var(--white);
+} */
 
 
 
