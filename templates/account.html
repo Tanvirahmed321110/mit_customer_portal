@@ -27398,22 +27398,35 @@
                                     <!--================|| Sub Head OR Tab Buttons ||================-->
                                     <div class="sub-head ">
                                         <ul class="my-flex-center tab-buttons my-gap-4">
-                                            <li class="item active" data-tab="orders">
+                                            <li class="item active" data-tab="edit-profile">
                                                 <span>
                                                     <i class="fa-solid fa-user-pen"></i>
                                                 </span>
                                                 Edit Account
                                             </li>
-                                            <li class="item" data-tab="change-password">
-                                                <span><i class="fa-solid fa-key"></i>
-                                                </span>
-                                                Change Password
-                                            </li>
-                                            <li class="item " data-tab="canceled-orders">
+                                            <li class="item " data-tab="address">
                                                 <span>
                                                     <i class="fa-solid fa-location-dot"></i>
                                                 </span>
                                                 Address
+                                            </li>
+                                            <li class="item " data-tab="social-media">
+                                                <span>
+                                                    <i class="fa-solid fa-link"></i>
+                                                </span>
+                                                Social Media
+                                            </li>
+                                            <li class="item " data-tab="corporate-details">
+                                                <span>
+                                                    <i class="fa-solid fa-building"></i>
+                                                </span>
+                                                Courporate Details
+                                            </li>
+
+                                            <li class="item" data-tab="change-password">
+                                                <span><i class="fa-solid fa-key"></i>
+                                                </span>
+                                                Change Password
                                             </li>
 
                                         </ul>
@@ -27424,7 +27437,7 @@
                                     <div class="tab-contents flex-1 my-d-flex ">
 
                                         <!--============||  Edit Profile ||===========-->
-                                        <div class="tab-content active" data-tab="orders">
+                                        <div class="tab-content active" data-tab="edit-profile">
                                             <div
                                                 class="my-p-4 other-card edit-profile my-flex-column my-pt-4 my-border my-shadow-2  my-radius-md">
                                                 <form id="contactForm" action="" method="post"
@@ -27432,7 +27445,7 @@
 
                                                     <div
                                                         style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-                                                        <h3 class="my-text-primary">Profile & Address</h3>
+                                                        <h3 class="my-text-primary">Primary Contact</h3>
                                                         <div class="small">Please fill the details</div>
                                                     </div>
 
@@ -27484,64 +27497,50 @@
                                                         <!-- RIGHT: input fields -->
                                                         <div class="">
                                                             <div class="fields my-flex-column my-gap-2">
-                                                                <div class="my-grid-2 my-gap-4">
-                                                                    <div class="my-input-control">
-                                                                        <label for="fullName">Full name</label>
-                                                                        <input id="fullName" name="fullName" type="text"
-                                                                            placeholder="John Doe" required />
-                                                                    </div>
+                                                                <div class="my-grid-1 my-gap-4">
 
+                                                                    <!-- for name -->
                                                                     <div class="my-input-control">
-                                                                        <label for="company">Company name</label>
-                                                                        <input id="company" name="company" type="text"
-                                                                            placeholder="Acme Inc." />
+                                                                        <label for="present_address">Name</label>
+                                                                        <input id="name" name="present_address"
+                                                                            type="text" placeholder="Present Address" />
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="my-grid-2 my-gap-4">
-                                                                    <div class="my-input-control">
-                                                                        <label for="email">Email</label>
-                                                                        <input id="email" name="email" type="email"
-                                                                            placeholder="you@example.com" required />
-                                                                    </div>
-
+                                                                <div class="my-grid-1 my-gap-4">
                                                                     <div class="my-input-control">
                                                                         <label for="phone">Phone</label>
-                                                                        <input id="phone" name="phone" type="tel"
-                                                                            placeholder="+88 01234 567890" />
+                                                                        <input id="phone" name="phone" type="email"
+                                                                            placeholder="phone" />
                                                                     </div>
                                                                 </div>
 
+                                                                <!-- for secondary_phone -->
                                                                 <div class="my-input-control">
-                                                                    <label for="address1">Address Line 1</label>
-                                                                    <input id="address1" name="address1" type="text"
-                                                                        placeholder="Street, building, floor" />
+                                                                    <label for="secondary_phone">Secondary Phone</label>
+                                                                    <input id="secondary_phone" name="secondary_phone"
+                                                                        placeholder=" secondary phone" type="text" />
                                                                 </div>
 
-                                                                <div class="my-input-control">
-                                                                    <label for="address2">Address Line 2</label>
-                                                                    <input id="address2" name="address2" type="text"
-                                                                        placeholder="Apt, suite, landmark (optional)" />
+                                                                <!-- For Email -->
+                                                                <div class=" my-input-control">
+                                                                    <label for="email">Email</label>
+                                                                    <input id="email" name="email" type="text"
+                                                                        placeholder="email" />
                                                                 </div>
 
-                                                                <div class="my-grid-2 my-gap-4">
-                                                                    <div class="my-input-control">
-                                                                        <label for="city">City</label>
-                                                                        <input id="city" name="city" type="text"
-                                                                            placeholder="Chittagong" />
-                                                                    </div>
-
-                                                                    <div class="my-input-control">
-                                                                        <label for="postal">Postal / ZIP</label>
-                                                                        <input id="postal" name="postal" type="text"
-                                                                            placeholder="4000" />
-                                                                    </div>
+                                                                <!-- For Whats app -->
+                                                                <div class="my-input-control">
+                                                                    <label for="whatsapp">Whats App Number</label>
+                                                                    <input id="whatsapp" name="whatsapp" type="text"
+                                                                        placeholder="whatsapp" />
                                                                 </div>
 
+                                                                <!-- For Whats app -->
                                                                 <div class="my-input-control">
-                                                                    <label for="notes">Notes (optional)</label>
-                                                                    <textarea id="notes" name="notes"
-                                                                        placeholder="Anything else..."></textarea>
+                                                                    <label for="messenger_id">Messenger ID</label>
+                                                                    <input id="messenger_id" name="messenger_id"
+                                                                        type="text" placeholder="messenger_id" />
                                                                 </div>
 
                                                             </div>
@@ -27565,6 +27564,239 @@
                                                 </form>
                                             </div>
                                         </div>
+
+
+
+                                        <!--============|| Address Content Here ||===========-->
+                                        <div class="tab-content" data-tab="address">
+
+                                            <div
+                                                class="my-p-4 other-card my-flex-column my-pt-3  my-border  my-radius-md">
+                                                <h3 class="my-text-primary">Address</h3>
+                                                <p class="my-text-gray ">Please enter the required details to add a
+                                                    new
+                                                    address.
+                                                </p>
+
+
+                                                <form action="" method="post"
+                                                    class="my-flex-column account-form my-mt-5 my-gap-3">
+                                                    <div class="my-grid-1 my-gap-4">
+
+                                                        <div class="my-input-control">
+                                                            <label for="present_address">Present
+                                                                Address</label>
+                                                            <input id="present_address" name="present_address"
+                                                                type="text" placeholder="Present Address" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="my-grid-1 my-gap-4">
+                                                        <div class="my-input-control">
+                                                            <label for="permanent_address">Permanent
+                                                                Address</label>
+                                                            <input id="permanent_address" name="permanent_address"
+                                                                type="email" placeholder="Permanent Address" required />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="my-input-control">
+                                                        <label for="billing_address">Billing Address</label>
+                                                        <input id="billing_address" name="billing_address" type="text"
+                                                            placeholder="Billing Address" />
+                                                    </div>
+
+                                                    <div class="my-input-control">
+                                                        <label for="address1">Shipping Address 1</label>
+                                                        <input id="address1" name="address1" type="text"
+                                                            placeholder="Apt, suite, landmark (optional)" />
+                                                    </div>
+
+                                                    <div class="my-input-control">
+                                                        <label for="address2">Shipping Address 2</label>
+                                                        <input id="address2" name="address2" type="text"
+                                                            placeholder="Apt, suite, landmark (optional)" />
+                                                    </div>
+
+                                                    <!-- For City and ZIp Code -->
+                                                    <div class="my-grid-2 my-grid-md-1 my-gap-3">
+                                                        <!-- For City -->
+                                                        <div class="my-input-control">
+                                                            <label for="city">City</label>
+                                                            <input name="city" id="city" type="text" placeholder="City"
+                                                                value="">
+                                                        </div>
+
+                                                        <!-- Zip Code -->
+                                                        <div class="my-input-control">
+                                                            <label for="zip-code">Zip Code</label>
+                                                            <input name="zip-code" id="zip-code" type="text"
+                                                                placeholder="Zip Code">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- Error Message -->
+                                                    <div class="error-message active">Error Message Here</div>
+
+                                                    <!-- Submit Button -->
+                                                    <div class="my-d-flex my-align-end my-justify-end">
+                                                        <button type="submit"
+                                                            class="my-btn my-mt-1  my-primary-btn my-fs-lg account-btn-bold">
+                                                            SAVE
+                                                        </button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <!--============|| Social Media Content Here ||===========-->
+                                        <div class="tab-content" data-tab="social-media">
+
+                                            <div
+                                                class="my-p-4 other-card my-flex-column my-pt-3  my-border  my-radius-md">
+                                                <h3 class="my-text-primary">Social Media </h3>
+                                                <p class="my-text-gray ">Please enter your social media profile link
+                                                </p>
+
+
+                                                <form action="" method="post"
+                                                    class="my-flex-column account-form my-mt-5 my-gap-3">
+                                                    <div class="my-grid-1 my-gap-4">
+
+                                                        <!-- For Facebook Profile -->
+                                                        <div class="my-input-control">
+                                                            <label for="facebook_profile">Facebook Profile</label>
+                                                            <input id="facebook_profile" name="facebook_profile"
+                                                                type="text" placeholder="facebook profile" />
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- For Instagram ID -->
+                                                    <div class="my-grid-1 my-gap-4">
+                                                        <div class="my-input-control">
+                                                            <label for="instagram_id">Instagram ID</label>
+                                                            <input id="instagram_id" name="instagram_id" type="text"
+                                                                placeholder="instagram id" />
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- For Linkedin Profile -->
+                                                    <div class="my-grid-1 my-gap-4">
+                                                        <div class="my-input-control">
+                                                            <label for="linkedin_profile">Linkedin Profile</label>
+                                                            <input id="linkedin_profile" name="linkedin_profile"
+                                                                type="text" placeholder="linkedin profile" />
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- For Tiktok Profile -->
+                                                    <div class="my-grid-1 my-gap-4">
+                                                        <div class="my-input-control">
+                                                            <label for="tiktok_profile">Tiktok Profile</label>
+                                                            <input id="tiktok_profile" name="tiktok_profile" type="text"
+                                                                placeholder="tiktok profile" />
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- For youtube channel -->
+                                                    <div class="my-input-control">
+                                                        <label for="youtube_channel">YouTube Channel </label>
+                                                        <input id="youtube_channel" name="youtube_channel" type="text"
+                                                            placeholder="youtube channel" />
+                                                    </div>
+
+                                                    <!-- Error Message -->
+                                                    <div class="error-message active">Error Message Here</div>
+
+                                                    <!-- Submit Button -->
+                                                    <div class="my-d-flex my-align-end my-justify-end">
+                                                        <button type="submit"
+                                                            class="my-btn my-mt-1  my-primary-btn my-fs-lg account-btn-bold">
+                                                            SAVE
+                                                        </button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+
+                                        <!--============|| If Corporate Customer ||===========-->
+                                        <div class="tab-content" data-tab="corporate-details">
+
+                                            <div
+                                                class="my-p-4 other-card my-flex-column my-pt-3  my-border  my-radius-md">
+                                                <h3 class="my-text-primary">Courporate Details</h3>
+                                                <p class="my-text-gray ">Please enter your courporate details
+                                                </p>
+
+
+                                                <form action="" method="post"
+                                                    class="my-flex-column account-form my-mt-5 my-gap-3">
+                                                    <div class="my-grid-2 my-gap-4">
+
+                                                        <!-- For Company Name -->
+                                                        <div class="my-input-control">
+                                                            <label for="company_name">Company Name</label>
+                                                            <input id="company_name" name="company_name" type="text"
+                                                                placeholder="company name" />
+                                                        </div>
+
+                                                        <!-- For Designation -->
+                                                        <div class="my-input-control">
+                                                            <label for="designation">Designation</label>
+                                                            <input id="designation" name="designation" type="text"
+                                                                placeholder="designation" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="my-grid-2 my-gap-4">
+                                                        <!-- For Office Email -->
+                                                        <div class="my-input-control">
+                                                            <label for="office_email">Office Email</label>
+                                                            <input id="office_email" name="office_email" type="email"
+                                                                placeholder="office email" />
+                                                        </div>
+
+                                                        <!-- For Designation -->
+                                                        <div class="my-input-control">
+                                                            <label for="office_phone">Office Phone</label>
+                                                            <input id="office_phone" name="office_phone" type="number"
+                                                                placeholder="office phone" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class=" my-input-control">
+                                                        <label for="billing_address">Office Address</label>
+                                                        <input id="office_address" name="office_address" type="text"
+                                                            placeholder="office_address" />
+                                                    </div>
+
+                                                    <div class="my-input-control">
+                                                        <label for="trade_license">Trade License</label>
+                                                        <input id="trade_license" name="trade_license" type="text"
+                                                            placeholder="trade license" />
+                                                    </div>
+
+
+
+                                                    <!-- Error Message -->
+                                                    <div class="error-message active">Error Message Here</div>
+
+                                                    <!-- Submit Button -->
+                                                    <div class="my-d-flex my-align-end my-justify-end">
+                                                        <button type="submit"
+                                                            class="my-btn my-mt-1  my-primary-btn my-fs-lg account-btn-bold">
+                                                            SAVE
+                                                        </button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
 
 
                                         <!--============|| Change Password ||===========-->
@@ -27604,101 +27836,6 @@
                                             </div>
                                         </div>
 
-
-                                        <!--============|| Address Content Here ||===========-->
-                                        <div class="tab-content" data-tab="canceled-orders">
-
-                                            <div
-                                                class="my-p-4 other-card my-flex-column my-pt-3  my-border  my-radius-md">
-                                                <h3 class="my-text-primary">Address</h3>
-                                                <p class="my-text-gray ">Please enter the required details to add a
-                                                    new
-                                                    address.
-                                                </p>
-
-
-                                                <form action="" method="post"
-                                                    class="my-flex-column account-form my-mt-5 my-gap-3">
-                                                    <!-- For Name -->
-                                                    <div class="my-input-control ">
-                                                        <label for="name">Name</label>
-                                                        <input name="name" id="name" type="text" placeholder="Name *"
-                                                            required="1" value="">
-
-                                                    </div>
-                                                    <!-- Address 1 -->
-                                                    <div class="my-input-control">
-                                                        <label for="address-1">Address 1</label>
-                                                        <input name="street" type="text" id="address-1"
-                                                            placeholder="Address1 *" required="1" value="">
-                                                    </div>
-
-                                                    <!-- Address 2 -->
-                                                    <div class="my-input-control">
-                                                        <label for="address-2">Address 2</label>
-                                                        <input name="street2" id="address-2" type="text"
-                                                            placeholder="Address2" value="">
-                                                    </div>
-
-                                                    <!-- For City and ZIp Code -->
-                                                    <div class="my-grid-2 my-grid-md-1 my-gap-3">
-                                                        <!-- For City -->
-                                                        <div class="my-input-control">
-                                                            <label for="city">City</label>
-                                                            <input name="city" id="city" type="text" placeholder="City"
-                                                                value="">
-                                                        </div>
-
-                                                        <!-- Zip Code -->
-                                                        <div class="my-input-control">
-                                                            <label for="zip-code">Zip Code</label>
-                                                            <input name="zip-code" id="zip-code" type="text"
-                                                                placeholder="Zip Code">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- For Phone OR Email -->
-                                                    <div class=" my-grid-2 my-grid-md-1 my-gap-3">
-                                                        <!-- For Phone -->
-                                                        <div class="my-input-control">
-                                                            <label for="phone">Phone</label>
-                                                            <input name="phone" id="phone" type="text"
-                                                                placeholder="Phone" value="">
-                                                        </div>
-
-                                                        <!-- For Email -->
-                                                        <div class="my-input-control">
-                                                            <label for="email">Email</label>
-                                                            <input name="email" id="email" type="text"
-                                                                placeholder="Email">
-                                                        </div>
-                                                    </div>
-
-
-                                                    <!-- Error Message -->
-                                                    <div class="error-message active">Error Message Here</div>
-
-                                                    <!-- Submit Button -->
-                                                    <div class="my-d-flex my-align-end my-justify-end">
-                                                        <button type="submit"
-                                                            class="my-btn my-mt-1  my-primary-btn my-fs-lg account-btn-bold">
-                                                            SAVE
-                                                        </button>
-                                                    </div>
-
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                        <!--============|| Completed Orders ||===========-->
-                                        <div class="tab-content" data-tab="completed-orders">
-
-                                            <!--==========  When Empty =========-->
-                                            <div class="no-result">
-                                                <img src="/static/src/images/no-results.png" alt="no result icon"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
