@@ -34,3 +34,17 @@ function newTabF() {
 }
 
 newTabF();
+
+
+
+// Report Menu Toggle
+function reportMenuToggle() {
+    const reportItem = document.querySelector(".report-item");
+
+    if (reportItem) {
+        reportItem.addEventListener("click", function () {
+            this.classList.toggle("active");
+        });
+    }
+}
+reportMenuToggle()

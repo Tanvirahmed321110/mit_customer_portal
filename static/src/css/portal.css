@@ -36,8 +36,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100dvh - 160px);
+    min-height: calc(100dvh - 160px);
     overflow-y: auto;
+    gap: 40px;
 }
 
 .slidebar-title-name {
@@ -60,6 +61,8 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 2px;
+    cursor: pointer;
+    user-select: none;
 }
 
 
@@ -121,8 +124,61 @@
 
 
 
+/* report dropdown */
+.report-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s linear;
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.report-dropdown a {
+    font-size: 14px;
+    color: var(--gray);
+    padding: 8px;
+    border-bottom: 1px solid var(--white-off);
+    /* background-color: #EFF6FF; */
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.report-dropdown a i {
+    font-size: 10px;
+}
+
+.report-dropdown a:hover {
+    color: var(--primary-color);
+}
+
+/* Open dropdown when active */
+.report-item.active+.report-dropdown {
+    max-height: 200px;
+}
+
+/* Rotate arrow */
+.report-item i {
+    transition: transform .3s ease;
+}
+
+.report-item.active i {
+    transform: rotate(90deg);
+}
 
 
+
+
+
+
+
+/* Portal right content */
 .portal .portal-right {
     flex: 1;
 }
@@ -1021,7 +1077,6 @@ footer {
     color: var(--green);
     font-size: 15px;
 }
-
 
 
 
