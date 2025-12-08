@@ -591,14 +591,20 @@ footer {
 }
 
 .notices .notice-card {
-    padding: 12px;
-    padding-top: 16px;
-    background-color: var(--white);
+    padding: 8px;
+    background: var(--secondary-color);
+    background: var(--secondary-hover);
+    background: #002741;
     border-radius: 16px;
     box-shadow: 0px 4px 16px 0px #0000001F;
     transition: .2s ease;
     position: relative;
     overflow: hidden;
+    border: none;
+}
+
+.notices .notice-card .title {
+    color: var(--border-color2);
 }
 
 .notices .notice-card::after {
@@ -608,7 +614,7 @@ footer {
     height: 6px;
     width: 100%;
     z-index: 2;
-    background: linear-gradient(to right, gold, var(--green), red, orange);
+    /* background: linear-gradient(to right, gold, var(--green), red, orange); */
 }
 
 .notices .notice-card:hover::after {
@@ -622,7 +628,7 @@ footer {
 }
 
 .notices .notice-card .date {
-    background-color: #002741;
+    background: var(--secondary-hover);
     padding: 12px 12px;
     padding-top: 18px;
     margin-top: -10px;
@@ -630,6 +636,7 @@ footer {
     border-bottom-left-radius: 16px;
     color: var(--white-off2);
     font-weight: 600;
+    border: 1px solid rgba(102, 51, 153, 0.662);
 }
 
 .notices .notice-card:hover {
@@ -647,7 +654,7 @@ footer {
 }
 
 .notices .notice-card .bottom-content {
-    padding: 16px;
+    padding: 12px;
 }
 
 .notices .notice-card .desc {
