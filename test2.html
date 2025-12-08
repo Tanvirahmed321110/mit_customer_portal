@@ -4,210 +4,387 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Recent Orders</title>
-
+        <title>Helpdesk / Ticket System</title>
         <style>
+            :root {
+                --primary: #1878F2;
+                --text: #333;
+                --light-bg: #f5f7ff;
+                --border: #dbe6ff;
+                --radius: 12px;
+            }
+
+            /* General */
             body {
-                font-family: Arial, sans-serif;
-                background: #f4f6f9;
                 margin: 0;
-                padding: 40px;
+                font-family: Arial, sans-serif;
+                background: #f7f8fc;
+                color: var(--text);
             }
 
-            .overview {
-                max-width: 1200px;
+            .container {
+                width: 92%;
                 margin: auto;
+                padding: 20px 0;
             }
 
-            .recent-orders-title {
+            h2.section-title {
+                margin-bottom: 15px;
+                color: var(--primary);
                 font-size: 22px;
-                margin-bottom: 16px;
-            }
-
-            /* ⭐ Scroll Wrapper */
-            .orders-scroll {
-                width: 100%;
-                overflow-x: auto;
-                overflow-y: hidden;
-                padding-bottom: 10px;
-                border-radius: 6px;
-                background: #fff;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            }
-
-            /* ⭐ Table Layout */
-            .orders {
-                min-width: 900px;
-                /* Forces scroll */
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            .orders th,
-            .orders td {
-                padding: 14px 18px;
-                white-space: nowrap;
-                text-align: left;
-                border-bottom: 1px solid #ececec;
-            }
-
-            .orders thead {
-                background: #f7f9fc;
                 font-weight: bold;
             }
 
-            /* Status Colors */
-            .status {
-                padding: 4px 10px;
-                border-radius: 4px;
-                font-size: 13px;
-                display: inline-block;
+            /* ================= CREATE TICKET ================= */
+            .ticket-box {
+                background: var(--light-bg);
+                padding: 20px;
+                border-radius: var(--radius);
+                border: 1px solid var(--border);
+                margin-bottom: 35px;
             }
 
-            .delivered {
-                background: #d4f4dd;
-                color: #1f8c3c;
+            .ticket-box label {
+                display: block;
+                margin-bottom: 6px;
+                font-size: 14px;
+                font-weight: bold;
             }
 
-            .pending {
-                background: #fff4c4;
-                color: #a88600;
+            .ticket-box input,
+            .ticket-box select,
+            .ticket-box textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin-bottom: 15px;
+                font-size: 14px;
             }
 
-            .canceled {
-                background: #ffdce1;
-                color: #d1273d;
-            }
-
-            /* Invoice Button */
-            .invoice-btn {
-                background: none;
+            .ticket-box button {
+                background: var(--primary);
+                padding: 14px 22px;
                 border: none;
+                color: #fff;
+                border-radius: 8px;
                 cursor: pointer;
                 font-size: 16px;
-                position: relative;
             }
 
-            .invoice-btn .show-text {
-                visibility: hidden;
-                opacity: 0;
+            /* ================= CONVERSATION ITEMS ================= */
+            .conversation-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
+                margin-top: 15px;
+                margin-bottom: 40px;
+            }
+
+            .conv-item {
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 15px;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                gap: 12px;
                 transition: 0.2s;
-                position: absolute;
-                background: #000;
-                color: #fff;
-                padding: 4px 8px;
-                border-radius: 4px;
-                font-size: 12px;
-                left: 50%;
-                top: -28px;
-                transform: translateX(-50%);
-                white-space: nowrap;
             }
 
-            .invoice-btn:hover .show-text {
-                visibility: visible;
-                opacity: 1;
+            .conv-item:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 12px rgba(24, 120, 242, 0.08);
+            }
+
+            .conv-item img {
+                width: 55px;
+                height: 55px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .conv-body {
+                flex: 1;
+            }
+
+            .conv-body h4 {
+                margin: 0 0 5px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            .conv-body span {
+                font-size: 13px;
+                color: #666;
+            }
+
+            .conv-item button {
+                background: var(--primary);
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 6px;
+                font-size: 13px;
+                cursor: pointer;
+            }
+
+            /* ================= TICKET HISTORY ================= */
+            .ticket-history {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                margin-bottom: 40px;
+            }
+
+            .ticket-card {
+                background: #fff;
+                border: 1px solid var(--border);
+                padding: 20px;
+                border-radius: var(--radius);
+                box-shadow: 0 2px 10px rgba(24, 120, 242, 0.05);
+            }
+
+            .ticket-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .ticket-top h3 {
+                margin: 0;
+                color: var(--primary);
+            }
+
+            .ticket-top .product {
+                margin: 4px 0 0;
+                font-size: 13px;
+                color: #555;
+            }
+
+            .ticket-top .date {
+                font-size: 13px;
+                color: #666;
+                margin-top: 4px;
+            }
+
+            .status-badge {
+                padding: 6px 12px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: bold;
+                color: #fff;
+                margin-top: 8px;
+            }
+
+            .status-badge.open {
+                background: #999;
+            }
+
+            .status-badge.processing {
+                background: var(--primary);
+            }
+
+            .status-badge.ready {
+                background: #00A86B;
+            }
+
+            .status-badge.delivered {
+                background: #4CAF50;
+            }
+
+            /* Timeline */
+            .timeline {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            .step {
+                text-align: center;
+                width: 120px;
+                margin-bottom: 15px;
+            }
+
+            .circle {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: 3px solid var(--primary);
+                margin: auto;
+                background: #fff;
+            }
+
+            .step.completed .circle {
+                background: var(--primary);
+            }
+
+            .step p {
+                font-size: 12px;
+                margin-top: 8px;
+                color: #444;
+            }
+
+            /* Lines */
+            .line {
+                height: 3px;
+                width: 60px;
+                background: #d0d7e8;
+            }
+
+            .line.completed {
+                background: var(--primary);
+            }
+
+            @media(max-width: 800px) {
+                .conversation-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            @media(max-width: 600px) {
+                .conversation-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .timeline {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .line {
+                    width: 3px;
+                    height: 40px;
+                }
             }
         </style>
     </head>
 
     <body>
 
-        <div class="recent-orders overview my-mt-4">
+        <div class="container">
 
-            <h3 class="recent-orders-title">Recent Orders</h3>
+            <!-- ==================== CREATE TICKET ==================== -->
+            <h2 class="section-title">Open Ticket</h2>
+            <div class="ticket-box">
+                <label>Ticket Title</label>
+                <input type="text" placeholder="Enter your ticket title">
 
-            <!-- ⭐ Scroll Wrapper Added -->
-            <div class="orders-scroll">
+                <label>Issue / Category Type</label>
+                <select>
+                    <option>Select Issue Type</option>
+                    <option>Order Issue</option>
+                    <option>Payment Issue</option>
+                    <option>Service Related</option>
+                    <option>Account Problem</option>
+                </select>
 
-                <table class="orders">
+                <label>Upload Image / File</label>
+                <input type="file">
 
-                    <thead>
-                        <tr>
-                            <th>Order Number</th>
-                            <th>Status</th>
-                            <th>Total</th>
-                            <th>Order Placed</th>
-                            <th>Invoice</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                <label>Details</label>
+                <textarea rows="5" placeholder="Describe your issue..."></textarea>
 
-                    <tbody>
+                <button>Create Ticket</button>
+            </div>
 
-                        <tr>
-                            <td class="order-number"><a href="#">#4532180</a></td>
-                            <td>
-                                <div class="delivered status">Delivered</div>
-                            </td>
-                            <td>TK-3450</td>
-                            <td>09 Nov 2025</td>
-                            <td>
-                                <button class="invoice-btn">
-                                    <i class="fa-regular fa-eye"></i>
-                                    <span class="show-text">View Invoice</span>
-                                </button>
-                            </td>
-                            <td>Other</td>
-                        </tr>
+            <!-- ==================== CONVERSATION ITEMS ==================== -->
+            <h2 class="section-title">Start Conversation</h2>
+            <div class="conversation-grid">
+                <div class="conv-item">
+                    <img src="https://via.placeholder.com/80" alt="">
+                    <div class="conv-body">
+                        <h4>Service Support</h4>
+                        <span>5 Active Conversations</span>
+                    </div>
+                    <button>Chat</button>
+                </div>
 
-                        <tr>
-                            <td><a href="#">#2924213</a></td>
-                            <td>
-                                <div class="delivered status">Delivered</div>
-                            </td>
-                            <td>TK-1246</td>
-                            <td>09 Nov 2025</td>
-                            <td>
-                                <button class="invoice-btn">
-                                    <i class="fa-regular fa-eye"></i>
-                                    <span class="show-text">View Invoice</span>
-                                </button>
-                            </td>
-                            <td>Other</td>
-                        </tr>
+                <div class="conv-item">
+                    <img src="https://via.placeholder.com/80" alt="">
+                    <div class="conv-body">
+                        <h4>Product Buy Support</h4>
+                        <span>3 Active Conversations</span>
+                    </div>
+                    <button>Chat</button>
+                </div>
 
-                        <tr>
-                            <td><a href="#">#2924213</a></td>
-                            <td>
-                                <div class="pending status">Pending</div>
-                            </td>
-                            <td>TK-3450</td>
-                            <td>09 Nov 2025</td>
-                            <td>
-                                <button class="invoice-btn">
-                                    <i class="fa-regular fa-eye"></i>
-                                    <span class="show-text">View Invoice</span>
-                                </button>
-                            </td>
-                            <td>Other</td>
-                        </tr>
+                <div class="conv-item">
+                    <img src="https://via.placeholder.com/80" alt="">
+                    <div class="conv-body">
+                        <h4>Payment Issue</h4>
+                        <span>7 Active Conversations</span>
+                    </div>
+                    <button>Chat</button>
+                </div>
+            </div>
 
-                        <tr>
-                            <td><a href="#">#2924214</a></td>
-                            <td>
-                                <div class="canceled status">Canceled</div>
-                            </td>
-                            <td>TK-1968</td>
-                            <td>09 Nov 2025</td>
-                            <td>
-                                <button class="invoice-btn">
-                                    <i class="fa-regular fa-eye"></i>
-                                    <span class="show-text">View Invoice</span>
-                                </button>
-                            </td>
-                            <td>Other</td>
-                        </tr>
+            <!-- ==================== TICKET HISTORY ==================== -->
+            <h2 class="section-title">Ticket Status History</h2>
+            <div class="ticket-history">
 
-                    </tbody>
+                <!-- Ticket 1 -->
+                <div class="ticket-card">
+                    <div class="ticket-top">
+                        <div>
+                            <h3>Ticket #TKT-4592</h3>
+                            <p class="product">Product: Premium Service Plan</p>
+                            <p class="date">Created: 2025-12-06</p>
+                        </div>
+                        <span class="status-badge delivered">Delivered</span>
+                    </div>
+                    <div class="timeline">
+                        <div class="step completed"><span class="circle"></span>
+                            <p>Open</p>
+                        </div>
+                        <div class="line completed"></div>
+                        <div class="step completed"><span class="circle"></span>
+                            <p>Processing</p>
+                        </div>
+                        <div class="line completed"></div>
+                        <div class="step completed"><span class="circle"></span>
+                            <p>Ready for Delivery</p>
+                        </div>
+                        <div class="line completed"></div>
+                        <div class="step completed"><span class="circle"></span>
+                            <p>Delivered</p>
+                        </div>
+                    </div>
+                </div>
 
-                </table>
+                <!-- Ticket 2 -->
+                <div class="ticket-card">
+                    <div class="ticket-top">
+                        <div>
+                            <h3>Ticket #TKT-7721</h3>
+                            <p class="product">Product: Web Hosting</p>
+                            <p class="date">Created: 2025-12-05</p>
+                        </div>
+                        <span class="status-badge processing">Processing</span>
+                    </div>
+                    <div class="timeline">
+                        <div class="step completed"><span class="circle"></span>
+                            <p>Open</p>
+                        </div>
+                        <div class="line completed"></div>
+                        <div class="step completed"><span class="circle"></span>
+                            <p>Processing</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step"><span class="circle"></span>
+                            <p>Ready for Delivery</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step"><span class="circle"></span>
+                            <p>Delivered</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <!-- END Scroll Wrapper -->
-
         </div>
-
     </body>
 
 </html>

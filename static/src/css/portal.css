@@ -325,6 +325,7 @@
     box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.076);
 }
 
+
 .portal .p-body .cart-item:hover .left.icon {
     background-color: var(--primary-color);
 }
@@ -698,7 +699,8 @@ footer {
     background-color: var(--white-off);
 }
 
-.my-input-control input {
+.my-input-control input,
+select {
     color: #444;
     padding: 9px;
     border-radius: 6px;
@@ -1093,11 +1095,80 @@ footer {
 
 
 
+/* help desk */
+.open-ticket {
+    border: 4px solid var(--primary-color);
+}
+
+.open-ticket .other-card {
+    border: none;
+}
+
+.conversation {
+    background-color: #FDEDE9;
+    padding: 16px;
+}
+
+.conversation-items {
+    gap: 50px;
+}
+
+.conversation .item {
+    background-color: var(--white);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-1);
+}
+
+.conversation .item .img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
+.conversation .item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px solid var(--white);
+    margin-top: -50px;
+    background-color: var(--white);
+}
 
+.conversation .item .content {
+    background-color: #EFF6FF;
+    padding: 16px 12px;
+}
 
+.conversation .item .name {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--n-dark2);
+}
 
+.conversation .item .phone {
+    color: var(--gray);
+}
+
+.conversation .item .type {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--n-dark);
+}
+
+.conversation .item .content .chat-btn {
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.conversation .item .content .chat-btn:hover {
+    background-color: var(--primary-hover-color);
+}
 
 @media (max-width:1281px) {
 
