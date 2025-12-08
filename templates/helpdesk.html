@@ -27410,16 +27410,17 @@
                             </div>
 
 
-                            <div class="my-bg-white my-radius-md orders-page tab-area flex-1 my-flex-column">
+                            <div class=" my-radius-md orders-page tab-area flex-1 my-flex-column">
                                 <!--==============|| Body Content Here ||==============-->
                                 <div class="p-body my-radius-md my-flex-column">
                                     <div class="my-d-flex my-gap-5 flex-1">
 
+                                        <!--==============|| conversation ||=============-->
                                         <div class="conversation flex-1">
                                             <div class="my-flex-between my-gap-4">
                                                 <h3 class="my--primary">Conversation</h3>
-                                                <div class="ticket">
-                                                    <img class="w-10" src="/static/src/images/icon/talking.png"
+                                                <div class="ticket my-bg-white profile-img-xl">
+                                                    <img class="w-10 my-p-1" src="/static/src/images/icon/talking.png"
                                                         alt="ticket icon" loading="lazy">
                                                 </div>
                                             </div>
@@ -27485,9 +27486,10 @@
                                                 class="my-p-4 other-card my-flex-column my-pt-3  my-border  my-radius-md">
                                                 <div class="my-flex-between">
                                                     <h3 class="my-primary">Open Ticket</h3>
-                                                    <div class="ticket">
-                                                        <img class="w-10" src="/static/src/images/icon/ticket.png"
-                                                            alt="ticket icon" loading="lazy">
+                                                    <div class="ticket-img profile-img-xl">
+                                                        <img class="w-10 my-p-1"
+                                                            src="/static/src/images/icon/ticket.png" alt="ticket icon"
+                                                            loading="lazy">
                                                     </div>
                                                 </div>
 
@@ -27551,6 +27553,161 @@
 
                                                 </form>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--==============|| Ticket History Here ||==============-->
+                                <div class="ticket-history my-bg-white my-p-5 my-mt-5 my-radius-md">
+                                    <div class="recent-orders my-mt-0 my-w-100">
+
+                                        <div class="my-flex-between">
+                                            <h3 class="recent-orders-title">Ticket Status History</h3>
+                                            <div class="search"><input type="text" placeholder="Search by Ticket ID">
+                                                <span class="search-icon"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="my-pt-3">
+                                            <table class="orders">
+
+                                                <!-- Head Here -->
+                                                <thead>
+                                                    <tr>
+                                                        <th>Ticket ID </th>
+                                                        <th>Product</th>
+                                                        <th>Status</th>
+                                                        <th>Date</th>
+                                                        <th>Other 1</th>
+                                                        <th>Other 2</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <!-- Orders Body Here -->
+                                                <tbody>
+
+                                                    <!-- single order -->
+                                                    <tr>
+                                                        <td class="order-number"><a href="#">#4532180</a></td>
+                                                        <td>Keyboard</td>
+                                                        <td>
+                                                            <div class="open status">Open</div>
+                                                        </td>
+
+                                                        <!-- all status -->
+                                                        <!-- <td>
+                                                        <div class="open status">Open</div>
+                                                        <div class="delivered status">Delivered</div>
+                                                        <div class="canceled status">Canceled</div>
+                                                        <div class="ready-for-delivery status">Ready For Delivery</div>
+                                                        <div class="processing status">Processing</div>
+                                                    </td> -->
+
+                                                        <td><span class="">TK-</span>3450</td>
+                                                        <td>09 Nov 2025</td>
+                                                        <td><a href="./order-details"
+                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                Details</a></td>
+                                                    </tr>
+
+                                                    <!-- single order -->
+                                                    <tr>
+                                                        <td class="order-number"><a href="#">#2924213</a></td>
+                                                        <td>HP Monitor</td>
+                                                        <td>
+                                                            <div class="processing status">Processing</div>
+                                                        </td>
+                                                        <td><span class="">TK-</span>1246</td>
+                                                        <td>09 Nov 2025</td>
+                                                        <td><a href="./order-details"
+                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                Details</a></td>
+                                                    </tr>
+
+                                                    <!-- single order -->
+                                                    <tr>
+                                                        <td class="order-number"><a href="#">#2924213</a></td>
+                                                        <td>Mobile Phone</td>
+                                                        <td>
+                                                            <div class="canceled status">Canceled</div>
+                                                        </td>
+                                                        <td><span class="">TK-</span>3450</td>
+                                                        <td>09 Nov 2025</td>
+                                                        <td><a href="./order-details"
+                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                Details</a></td>
+                                                    </tr>
+
+                                                    <!-- single order -->
+                                                    <tr>
+                                                        <td class="order-number"><a href="#">#2924214</a></td>
+                                                        <td>Mobile Charger</td>
+                                                        <td>
+                                                            <div class="open status">Open</div>
+                                                        </td>
+                                                        <td><span class="">TK-</span>1968</td>
+                                                        <td>09 Nov 2025</td>
+                                                        <td><a href="./order-details"
+                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                Details</a></td>
+                                                    </tr>
+                                                    <!-- single order -->
+                                                    <tr>
+                                                        <td class="order-number"><a href="#">#2924213</a></td>
+                                                        <td>Desktop Set</td>
+                                                        <td>
+                                                            <div class="ready-for-delivery status">Ready For Delivery
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="">TK-</span>2150</td>
+                                                        <td>09 Nov 2025</td>
+                                                        <td><a href="./order-details"
+                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                Details</a></td>
+                                                    </tr>
+                                                    <!-- single order -->
+                                                    <tr>
+                                                        <td class="order-number"><a href="#">#2924212</a></td>
+                                                        <td>Smart Watch</td>
+                                                        <td>
+                                                            <div class="delivered status">Delivered</div>
+                                                        </td>
+                                                        <td><span class="">TK-</span>2900</td>
+                                                        <td>09 Nov 2025</td>
+                                                        <td><a href="./order-details"
+                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                Details</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                        <!--========== Pagination ===========-->
+                                        <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
+
+                                            <!-- disabled -->
+                                            <!-- <button class="prev next-prev disabled" disabled>
+                                                    <i class="fa-solid fa-angle-left"></i>
+                                                </button> -->
+                                            <button class="prev next-prev ">
+                                                <i class="fa-solid fa-angle-left"></i>
+                                            </button>
+
+                                            <ul class="wrap my-flex-center my-gap-1">
+                                                <li><a class="page " href="#">1</a></li>
+                                                <li><a class="page active" href="#">2</a></li>
+                                                <li><a class="page jump" href="#">...</a></li>
+                                                <li><a class="page" href="#">8</a></li>
+                                                <li><a class="page" href="#">9</a></li>
+                                            </ul>
+
+                                            <button class="next next-prev">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </button>
+
                                         </div>
                                     </div>
                                 </div>

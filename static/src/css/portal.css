@@ -524,7 +524,8 @@ footer {
     color: white;
 }
 
-.portal .recent-orders .orders .status.pending {
+.portal .recent-orders .orders .status.pending,
+.status.processing {
     background-color: var(--orange);
     color: white;
 }
@@ -534,14 +535,54 @@ footer {
     color: white;
 }
 
+.portal .status.open {
+    background-color: var(--input);
+}
+
+.portal .status.ready-for-delivery {
+    background-color: var(--before);
+    color: var(--white);
+}
+
+.portal .status.status.processing {
+    background-color: var(--before);
+    color: var(--white);
+    opacity: .7;
+}
+
 .portal .recent-orders .orders tbody tr:nth-child(even),
 .portal .recent-orders .orders tbody tr:hover {
     background-color: #F9FAFB;
 }
 
+.portal .search {
+    position: relative;
+    /* background-color: rebeccapurple; */
+}
 
+.portal .search input {
+    border-radius: 28px;
+    padding: 10px 12px;
+    border-width: 1px;
+    background-color: #F0F3F2;
+    font-size: var(--fs-sm);
+}
 
+.portal .search input:focus {
+    outline: 2px solid var(--input);
+}
 
+.portal .search input::placeholder {
+    font-size: var(--fs-sm);
+}
+
+.portal .search .search-icon i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+}
 
 
 
@@ -1126,6 +1167,11 @@ select {
     justify-content: center;
 }
 
+.ticket-img.profile-img-xl {
+    border: none;
+    background-color: #FDEDE9;
+    background-color: #EFF6FF;
+}
 
 .conversation .item img {
     width: 80px;

@@ -4,387 +4,226 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Helpdesk / Ticket System</title>
+        <title>Ticket UI</title>
+
         <style>
             :root {
-                --primary: #1878F2;
-                --text: #333;
-                --light-bg: #f5f7ff;
-                --border: #dbe6ff;
-                --radius: 12px;
+                --primary: #1878f2;
+                --primary-light: #4d99ff;
+                --primary-dark: #0d5fcc;
+                --primary-deep: #0a3f7a;
+                --bg: #f4f6f9;
             }
 
-            /* General */
-            body {
+            * {
                 margin: 0;
-                font-family: Arial, sans-serif;
-                background: #f7f8fc;
-                color: var(--text);
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Roboto", sans-serif;
             }
 
-            .container {
-                width: 92%;
+            body {
+                background: var(--bg);
+                padding: 30px;
+            }
+
+            .tickets-container {
+                max-width: 1100px;
                 margin: auto;
-                padding: 20px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
             }
 
-            h2.section-title {
-                margin-bottom: 15px;
-                color: var(--primary);
-                font-size: 22px;
-                font-weight: bold;
-            }
-
-            /* ================= CREATE TICKET ================= */
-            .ticket-box {
-                background: var(--light-bg);
-                padding: 20px;
-                border-radius: var(--radius);
-                border: 1px solid var(--border);
-                margin-bottom: 35px;
-            }
-
-            .ticket-box label {
-                display: block;
-                margin-bottom: 6px;
-                font-size: 14px;
-                font-weight: bold;
-            }
-
-            .ticket-box input,
-            .ticket-box select,
-            .ticket-box textarea {
-                width: 100%;
-                padding: 12px;
-                border: 1px solid var(--border);
-                border-radius: 8px;
-                margin-bottom: 15px;
-                font-size: 14px;
-            }
-
-            .ticket-box button {
-                background: var(--primary);
-                padding: 14px 22px;
-                border: none;
-                color: #fff;
-                border-radius: 8px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-            /* ================= CONVERSATION ITEMS ================= */
-            .conversation-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 18px;
-                margin-top: 15px;
-                margin-bottom: 40px;
-            }
-
-            .conv-item {
-                border: 1px solid var(--border);
-                border-radius: var(--radius);
-                padding: 15px;
+            /* ================= CARD VIEW ================= */
+            .ticket-card {
                 background: #fff;
+                padding: 20px;
+                border-radius: 14px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
                 display: flex;
                 align-items: center;
-                gap: 12px;
-                transition: 0.2s;
+                justify-content: space-between;
             }
 
-            .conv-item:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 4px 12px rgba(24, 120, 242, 0.08);
+            .ticket-card .left {
+                display: flex;
+                align-items: center;
+                gap: 20px;
             }
 
-            .conv-item img {
-                width: 55px;
-                height: 55px;
+            .ticket-card img {
+                width: 60px;
+                height: 60px;
                 object-fit: cover;
                 border-radius: 10px;
             }
 
-            .conv-body {
-                flex: 1;
+            .ticket-info h2 {
+                font-size: 20px;
+                color: #222;
             }
 
-            .conv-body h4 {
-                margin: 0 0 5px;
-                font-size: 15px;
-                font-weight: bold;
-            }
-
-            .conv-body span {
-                font-size: 13px;
+            .ticket-info p {
+                font-size: 14px;
                 color: #666;
             }
 
-            .conv-item button {
-                background: var(--primary);
-                color: #fff;
+            .status-btn {
+                padding: 10px 22px;
+                border-radius: 8px;
                 border: none;
-                padding: 10px 15px;
-                border-radius: 6px;
-                font-size: 13px;
-                cursor: pointer;
-            }
-
-            /* ================= TICKET HISTORY ================= */
-            .ticket-history {
-                display: flex;
-                flex-direction: column;
-                gap: 25px;
-                margin-bottom: 40px;
-            }
-
-            .ticket-card {
-                background: #fff;
-                border: 1px solid var(--border);
-                padding: 20px;
-                border-radius: var(--radius);
-                box-shadow: 0 2px 10px rgba(24, 120, 242, 0.05);
-            }
-
-            .ticket-top {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-
-            .ticket-top h3 {
-                margin: 0;
-                color: var(--primary);
-            }
-
-            .ticket-top .product {
-                margin: 4px 0 0;
-                font-size: 13px;
-                color: #555;
-            }
-
-            .ticket-top .date {
-                font-size: 13px;
-                color: #666;
-                margin-top: 4px;
-            }
-
-            .status-badge {
-                padding: 6px 12px;
-                border-radius: 20px;
-                font-size: 13px;
-                font-weight: bold;
-                color: #fff;
-                margin-top: 8px;
-            }
-
-            .status-badge.open {
-                background: #999;
-            }
-
-            .status-badge.processing {
                 background: var(--primary);
+                color: #fff;
+                cursor: pointer;
+                font-size: 14px;
+                transition: 0.3s;
             }
 
-            .status-badge.ready {
-                background: #00A86B;
+            .status-btn:hover {
+                background: var(--primary-dark);
             }
 
-            .status-badge.delivered {
-                background: #4CAF50;
+            /* ================= TABLE VIEW ================= */
+            .table-area {
+                background: #fff;
+                padding: 20px;
+                border-radius: 14px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             }
 
-            /* Timeline */
-            .timeline {
-                display: flex;
-                align-items: center;
-                margin-top: 20px;
-                flex-wrap: wrap;
-            }
-
-            .step {
-                text-align: center;
-                width: 120px;
+            .table-area h3 {
+                font-size: 20px;
+                color: #222;
                 margin-bottom: 15px;
             }
 
-            .circle {
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                border: 3px solid var(--primary);
-                margin: auto;
-                background: #fff;
+            table {
+                width: 100%;
+                border-collapse: collapse;
             }
 
-            .step.completed .circle {
-                background: var(--primary);
+            thead {
+                background: #eef3ff;
             }
 
-            .step p {
-                font-size: 12px;
-                margin-top: 8px;
+            thead th {
+                padding: 12px;
+                font-size: 14px;
                 color: #444;
+                text-align: left;
             }
 
-            /* Lines */
-            .line {
-                height: 3px;
-                width: 60px;
-                background: #d0d7e8;
+            tbody td {
+                padding: 14px 12px;
+                font-size: 14px;
+                border-bottom: 1px solid #eee;
             }
 
-            .line.completed {
+            tbody tr:hover {
+                background: #f9faff;
+            }
+
+            /* ================= STATUS BADGES BLUE THEME ================= */
+            .status {
+                padding: 6px 14px;
+                border-radius: 6px;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 500;
+            }
+
+            .open {
                 background: var(--primary);
+                /* Blue */
             }
 
-            @media(max-width: 800px) {
-                .conversation-grid {
-                    grid-template-columns: 1fr 1fr;
-                }
+            .processing {
+                background: var(--primary-light);
+                /* Light Blue */
             }
 
-            @media(max-width: 600px) {
-                .conversation-grid {
-                    grid-template-columns: 1fr;
-                }
+            .ready {
+                background: var(--primary-dark);
+                /* Dark Blue */
+            }
 
-                .timeline {
-                    flex-direction: column;
-                    gap: 20px;
-                }
-
-                .line {
-                    width: 3px;
-                    height: 40px;
-                }
+            .delivered {
+                background: var(--primary-deep);
+                /* Deep Navy Blue */
             }
         </style>
+
     </head>
 
     <body>
 
-        <div class="container">
+        <div class="tickets-container">
 
-            <!-- ==================== CREATE TICKET ==================== -->
-            <h2 class="section-title">Open Ticket</h2>
-            <div class="ticket-box">
-                <label>Ticket Title</label>
-                <input type="text" placeholder="Enter your ticket title">
+            <!-- ================= CARD ================= -->
+            <div class="ticket-card">
+                <div class="left">
+                    <img src="https://via.placeholder.com/60" alt="product">
+                    <div class="ticket-info">
+                        <h2>Ticket #A1032</h2>
+                        <p>Product: Mobile Charger</p>
+                        <p>Created: 10 Dec 2025</p>
+                    </div>
+                </div>
 
-                <label>Issue / Category Type</label>
-                <select>
-                    <option>Select Issue Type</option>
-                    <option>Order Issue</option>
-                    <option>Payment Issue</option>
-                    <option>Service Related</option>
-                    <option>Account Problem</option>
-                </select>
-
-                <label>Upload Image / File</label>
-                <input type="file">
-
-                <label>Details</label>
-                <textarea rows="5" placeholder="Describe your issue..."></textarea>
-
-                <button>Create Ticket</button>
+                <button class="status-btn">View Status</button>
             </div>
 
-            <!-- ==================== CONVERSATION ITEMS ==================== -->
-            <h2 class="section-title">Start Conversation</h2>
-            <div class="conversation-grid">
-                <div class="conv-item">
-                    <img src="https://via.placeholder.com/80" alt="">
-                    <div class="conv-body">
-                        <h4>Service Support</h4>
-                        <span>5 Active Conversations</span>
-                    </div>
-                    <button>Chat</button>
-                </div>
 
-                <div class="conv-item">
-                    <img src="https://via.placeholder.com/80" alt="">
-                    <div class="conv-body">
-                        <h4>Product Buy Support</h4>
-                        <span>3 Active Conversations</span>
-                    </div>
-                    <button>Chat</button>
-                </div>
+            <!-- ================= TABLE ================= -->
+            <div class="table-area">
+                <h3>Ticket Status History</h3>
 
-                <div class="conv-item">
-                    <img src="https://via.placeholder.com/80" alt="">
-                    <div class="conv-body">
-                        <h4>Payment Issue</h4>
-                        <span>7 Active Conversations</span>
-                    </div>
-                    <button>Chat</button>
-                </div>
-            </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Product</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
 
-            <!-- ==================== TICKET HISTORY ==================== -->
-            <h2 class="section-title">Ticket Status History</h2>
-            <div class="ticket-history">
+                    <tbody>
+                        <tr>
+                            <td>#A1032</td>
+                            <td>Mobile Charger</td>
+                            <td><span class="status open">Open</span></td>
+                            <td>10 Dec 2025</td>
+                        </tr>
 
-                <!-- Ticket 1 -->
-                <div class="ticket-card">
-                    <div class="ticket-top">
-                        <div>
-                            <h3>Ticket #TKT-4592</h3>
-                            <p class="product">Product: Premium Service Plan</p>
-                            <p class="date">Created: 2025-12-06</p>
-                        </div>
-                        <span class="status-badge delivered">Delivered</span>
-                    </div>
-                    <div class="timeline">
-                        <div class="step completed"><span class="circle"></span>
-                            <p>Open</p>
-                        </div>
-                        <div class="line completed"></div>
-                        <div class="step completed"><span class="circle"></span>
-                            <p>Processing</p>
-                        </div>
-                        <div class="line completed"></div>
-                        <div class="step completed"><span class="circle"></span>
-                            <p>Ready for Delivery</p>
-                        </div>
-                        <div class="line completed"></div>
-                        <div class="step completed"><span class="circle"></span>
-                            <p>Delivered</p>
-                        </div>
-                    </div>
-                </div>
+                        <tr>
+                            <td>#A1032</td>
+                            <td>Mobile Charger</td>
+                            <td><span class="status processing">Processing</span></td>
+                            <td>11 Dec 2025</td>
+                        </tr>
 
-                <!-- Ticket 2 -->
-                <div class="ticket-card">
-                    <div class="ticket-top">
-                        <div>
-                            <h3>Ticket #TKT-7721</h3>
-                            <p class="product">Product: Web Hosting</p>
-                            <p class="date">Created: 2025-12-05</p>
-                        </div>
-                        <span class="status-badge processing">Processing</span>
-                    </div>
-                    <div class="timeline">
-                        <div class="step completed"><span class="circle"></span>
-                            <p>Open</p>
-                        </div>
-                        <div class="line completed"></div>
-                        <div class="step completed"><span class="circle"></span>
-                            <p>Processing</p>
-                        </div>
-                        <div class="line"></div>
-                        <div class="step"><span class="circle"></span>
-                            <p>Ready for Delivery</p>
-                        </div>
-                        <div class="line"></div>
-                        <div class="step"><span class="circle"></span>
-                            <p>Delivered</p>
-                        </div>
-                    </div>
-                </div>
+                        <tr>
+                            <td>#A1032</td>
+                            <td>Mobile Charger</td>
+                            <td><span class="status ready">Ready for Delivery</span></td>
+                            <td>12 Dec 2025</td>
+                        </tr>
+
+                        <tr>
+                            <td>#A1032</td>
+                            <td>Mobile Charger</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                            <td>13 Dec 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
+
         </div>
+
     </body>
 
 </html>
