@@ -1332,33 +1332,99 @@ select {
     .orders-page .recent-orders {
         padding-top: 0;
         margin-top: 0;
-        overflow-x: auto;
     }
 
-    .portal .recent-orders .orders {
-        border-collapse: collapse;
-        width: 1000px;
-        min-width: 800px;
+    .table-wrap {
         overflow-x: auto;
+        overflow-y: hidden;
+        display: block;
+        -webkit-overflow-scrolling: touch;
+        width: 460px;
     }
 
-}
+    .table-wrap table {
+        min-width: 660px;
+    }
 
-@media (max-width:991px) {
-    .p-body .carts {
-        grid-template-columns: repeat(2, 1fr);
+    .sidebar-toggle-btn {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--secondary-hover);
+        padding: 12px 12px;
+        border-radius: 0 6px 6px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        z-index: 9;
+        display: inline-block;
+    }
+
+    .sidebar-toggle-btn i {
+        font-size: 16px;
+        color: var(--white);
+    }
+
+    .portal .sidebar-wrap {
+        position: fixed;
+        left: -300px;
+        top: 52px;
+        height: calc(100% - 108px);
+        background-color: var(--white);
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        z-index: 8;
+        display: block;
+        width: 260px;
+        overflow-y: auto;
+        padding-left: 0;
+    }
+
+    .portal .sidebar-wrap.active {
+        left: 0;
     }
 
     .p-wrapper {
         gap: 0px;
+        display: unset;
     }
 
     .portal aside .sidebar {
-        padding: 12px;
-        width: 260px;
-        display: none;
-        flex-direction: column;
-        gap: 20px;
+        padding: 16px 4px;
+        padding-right: 4px;
+        flex-basis: 300px;
+    }
+
+
+    .portal .sidebar .item {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .portal .sidebar .item svg,
+    .portal .sidebar .item svg g,
+    .portal .sidebar .item svg line,
+    .portal .sidebar .item svg circle {
+        width: 16px;
+        height: 16px;
+    }
+
+    .portal .sidebar .item i {
+        font-size: 10px;
+    }
+
+}
+
+
+
+/* Mobile Responsive Here */
+@media (max-width:769px) {
+    .p-body .carts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portal .p-body {
+        padding: 16px;
     }
 
     .portal .head {
@@ -1423,18 +1489,17 @@ select {
 
 
     .portal .p-body .cart-item {
-        padding: 12px 12px;
-        flex-direction: column;
-        justify-content: center;
+        padding: 12px 10px;
+        align-items: flex-start;
+        gap: 8px;
     }
 
     .portal .p-body .cart-item .cart-title {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .portal .p-body .cart-item .val {
         font-size: 16px;
-        text-align: center;
         line-height: 16px;
     }
 
@@ -1448,17 +1513,93 @@ select {
     }
 
     .portal .p-body .cart-item .left .icon {
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: unset;
     }
 
     .portal .p-body .cart-item .left .icon svg {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
     }
 
     .overview.recent-orders {
         padding: 16px;
-        display: none;
+    }
+
+
+    /* select */
+    .portal .sort-by select {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .portal .sort-by select option {
+        font-size: 12px;
+    }
+
+
+    /* Optional: smooth scroll bar styling */
+    .recent-orders::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .recent-orders::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .recent-orders::-webkit-scrollbar-thumb {
+        background: #bbb;
+        border-radius: 20px;
+    }
+
+    .portal .p-body .payment-date .cart-item {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .portal .p-body .payment-date .cart-item .left .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: var(--white);
+    }
+
+
+    .table-wrap {
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: block;
+        -webkit-overflow-scrolling: touch;
+        width: 99%;
+    }
+
+    .table-wrap table {
+        min-width: 660px;
+    }
+
+    .slidebar-title-name {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width:480px) {
+    .p-body .carts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .portal .p-body {
+        padding: 12px;
+    }
+
+    .table-wrap {
+        width: 99%;
     }
 }

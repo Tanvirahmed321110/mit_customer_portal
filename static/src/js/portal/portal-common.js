@@ -48,3 +48,36 @@ function reportMenuToggle() {
     }
 }
 reportMenuToggle()
+
+
+
+
+
+// Portal Sidebar Toggle
+function portalSidebarToggle() {
+    const sidebarToggleBtn = document.getElementById("portal-sidebar-toggle-btn");
+    const sidebarWrap = document.getElementById("portal-sidebar");
+
+    // Validation: return if elements not found
+    if (!sidebarToggleBtn || !sidebarWrap) return;
+
+    // Find the <i> inside the button
+    const icon = sidebarToggleBtn.querySelector("i");
+    if (!icon) return;
+
+    sidebarToggleBtn.addEventListener("click", function () {
+        sidebarWrap.classList.toggle("active");
+
+        // Change icon based on sidebar state
+        if (sidebarWrap.classList.contains("active")) {
+            icon.classList.remove("fa-angles-right");
+            icon.classList.add("fa-xmark");
+        } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-angles-right");
+        }
+    });
+}
+
+// Initialize
+portalSidebarToggle();

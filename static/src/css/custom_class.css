@@ -200,6 +200,14 @@ tr {
 
 
 /*____________  Reused Class  ____________*/
+.desktop-show {
+    display: block;
+}
+
+.desktop-hide {
+    display: none;
+}
+
 .my-container,
 .my-container-sm {
     padding: 10px 16px;
@@ -1765,6 +1773,13 @@ tr {
 
 /*________  Responsive for small Device  ________*/
 @media (max-width:767px) {
+    .mobile-show {
+        display: block;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
 
     /* margin  */
     .my-mt-sm-1 {
