@@ -52,27 +52,30 @@ reportMenuToggle()
 
 
 
-
 // Portal Sidebar Toggle
 function portalSidebarToggle() {
     const sidebarToggleBtn = document.getElementById("portal-sidebar-toggle-btn");
     const sidebarWrap = document.getElementById("portal-sidebar");
+    const body = document.body;
 
-    // Validation: return if elements not found
-    if (!sidebarToggleBtn || !sidebarWrap) return;
+    // Validation
+    if (!sidebarToggleBtn || !sidebarWrap || !body) return;
 
     // Find the <i> inside the button
     const icon = sidebarToggleBtn.querySelector("i");
     if (!icon) return;
 
+    // Click Event Here
     sidebarToggleBtn.addEventListener("click", function () {
+        // Toggle sidebar active class
         sidebarWrap.classList.toggle("active");
 
-        // Change icon based on sidebar state
         if (sidebarWrap.classList.contains("active")) {
+            body.style.overflow = "hidden";
             icon.classList.remove("fa-angles-right");
             icon.classList.add("fa-xmark");
         } else {
+            body.style.overflow = "";
             icon.classList.remove("fa-xmark");
             icon.classList.add("fa-angles-right");
         }

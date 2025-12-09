@@ -1430,6 +1430,14 @@ select {
         --fs-xxxl: 30px;
     }
 
+    .portal .head .grade-value {
+        font-size: 10px;
+    }
+
+    .portal .recent-orders .orders .status {
+        font-size: 10px;
+    }
+
     .p-body .carts {
         grid-template-columns: repeat(3, 1fr);
     }
