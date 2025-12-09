@@ -1495,21 +1495,21 @@ select {
     }
 
     .portal .p-body .cart-item .cart-title {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .portal .p-body .cart-item .val {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 16px;
     }
 
     .portal .recent-orders .orders td {
         padding: 8px 10px;
-        font-size: 12PX;
+        font-size: 10px;
     }
 
     .portal .recent-orders .orders th {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .portal .p-body .cart-item .left .icon {
