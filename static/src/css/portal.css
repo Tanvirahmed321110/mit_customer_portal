@@ -723,6 +723,19 @@ footer {
 .sub-head {
     border-bottom: 4px solid #EFF6FF;
     padding-top: 0px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+}
+
+.sub-head::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.sub-head ul {
+    width: 100%;
+    padding: 4px 12px;
 }
 
 .sub-head .item {
@@ -736,6 +749,7 @@ footer {
     user-select: none;
     font-size: 14px;
     color: #444;
+    text-wrap: nowrap;
 }
 
 .sub-head .item i {
@@ -1347,17 +1361,23 @@ select {
     }
 
     .sidebar-toggle-btn {
+        /* width: 48px;
+        height: 48px; */
         position: fixed;
-        left: 0;
+        padding: 12px;
+        left: 0px;
         top: 50%;
         transform: translateY(-50%);
         background: var(--secondary-hover);
-        padding: 12px 12px;
-        border-radius: 0 6px 6px 0;
+        border-radius: 0 8px 8px 0;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         cursor: pointer;
         z-index: 9;
         display: inline-block;
+        /* clip-path: polygon(0 0, 0% 100%, 68% 44%); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .sidebar-toggle-btn i {
@@ -1508,7 +1528,7 @@ select {
 
 
     .portal .p-body .cart-item {
-        padding: 12px 10px;
+        padding: 16px 12px;
         align-items: flex-start;
         gap: 8px;
     }
@@ -1605,6 +1625,46 @@ select {
     .slidebar-title-name {
         font-size: 10px;
     }
+
+    .portal .head .right .point {
+        font-size: 24px;
+    }
+
+
+    /* account page */
+    .other-card.edit-profile .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .other-card {
+        border-width: 0px;
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .my-input-control label {
+        font-size: 12px;
+    }
+
+    .sub-head ul {
+        width: 180%;
+        padding: 4px 12px;
+    }
+
+    .sub-head .item {
+        font-size: 12px;
+    }
+
+    .sub-head .item i {
+        font-size: 15px;
+    }
+
+    .small {
+        font-size: 12px;
+        color: var(--gray2);
+    }
+
 }
 
 
