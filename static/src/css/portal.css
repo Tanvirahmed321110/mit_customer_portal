@@ -1419,6 +1419,17 @@ select {
 
 /* Mobile Responsive Here */
 @media (max-width:769px) {
+    :root {
+        /*______  Font Size  ______ */
+        --fs-xs: 10px;
+        --fs-sm: 11px;
+        --fs-md: 12px;
+        --fs-lg: 16px;
+        --fs-xl: 18px;
+        --fs-xxl: 22px;
+        --fs-xxxl: 30px;
+    }
+
     .p-body .carts {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1590,6 +1601,10 @@ select {
 
 
 @media (max-width:480px) {
+    .status {
+        font-size: 10px !important;
+    }
+
     .p-body .carts {
         grid-template-columns: repeat(2, 1fr);
     }
