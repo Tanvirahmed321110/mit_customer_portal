@@ -658,7 +658,8 @@ footer {
 }
 
 .notices .notice-card .desc {
-    color: var(--gray);
+    color: var(--white-off2);
+    opacity: .5;
 }
 
 /*********   Overview Page   **********/
@@ -726,6 +727,7 @@ footer {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    overflow-y: hidden;
 
 }
 
@@ -735,7 +737,6 @@ footer {
 
 .sub-head ul {
     width: 100%;
-    padding: 4px 12px;
 }
 
 .sub-head .item {
@@ -1047,7 +1048,7 @@ select {
 .no-result img {
     border-radius: 50%;
     background-color: #ebedf8;
-    animation: softBounceShake 1.6s ease-in-out infinite;
+    animation: softBounceShake 1.6s ease-in-out 3;
 }
 
 @keyframes softBounceShake {
@@ -1302,6 +1303,14 @@ select {
     background-color: var(--primary-hover-color);
 }
 
+.account-tables h5 {
+    font-size: 15px;
+}
+
+.tag {
+    font-size: 11px;
+}
+
 @media (max-width:1281px) {
 
     .portal .head .left,
@@ -1450,6 +1459,38 @@ select {
         --fs-xxxl: 30px;
     }
 
+    .portal .my-container {
+        padding: 0;
+    }
+
+    .account-tables .review-date {
+        position: absolute;
+        top: 0px;
+        right: 6px;
+    }
+
+    .pagination-2 .page,
+    .pagination-2 .next-prev {
+        width: 36px;
+        height: 36px;
+    }
+
+    .portal .p-body {
+        padding: 16px;
+    }
+
+    .account-tables {
+        align-items: flex-start;
+    }
+
+    .account-tables h5 {
+        font-size: 13px;
+    }
+
+    .account-tables .right {
+        width: 100%;
+    }
+
     .portal .head .grade-value {
         font-size: 10px;
     }
@@ -1502,7 +1543,8 @@ select {
 
     .portal .head {
         background-color: var(--white);
-        padding: 0 8px;
+        padding: 0 16px;
+        margin-top: 2px;
     }
 
     .portal-right .head .left {
@@ -1678,9 +1720,6 @@ select {
     }
 
 
-    .portal .p-body {
-        padding: 12px;
-    }
 
     .table-wrap {
         width: 99%;
