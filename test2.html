@@ -1,457 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Social Activities — Events</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Social Activities Page</title>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
         <style>
-            :root {
-                --bg: #f6f7fb;
-                --card: #ffffff;
-                --muted: #6b7280;
-                --accent: #4f46e5;
-                --success: #10b981;
-                --radius: 12px;
-                --glass: rgba(255, 255, 255, 0.6);
-                font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            }
-
-            * {
-                box-sizing: border-box
-            }
-
             body {
                 margin: 0;
-                background: linear-gradient(180deg, var(--bg), #ffffff);
-                color: #111827
+                font-family: "Roboto", sans-serif;
+                background: #f5f5f5;
+                color: #333;
             }
 
-            .container {
-                max-width: 1100px;
-                margin: 36px auto;
-                padding: 20px
-            }
-
-            header {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 16px;
-                align-items: center;
-                justify-content: space-between
-            }
-
-            .title {
-                display: flex;
-                flex-direction: column
-            }
-
-            h1 {
-                margin: 0;
-                font-size: 22px
-            }
-
-            p.lead {
-                margin: 4px 0 0;
-                color: var(--muted);
-                font-size: 14px
-            }
-
-            .controls {
-                display: flex;
-                gap: 12px;
-                align-items: center
-            }
-
-            .search {
-                display: flex;
-                align-items: center;
-                background: var(--card);
-                padding: 8px;
-                border-radius: 10px;
-                box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06)
-            }
-
-            .search input {
-                border: 0;
-                outline: 0;
-                background: transparent;
-                width: 220px
-            }
-
-            .filters {
-                display: flex;
-                gap: 8px;
-                flex-wrap: wrap
-            }
-
-            .chip {
-                padding: 8px 12px;
-                border-radius: 999px;
-                background: transparent;
-                border: 1px solid rgba(15, 23, 42, 0.06);
-                cursor: pointer;
-                font-size: 13px
-            }
-
-            .chip.active {
-                background: var(--accent);
-                color: #fff;
-                border-color: transparent;
-                box-shadow: 0 6px 18px rgba(79, 70, 229, 0.12)
-            }
-
-            main {
-                margin-top: 20px
-            }
-
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 18px
-            }
-
-            /* event card */
-            .card {
-                background: var(--card);
-                border-radius: var(--radius);
-                overflow: hidden;
-                box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
-                display: flex;
-                flex-direction: column
-            }
-
-            .card .media {
-                position: relative;
-                height: 150px;
-                background: #ddd
-            }
-
-            .card img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block
-            }
-
-            .date-badge {
-                position: absolute;
-                left: 12px;
-                top: 12px;
-                background: linear-gradient(180deg, #fff 0, #f9fafb 100%);
-                padding: 8px;
-                border-radius: 8px;
+            h1.section-title {
                 text-align: center;
-                box-shadow: 0 6px 16px rgba(2, 6, 23, 0.08)
+                margin-top: 50px;
+                margin-bottom: 10px;
+                font-size: 32px;
             }
 
-            .date-badge .day {
-                font-weight: 700;
-                font-size: 18px
+            p.sub-text {
+                text-align: center;
+                margin-bottom: 40px;
+                color: #777;
             }
 
-            .date-badge .month {
-                font-size: 12px;
-                color: var(--muted)
+            /* -------- SOCIAL BANNER DESIGNS WITH BG IMAGE -------- */
+            .social-banner-section {
+                padding: 60px 20px;
+                background: #f5f5f5;
             }
 
-            .card-body {
-                padding: 14px 14px 16px;
+            .social-banner-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+            }
+
+            .social-banner {
+                position: relative;
+                padding: 45px 25px;
+                border-radius: 18px;
+                color: white;
+                text-decoration: none;
+                height: 220px;
                 display: flex;
                 flex-direction: column;
-                gap: 8px
+                justify-content: flex-end;
+                overflow: hidden;
+                transition: 0.3s ease;
             }
 
-            .meta {
-                display: flex;
-                align-items: center;
-                justify-content: space-between
+            /* Background image */
+            .social-banner::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center;
+                z-index: 1;
+                transition: 0.3s ease;
             }
 
-            .category {
-                font-size: 12px;
-                padding: 6px 8px;
-                border-radius: 8px;
-                background: rgba(79, 70, 229, 0.08);
-                color: var(--accent)
+            /* Dark gradient overlay */
+            .social-banner::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg,
+                        rgba(0, 0, 0, 0.0) 0%,
+                        rgba(0, 0, 0, 0.55) 100%);
+                z-index: 2;
             }
 
-            h3 {
-                margin: 0;
-                font-size: 16px
+            /* Content on top */
+            .social-banner .content {
+                position: relative;
+                z-index: 3;
             }
 
-            p.desc {
-                margin: 0;
-                color: var(--muted);
-                font-size: 13px
-            }
-
-            .card-footer {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 14px 14px
-            }
-
-            .btn {
-                border: 0;
-                padding: 8px 12px;
-                border-radius: 10px;
-                cursor: pointer
-            }
-
-            .btn-outline {
-                background: transparent;
-                border: 1px solid rgba(15, 23, 42, 0.06)
-            }
-
-            .btn-primary {
-                background: var(--accent);
-                color: #fff
-            }
-
-            /* large / small variants */
-            .card.small .media {
-                height: 110px
-            }
-
-            /* empty state */
-            .empty {
-                padding: 40px;
-                text-align: center;
-                color: var(--muted)
-            }
-
-            /* responsive */
-            @media (max-width:980px) {
-                .grid {
-                    grid-template-columns: repeat(2, 1fr)
-                }
-            }
-
-            @media (max-width:640px) {
-                header {
-                    gap: 10px
-                }
-
-                .grid {
-                    grid-template-columns: 1fr
-                }
-
-                .search input {
-                    width: 120px
-                }
-            }
-
-            /* category sections */
-            .section-title {
-                margin: 30px 0 12px;
-                display: flex;
-                align-items: center;
-                gap: 12px
-            }
-
-            .count-pill {
-                background: var(--glass);
-                padding: 6px 10px;
-                border-radius: 999px;
+            .social-banner h2 {
+                margin-top: 10px;
+                font-size: 24px;
                 font-weight: 600;
-                color: var(--muted)
             }
 
-            /* subtle hover */
-            .card:hover {
+            .social-banner i {
+                font-size: 48px;
+            }
+
+            /* Hover effect */
+            .social-banner:hover {
                 transform: translateY(-6px);
-                transition: transform .18s ease
+            }
+
+            .social-banner:hover::before {
+                transform: scale(1.08);
+            }
+
+            /* Background images for each card */
+            .fb-bg::before {
+                background-image: url('https://i.ibb.co/rb8HKW9/facebook-bg.jpg');
+            }
+
+            .yt-bg::before {
+                background-image: url('https://i.ibb.co/sJt4VQs/youtube-bg.jpg');
+            }
+
+            .insta-bg::before {
+                background-image: url('https://i.ibb.co/smF7cp5/instagram-bg.jpg');
+            }
+
+            .tt-bg::before {
+                background-image: url('https://i.ibb.co/HF2w5dn/tiktok-bg.jpg');
+            }
+
+            .wp-bg::before {
+                background-image: url('https://i.ibb.co/znMbWpg/whatsapp-bg.jpg');
             }
         </style>
     </head>
 
     <body>
-        <div class="container">
-            <header>
-                <div class="title">
-                    <h1>Social Activities</h1>
-                    <p class="lead">Events arranged by date and category — দেখুন আপনার পছন্দ অনুযায়ী</p>
-                </div>
 
-                <div class="controls">
-                    <div class="search" role="search" aria-label="Search events">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right:8px">
-                            <path d="M21 21l-4.35-4.35" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                            <circle cx="11" cy="11" r="6" stroke="#9CA3AF" stroke-width="2"></circle>
-                        </svg>
-                        <input id="q" placeholder="Search by title, place or date (e.g. 21 Feb)" />
+        <h1 class="section-title">Our Social Activities</h1>
+        <p class="sub-text">Follow & stay connected with us across social media platforms</p>
+
+        <section class="social-banner-section">
+            <div class="social-banner-grid">
+
+                <!-- Facebook Banner -->
+                <a href="#" class="social-banner fb-bg">
+                    <div class="content">
+                        <i class="fa-brands fa-facebook"></i>
+                        <h2>Follow us on Facebook</h2>
                     </div>
+                </a>
 
-                    <div class="filters" role="tablist" aria-label="Event categories">
-                        <button class="chip active" data-cat="all">All</button>
-                        <button class="chip" data-cat="community">Community</button>
-                        <button class="chip" data-cat="culture">Culture</button>
-                        <button class="chip" data-cat="sports">Sports</button>
-                        <button class="chip" data-cat="workshop">Workshop</button>
+                <!-- YouTube Banner -->
+                <a href="#" class="social-banner yt-bg">
+                    <div class="content">
+                        <i class="fa-brands fa-youtube"></i>
+                        <h2>Subscribe on YouTube</h2>
                     </div>
-                </div>
-            </header>
+                </a>
 
-            <main>
-                <!-- Section: Upcoming -->
-                <div class="section-title">
-                    <h2 style="margin:0;font-size:16px">Upcoming</h2>
-                    <div class="count-pill" id="count-upcoming">4 events</div>
-                </div>
+                <!-- Instagram Banner -->
+                <a href="#" class="social-banner insta-bg">
+                    <div class="content">
+                        <i class="fa-brands fa-instagram"></i>
+                        <h2>Follow Instagram</h2>
+                    </div>
+                </a>
 
-                <div class="grid" id="events-grid">
-                    <!-- Event card template instances -->
+                <!-- TikTok Banner -->
+                <a href="#" class="social-banner tt-bg">
+                    <div class="content">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <h2>Watch on TikTok</h2>
+                    </div>
+                </a>
 
-                    <!-- Card 1 -->
-                    <article class="card" data-cat="community" data-title="Community Clean-up" data-date="2025-02-21">
-                        <div class="media">
-                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd"
-                                alt="Community clean-up">
-                            <div class="date-badge">
-                                <div class="day">21</div>
-                                <div class="month">Feb</div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="meta">
-                                <span class="category">Community</span>
-                                <small class="muted">Dhaka — 10:00 AM</small>
-                            </div>
-                            <h3>Community Clean-up</h3>
-                            <p class="desc">Join neighbors to clean and beautify the local park. Tools provided.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-outline">Details</button>
-                            <button class="btn btn-primary">RSVP</button>
-                        </div>
-                    </article>
+                <!-- WhatsApp Banner -->
+                <a href="#" class="social-banner wp-bg">
+                    <div class="content">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <h2>WhatsApp Support</h2>
+                    </div>
+                </a>
 
-                    <!-- Card 2 -->
-                    <article class="card" data-cat="culture" data-title="Winter Music Fest" data-date="2024-12-16">
-                        <div class="media">
-                            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=efgh"
-                                alt="Music festival">
-                            <div class="date-badge">
-                                <div class="day">16</div>
-                                <div class="month">Dec</div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="meta">
-                                <span class="category">Culture</span>
-                                <small class="muted">City Hall — 7:00 PM</small>
-                            </div>
-                            <h3>Winter Music Fest</h3>
-                            <p class="desc">A night of local bands, food stalls, and art installations.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-outline">Details</button>
-                            <button class="btn btn-primary">Buy Ticket</button>
-                        </div>
-                    </article>
+            </div>
+        </section>
 
-                    <!-- Card 3 -->
-                    <article class="card small" data-cat="sports" data-title="Morning Yoga" data-date="2025-03-05">
-                        <div class="media">
-                            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ijkl"
-                                alt="Morning yoga">
-                            <div class="date-badge">
-                                <div class="day">05</div>
-                                <div class="month">Mar</div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="meta">
-                                <span class="category">Sports</span>
-                                <small class="muted">Riverside — 6:30 AM</small>
-                            </div>
-                            <h3>Morning Yoga</h3>
-                            <p class="desc">All-levels yoga session by the river. Bring a mat.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-outline">Details</button>
-                            <button class="btn btn-primary">Join</button>
-                        </div>
-                    </article>
-
-                    <!-- Card 4 -->
-                    <article class="card" data-cat="workshop" data-title="Web Design Workshop" data-date="2025-04-12">
-                        <div class="media">
-                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=mnop"
-                                alt="Workshop">
-                            <div class="date-badge">
-                                <div class="day">12</div>
-                                <div class="month">Apr</div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="meta">
-                                <span class="category">Workshop</span>
-                                <small class="muted">Tech Hub — 2:00 PM</small>
-                            </div>
-                            <h3>Web Design Workshop</h3>
-                            <p class="desc">Hands-on workshop: HTML, CSS & accessible UI components.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-outline">Details</button>
-                            <button class="btn btn-primary">Register</button>
-                        </div>
-                    </article>
-
-                </div>
-
-                <div id="empty" class="empty" style="display:none">No events match your search.</div>
-
-            </main>
-        </div>
-
-        <script>
-            // Simple client-side filtering by category & search
-            const chips = document.querySelectorAll('.chip');
-            const cards = Array.from(document.querySelectorAll('.card'));
-            const q = document.getElementById('q');
-            const eventsGrid = document.getElementById('events-grid');
-            const empty = document.getElementById('empty');
-
-            function applyFilter() {
-                const activeChip = document.querySelector('.chip.active')?.dataset.cat || 'all';
-                const query = q.value.trim().toLowerCase();
-                let visible = 0;
-                cards.forEach(card => {
-                    const cat = card.dataset.cat;
-                    const title = card.dataset.title.toLowerCase();
-                    const date = card.dataset.date.toLowerCase();
-                    const matchCat = activeChip === 'all' ? true : activeChip === cat;
-                    const matchQuery = query === '' ? true : (title.includes(query) || date.includes(query));
-                    if (matchCat && matchQuery) {
-                        card.style.display = '';
-                        visible++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                empty.style.display = visible === 0 ? '' : 'none';
-            }
-
-            chips.forEach(c => c.addEventListener('click', e => {
-                chips.forEach(x => x.classList.remove('active'));
-                e.currentTarget.classList.add('active');
-                applyFilter();
-            }));
-
-            q.addEventListener('input', applyFilter);
-
-            // initial count update (simple)
-            function updateCounts() {
-                const upcoming = cards.length;
-                document.getElementById('count-upcoming').textContent = upcoming + ' events';
-            }
-            updateCounts();
-        </script>
     </body>
 
 </html>
