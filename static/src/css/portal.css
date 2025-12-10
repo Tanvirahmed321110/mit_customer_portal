@@ -1167,17 +1167,18 @@ select {
 
 .mit-point-area .reward-img {
     border: 1px solid var(--white-off);
-    padding: 12px;
+    padding: 16px;
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    position: relative;
 }
 
 .mit-point-area .reward-img img {
     width: 220px;
-    animation: rotateIcon 20s linear infinite;
-
+    animation: rotateIcon 40s linear 1;
 }
+
 
 @keyframes rotateIcon {
     from {
@@ -1318,7 +1319,7 @@ select {
 .totlal-service .total-value {
     font-size: var(--fs-lg);
     font-weight: 600;
-    color: var(--gray);
+    color: var(--n-dark);
     width: 46px;
     height: 46px;
     border-radius: 50%;
