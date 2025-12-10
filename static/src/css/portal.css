@@ -766,13 +766,14 @@ footer {
 
 .sub-head .item:hover::after,
 .sub-head .item.active::after {
-    position: absolute;
     content: '';
-    bottom: -3px;
+    position: absolute;
+    bottom: 0px;
     left: 0;
     height: 3px;
     width: 100%;
     background-color: var(--green);
+    z-index: 3;
 }
 
 .sub-head .item.active i,
@@ -1311,6 +1312,33 @@ select {
     font-size: 11px;
 }
 
+
+
+
+.totlal-service .total-value {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--gray);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--input);
+    padding: 4px;
+    outline: 3px solid var(--white-off);
+    border: 3px solid var(--white);
+}
+
+.totlal-service .total-text {
+    color: var(--gray);
+    font-size: var(--fs-sm);
+    margin-top: 4px;
+}
+
+
+
+
+
+
 @media (max-width:1281px) {
 
     .portal .head .left,
@@ -1457,6 +1485,10 @@ select {
         --fs-xl: 18px;
         --fs-xxl: 22px;
         --fs-xxxl: 30px;
+    }
+
+    .open-ticket {
+        padding: 16px;
     }
 
     .portal .my-container {
