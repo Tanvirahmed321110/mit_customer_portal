@@ -27471,226 +27471,361 @@
                                     <div class="my-flex-center flex-1 my-flex-column my-bg-white  my-radius-md">
                                         <div class="recent-orders my-mt-0 my-w-100 my-flex-column flex-1">
 
-                                            <div class="my-flex-between">
-                                                <div>
-                                                    <h3 class="recent-orders-title">Service and Warrenty</h3>
-                                                    <p class="small">You have serviced 10 items </p>
-                                                </div>
-                                                <div class="totlal-service">
-                                                    <div class="total-value my-text-center my-flex-center">10</div>
-                                                    <p class="total-text">Total Services</p>
-                                                </div>
+                                            <!--================|| Sub Head OR Tab Buttons ||================-->
+                                            <div class="sub-head ">
+                                                <ul class="my-flex-center tab-buttons my-gap-4">
+                                                    <li class="item active" data-tab="pick-drop-service">
+                                                        Pick &amp; Drop Serive
+                                                    </li>
+                                                    <li class="item " data-tab="home-service">
+                                                        Home Service
+                                                    </li>
+                                                    <li class="item " data-tab="cctv-service">
+                                                        CCTV Service
+                                                    </li>
+                                                    <li class="item " data-tab="remote-service">
+                                                        Remote Service
+                                                    </li>
+
+                                                    <li class="item" data-tab="warrenty-delivery">
+                                                        Warrenty Delivery
+                                                    </li>
+
+                                                    <li class="item" data-tab="warrenty-pending">
+                                                        Warrenty Pending
+                                                    </li>
+                                                    <li class="item" data-tab="book-service">
+                                                        Book A Service
+                                                    </li>
+                                                    <li class="item" data-tab="complain">
+                                                        complain
+                                                    </li>
+
+                                                </ul>
                                             </div>
 
-                                            <!--======== when data have ========-->
-                                            <div class="my-pt-3 table-wrap">
-                                                <table class="orders">
 
-                                                    <!-- Head Here -->
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ticket ID </th>
-                                                            <th>Product</th>
-                                                            <th>Status</th>
-                                                            <th>Date</th>
-                                                            <th>Print</th>
-                                                            <th>Other 2</th>
-                                                        </tr>
-                                                    </thead>
 
-                                                    <!-- Orders Body Here -->
-                                                    <tbody>
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#4532180</a></td>
-                                                            <td>Keyboard</td>
-                                                            <td>
-                                                                <div class="open status">Open</div>
-                                                            </td>
 
-                                                            <!-- all status -->
-                                                            <!-- <td>
-                                                        <div class="open status">Open</div>
-                                                        <div class="delivered status">Delivered</div>
-                                                        <div class="canceled status">Canceled</div>
-                                                        <div class="ready-for-delivery status">Ready For Delivery</div>
-                                                        <div class="processing status">Processing</div>
-                                                    </td> -->
+                                            <!--===================|| Tab Contents ||===================-->
+                                            <div class="tab-contents flex-1 my-d-flex ">
+                                                <!--============|| Pick Drop Service ||===========-->
+                                                <div class="tab-content active" data-tab="pick-drop-service">
+                                                    <div class="recent-orders my-mt-0 my-w-100">
+                                                        <h3 class="recent-orders-title">Pick and Drop Serivice</h3>
 
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
+                                                        <!--======== when data have ========-->
+                                                        <div class="my-pt-3 table-wrap">
+                                                            <table class="orders">
+
+                                                                <!-- Head Here -->
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Ticket ID </th>
+                                                                        <th>Product</th>
+                                                                        <th>Status</th>
+                                                                        <th>Date</th>
+                                                                        <th>Print</th>
+                                                                        <th>Other 2</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <!-- Orders Body Here -->
+                                                                <tbody>
+
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#4532180</a></td>
+                                                                        <td>Keyboard</td>
+                                                                        <td>
+                                                                            <div class="open status">Open</div>
+                                                                        </td>
+
+                                                                        <!-- all status -->
+                                                                        <!-- <td>
+                                                                            <div class="open status">Open</div>
+                                                                            <div class="delivered status">Delivered</div>
+                                                                            <div class="canceled status">Canceled</div>
+                                                                            <div class="ready-for-delivery status">Ready For Delivery</div>
+                                                                            <div class="processing status">Processing</div>
+                                                                        </td> -->
+
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td><a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a></td>
+                                                                    </tr>
+
+
+
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#2924214</a></td>
+                                                                        <td>Mobile Charger</td>
+                                                                        <td>
+                                                                            <div class="open status">Open</div>
+                                                                        </td>
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#2924213</a></td>
+                                                                        <td>HP Monitor</td>
+                                                                        <td>
+                                                                            <div class="processing status">Processing
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td><a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a></td>
+                                                                    </tr>
+
+
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#2924213</a></td>
+                                                                        <td>Desktop Set</td>
+                                                                        <td>
+                                                                            <div class="ready-for-delivery status">Ready
+                                                                                For
+                                                                                Delivery
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td><a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a></td>
+                                                                    </tr>
+
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#2924212</a></td>
+                                                                        <td>Smart Watch</td>
+                                                                        <td>
+                                                                            <div class="delivered status">Delivered
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td><a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a></td>
+                                                                    </tr>
+
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#2924213</a></td>
+                                                                        <td>Mobile Phone</td>
+                                                                        <td>
+                                                                            <div class="canceled status">Canceled</div>
+                                                                        </td>
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td><a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a></td>
+                                                                    </tr>
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#2924213</a></td>
+                                                                        <td>Mobile Phone</td>
+                                                                        <td>
+                                                                            <div class="canceled status">Canceled</div>
+                                                                        </td>
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td><a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a></td>
+                                                                    </tr>
+                                                                    <!-- single order -->
+                                                                    <tr>
+                                                                        <td class="order-number"><a
+                                                                                href="#">#2924213</a></td>
+                                                                        <td>Mobile Phone</td>
+                                                                        <td>
+                                                                            <div class="canceled status">Canceled</div>
+                                                                        </td>
+                                                                        <td>09 Nov 2025</td>
+                                                                        <!-- print button -->
+                                                                        <td><button class="invoice-btn">
+                                                                                <i class="fa-solid fa-print"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td><a href="./order-details"
+                                                                                class="my-btn my-btn-sm view-details-btn">View
+                                                                                Details</a></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+
+
+                                                            <!--========== Pagination ===========-->
+                                                            <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
+
+                                                                <!-- disabled -->
+                                                                <!-- <button class="prev next-prev disabled" disabled>
+                                                                        <i class="fa-solid fa-angle-left"></i>
+                                                                    </button> -->
+                                                                <button class="prev next-prev ">
+                                                                    <i class="fa-solid fa-angle-left"></i>
                                                                 </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
 
+                                                                <ul class="wrap my-flex-center my-gap-1">
+                                                                    <li><a class="page " href="#">1</a></li>
+                                                                    <li><a class="page active" href="#">2</a></li>
+                                                                    <li><a class="page jump" href="#">...</a></li>
+                                                                    <li><a class="page" href="#">8</a></li>
+                                                                    <li><a class="page" href="#">9</a></li>
+                                                                </ul>
 
-
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924214</a></td>
-                                                            <td>Mobile Charger</td>
-                                                            <td>
-                                                                <div class="open status">Open</div>
-                                                            </td>
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
+                                                                <button class="next next-prev">
+                                                                    <i class="fa-solid fa-angle-right"></i>
                                                                 </button>
-                                                            </td>
-                                                            <td>
-                                                                <a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a>
-                                                            </td>
-                                                        </tr>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--==========  When Empty =========-->
+                                                    <!-- <div class="no-result">
+                                                            <img src="/static/src/images/no-results.png" alt="no result icon"
+                                                                loading="lazy">
+                                                        </div> -->
+                                                </div>
 
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>HP Monitor</td>
-                                                            <td>
-                                                                <div class="processing status">Processing</div>
-                                                            </td>
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
+                                                <!--============|| Home Serive ||===========-->
+                                                <div class="tab-content" data-tab="home-service">
+
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
+                                                </div>
 
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Desktop Set</td>
-                                                            <td>
-                                                                <div class="ready-for-delivery status">Ready For
-                                                                    Delivery
-                                                                </div>
-                                                            </td>
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
+                                                <!--============|| CCTV Service ||===========-->
+                                                <div class="tab-content" data-tab="cctv-service">
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924212</a></td>
-                                                            <td>Smart Watch</td>
-                                                            <td>
-                                                                <div class="delivered status">Delivered</div>
-                                                            </td>
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
+                                                </div>
 
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Mobile Phone</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Mobile Phone</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                        <!-- single order -->
-                                                        <tr>
-                                                            <td class="order-number"><a href="#">#2924213</a></td>
-                                                            <td>Mobile Phone</td>
-                                                            <td>
-                                                                <div class="canceled status">Canceled</div>
-                                                            </td>
-                                                            <td>09 Nov 2025</td>
-                                                            <!-- print button -->
-                                                            <td><button class="invoice-btn">
-                                                                    <i class="fa-solid fa-print"></i>
-                                                                </button>
-                                                            </td>
-                                                            <td><a href="./order-details"
-                                                                    class="my-btn my-btn-sm view-details-btn">View
-                                                                    Details</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                <!--============|| Remote Service ||===========-->
+                                                <div class="tab-content" data-tab="remote-service">
+
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
+                                                </div>
+
+                                                <!--============|| warrenty delivery ||===========-->
+                                                <div class="tab-content" data-tab="warrenty-delivery">
+
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
+                                                </div>
 
 
+                                                <!--============|| warrent pending ||===========-->
+                                                <div class="tab-content" data-tab="warrenty-pending">
 
-                                                <!--========== Pagination ===========-->
-                                                <div class="pagination-2 my-flex-center my-gap-3 my-mt-6">
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
+                                                </div>
 
-                                                    <!-- disabled -->
-                                                    <!-- <button class="prev next-prev disabled" disabled>
-                                                    <i class="fa-solid fa-angle-left"></i>
-                                                </button> -->
-                                                    <button class="prev next-prev ">
-                                                        <i class="fa-solid fa-angle-left"></i>
-                                                    </button>
+                                                <!--============|| warrent pending ||===========-->
+                                                <div class="tab-content" data-tab="warrenty-pending">
 
-                                                    <ul class="wrap my-flex-center my-gap-1">
-                                                        <li><a class="page " href="#">1</a></li>
-                                                        <li><a class="page active" href="#">2</a></li>
-                                                        <li><a class="page jump" href="#">...</a></li>
-                                                        <li><a class="page" href="#">8</a></li>
-                                                        <li><a class="page" href="#">9</a></li>
-                                                    </ul>
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
+                                                </div>
 
-                                                    <button class="next next-prev">
-                                                        <i class="fa-solid fa-angle-right"></i>
-                                                    </button>
 
+                                                <!--============|| warrent pending ||===========-->
+                                                <div class="tab-content" data-tab="book-service">
+
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
+                                                </div>
+                                                <!--============|| warrent pending ||===========-->
+                                                <div class="tab-content" data-tab="complain">
+
+                                                    <!--==========  When Empty =========-->
+                                                    <div class="no-result">
+                                                        <img src="/static/src/images/no-results.png"
+                                                            alt="no result icon" loading="lazy">
+                                                    </div>
                                                 </div>
                                             </div>
-
 
 
 

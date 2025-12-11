@@ -5,7 +5,6 @@
 }
 
 .portal {
-
     /* background-color: var(--white); */
 }
 
@@ -39,6 +38,7 @@
     min-height: calc(100dvh - 160px);
     overflow-y: auto;
     gap: 40px;
+
 }
 
 .slidebar-title-name {
@@ -190,6 +190,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: var(--radius-md);
+    position: relative;
 }
 
 .portal .head .left,
@@ -213,20 +214,30 @@
     color: var(--n-dark);
 }
 
+.portal .head .e {
+    font-size: var(--fs-sm);
+    color: var(--n-dark);
+    line-height: 19px;
+}
+
+.portal .head .e:hover {
+    color: var(--primary-color);
+}
+
 .portal .head .grade {
     color: var(--gray);
     font-size: var(--fs-xs);
 }
 
 .portal .head .grade-value {
-    color: var(--primary-color);
-    font-weight: 600;
+    color: var(--gray);
+    font-weight: 500;
     font-size: 13px;
     font-size: var(--fs-xs);
 }
 
 .portal .head .right .point {
-    color: rgb(231, 151, 2);
+    color: red;
     border-radius: 50%;
     font-size: 28px;
     font-weight: 600;
@@ -250,13 +261,9 @@
 }
 
 .portal .head .left .user-id {
-    color: var(--gray);
+    color: var(--n-dark2);
     font-size: 14px;
     line-height: 16px;
-}
-
-.filter-head .info {
-    /* color: var(--before); */
 }
 
 .portal .head .right {
@@ -270,15 +277,9 @@
 
 .portal .head .meddle {
     clip-path: polygon(0 0, 100% 0, 74% 100%, 20% 100%);
-    background-color: rgba(240, 231, 248, 0.798);
     background-color: #F1F1F1;
-    /* height: 100%; */
-    color: var(--orange);
     padding-bottom: 2px;
-    margin-top: -44px;
-    /* border-radius: 16px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0; */
+    margin-top: -77px;
 }
 
 .portal .head .meddle .portal-name {
@@ -287,9 +288,17 @@
     text-transform: uppercase;
     font-size: var(--fs-lg);
     word-spacing: 4PX;
-    color: var(--green);
-    color: #e79702;
+    color: red;
     letter-spacing: .5px;
+}
+
+.portal .head .address-phones {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--n-dark2);
+    z-index: 2;
 }
 
 /*
@@ -1355,13 +1364,9 @@ select {
     background-size: contain;
 }
 
-.account-finance .item:nth-child(2) {
-    margin-top: 60px;
-}
-
-.account-finance .item:nth-child(1) {
-    margin-top: 120px;
-}
+/* .account-finance .item:nth-child(2) {
+    margin-top: -20px;
+} */
 
 
 /* single socila page item */
@@ -1582,6 +1587,9 @@ select {
         font-size: 10px;
     }
 
+    .portal .head .address-phones {
+        display: none;
+    }
 }
 
 
@@ -1702,13 +1710,13 @@ select {
     }
 
     .portal .head .left .user-id {
-        color: var(--gray);
+        color: var(--gray2);
         font-size: 12px;
         line-height: 16px;
     }
 
     .portal .head .grade {
-        color: var(--gray);
+        color: var(--gray2);
         font-size: 10px;
     }
 
