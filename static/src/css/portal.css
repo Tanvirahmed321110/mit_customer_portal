@@ -592,8 +592,6 @@ footer {
 
 .notices .notice-card {
     padding: 8px;
-    background: var(--secondary-color);
-    background: var(--secondary-hover);
     background: #002741;
     border-radius: 16px;
     box-shadow: 0px 4px 16px 0px #0000001F;
@@ -601,6 +599,7 @@ footer {
     position: relative;
     overflow: hidden;
     border: none;
+    /* background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-hover-color), var(--secondary-hover)); */
 }
 
 .notices .notice-card .title {
@@ -614,7 +613,7 @@ footer {
     height: 6px;
     width: 100%;
     z-index: 2;
-    /* background: linear-gradient(to right, gold, var(--green), red, orange); */
+    /* background: linear-gradient(to right, red, orange); */
 }
 
 .notices .notice-card:hover::after {
@@ -1346,9 +1345,26 @@ select {
     background-position: bottom -180px center;
     width: 100%;
     height: 100%;
-    align-items: center;
+    align-items: flex-start;
 }
 
+.account-finance {
+    background-image: url('/static/src/images/icon/account-finance.png');
+    background-image: unset;
+    background-position: center;
+    background-size: contain;
+}
+
+.account-finance .item:nth-child(2) {
+    margin-top: 60px;
+}
+
+.account-finance .item:nth-child(1) {
+    margin-top: 120px;
+}
+
+
+/* single socila page item */
 .social-page .item {
     position: relative;
     padding: 45px 25px;
@@ -1361,7 +1377,7 @@ select {
     justify-content: flex-end;
     overflow: hidden;
     transition: 0.3s ease;
-    background-color: rgba(118, 36, 195, 0.653);
+    background-color: rgba(118, 36, 195, 0.753);
     outline: 1px solid var(--input);
     border: 2px solid white;
 }
@@ -1835,6 +1851,14 @@ select {
         color: var(--gray2);
     }
 
+
+    .account-finance .item:nth-child(2) {
+        margin-top: 0px;
+    }
+
+    .account-finance .item:nth-child(1) {
+        margin-top: 0px;
+    }
 }
 
 
