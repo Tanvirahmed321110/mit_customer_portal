@@ -69,8 +69,7 @@
 
 
 .portal .sidebar .item i {
-    color: #999;
-    color: var(--primary-color);
+    color: var(--white);
     font-size: var(--fs-xs);
 }
 
@@ -142,15 +141,17 @@
 
 .report-dropdown a {
     font-size: 14px;
-    color: var(--gray);
+    color: var(--white-off2);
     padding: 8px;
-    border-bottom: 1px solid var(--white-off);
+    border-bottom: 1px solid var(--white-off2);
     /* background-color: #EFF6FF; */
     border-radius: 6px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    opacity: .9;
+    transition: .2s ease;
 }
 
 .report-dropdown a i {
@@ -158,7 +159,7 @@
 }
 
 .report-dropdown a:hover {
-    color: var(--primary-color);
+    opacity: .66;
 }
 
 /* Open dropdown when active */
@@ -286,19 +287,20 @@
 
 .portal .head .meddle {
     clip-path: polygon(0 0, 100% 0, 76% 100%, 20% 100%);
-    padding-bottom: 2px;
-    margin-top: -70px;
+    padding-bottom: 0px;
+    margin-top: -73px;
     background-color: #4491f7;
+    background-color: var(--white-off);
 }
 
 .portal .head .meddle .portal-name {
-    color: var(--white);
+    color: var(--after);
     font-weight: 700;
     text-transform: uppercase;
     font-size: var(--fs-lg);
     word-spacing: 4PX;
     letter-spacing: .5px;
-    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .portal .head .address-phones {
