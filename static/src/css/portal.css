@@ -56,7 +56,7 @@
     border-radius: 6px;
     font-size: var(--fs-sm);
     font-size: 15px;
-    /* border-bottom: 1px solid var(--input); */
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,6 +105,14 @@
 .portal .sidebar .item:hover i {
     color: var(--white);
     animation: arrow-slide 0.2s 3 alternate;
+}
+
+.portal .sidebar .item svg {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    background-color: var(--input);
+    padding: 4px;
 }
 
 @keyframes arrow-slide {
@@ -216,7 +224,7 @@
 
 .portal .head .e {
     font-size: var(--fs-sm);
-    color: var(--n-dark);
+    color: var(--primary-color);
     line-height: 19px;
 }
 
@@ -225,12 +233,12 @@
 }
 
 .portal .head .grade {
-    color: var(--gray);
+    color: var(--n-dark);
     font-size: var(--fs-xs);
 }
 
 .portal .head .grade-value {
-    color: var(--gray);
+    color: var(--n-dark);
     font-weight: 500;
     font-size: 13px;
     font-size: var(--fs-xs);
@@ -276,20 +284,20 @@
 
 
 .portal .head .meddle {
-    clip-path: polygon(0 0, 100% 0, 74% 100%, 20% 100%);
-    background-color: #F1F1F1;
+    clip-path: polygon(0 0, 100% 0, 77% 100%, 20% 100%);
+    background-color: var(--red);
     padding-bottom: 2px;
-    margin-top: -77px;
+    margin-top: -66px;
 }
 
 .portal .head .meddle .portal-name {
-    color: #000;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: var(--fs-lg);
+    font-size: 20px;
     word-spacing: 4PX;
-    color: red;
+    color: var(--white);
     letter-spacing: .5px;
+    text-shadow: 1px 2px rgba(94, 94, 94, 0.61);
 }
 
 .portal .head .address-phones {
@@ -297,7 +305,7 @@
     bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--n-dark2);
+    color: var(--after);
     z-index: 2;
 }
 
@@ -601,7 +609,7 @@ footer {
 
 .notices .notice-card {
     padding: 8px;
-    background: #002741;
+    padding-top: 12px;
     border-radius: 16px;
     box-shadow: 0px 4px 16px 0px #0000001F;
     transition: .2s ease;
@@ -612,7 +620,7 @@ footer {
 }
 
 .notices .notice-card .title {
-    color: var(--border-color2);
+    color: var(--n-dark);
 }
 
 .notices .notice-card::after {
@@ -623,6 +631,7 @@ footer {
     width: 100%;
     z-index: 2;
     /* background: linear-gradient(to right, red, orange); */
+    background: linear-gradient(to right, var(--green), gold, var(--orange), red);
 }
 
 .notices .notice-card:hover::after {
@@ -666,8 +675,7 @@ footer {
 }
 
 .notices .notice-card .desc {
-    color: var(--white-off2);
-    opacity: .5;
+    color: var(--gray);
 }
 
 /*********   Overview Page   **********/
