@@ -319,9 +319,9 @@
     z-index: 2;
     background-color: #F1F1F1;
     padding: 6px 16px;
-    border-radius: 12px 12px 1px 1px;
+    border-radius: 12px 12px 0px 0px;
     font-size: 14px;
-    outline: 5px solid #efeaea;
+    outline: 4px solid #efeaea;
     box-shadow: var(--shadow-2);
 }
 
@@ -347,7 +347,7 @@
     padding: 20px 16px;
     background-color: var(--input);
     background-color: #EFF6FF;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
@@ -356,6 +356,8 @@
     transition: .3s ease;
     border: 1px solid transparent;
     box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.076);
+    position: relative;
+    padding-left: 40px;
 }
 
 
@@ -412,12 +414,18 @@
     height: 42px;
     background-color: var(--white);
     border-radius: 50%;
-    border-radius: 6px;
+    border-radius: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: unset;
     box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.09);
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    border: 6px solid #f1f1f1;
+    box-shadow: unset;
+    border-radius: 0 1px 16px 0;
 }
 
 .portal .p-body .cart-item .left .icon svg {
@@ -437,6 +445,7 @@
     border: 1px solid transparent;
     transition: .3s ease;
     box-shadow: unset;
+    padding-left: 44px;
 }
 
 .portal .payment-date .cart-item .cart-title {
@@ -456,6 +465,7 @@
     border: 1px solid transparent !important;
     transition: background .9s ease;
 }
+
 
 footer {
     margin-top: 12px !important;
