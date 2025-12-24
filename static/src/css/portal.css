@@ -170,7 +170,7 @@
 
 /* Open dropdown when active */
 .report-item.active+.report-dropdown {
-    max-height: 200px;
+    max-height: 320px;
 }
 
 /* Rotate arrow */
