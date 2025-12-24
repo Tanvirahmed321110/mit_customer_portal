@@ -208,6 +208,7 @@
     justify-content: space-between;
     border-radius: var(--radius-md);
     position: relative;
+    overflow: hidden;
 }
 
 .portal .head .left,
@@ -295,26 +296,33 @@
     clip-path: polygon(0 0, 100% 0, 78% 100%, 20% 100%);
     background-color: var(--red);
     padding-bottom: 2px;
-    margin-top: -67px;
+    margin-top: -82px;
 }
 
 .portal .head .meddle .portal-name {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
     word-spacing: 4PX;
     color: var(--white);
     letter-spacing: .5px;
     text-shadow: 1px 2px rgba(165, 165, 165, 0.61);
+    line-height: 36px;
 }
 
 .portal .head .address-phones {
     position: absolute;
-    bottom: 12px;
+    bottom: 4px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--before);
+    color: var(--after);
     z-index: 2;
+    background-color: #F1F1F1;
+    padding: 6px 16px;
+    border-radius: 12px 12px 1px 1px;
+    font-size: 14px;
+    outline: 5px solid #efeaea;
+    box-shadow: var(--shadow-2);
 }
 
 /*
@@ -400,16 +408,21 @@
 }
 
 .portal .p-body .cart-item .left .icon {
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 42px;
     background-color: var(--white);
     border-radius: 50%;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-2);
-    box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.07);
-    border: 1px solid transparent;
+    box-shadow: unset;
+    box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.09);
+}
+
+.portal .p-body .cart-item .left .icon svg {
+    width: 18px;
+    height: 18px;
 }
 
 .portal .p-body .cart-item:hover .left .icon {
@@ -1621,6 +1634,11 @@ select {
     .portal .head .address-phones {
         display: none;
     }
+
+    .portal .head .e {
+        margin-top: 0;
+        line-height: 16px;
+    }
 }
 
 
@@ -1750,6 +1768,7 @@ select {
         color: var(--gray2);
         font-size: 12px;
         line-height: 16px;
+        margin-top: 0;
     }
 
     .portal .head .grade {
@@ -1879,8 +1898,9 @@ select {
     }
 
     .sub-head ul {
-        width: 180%;
-        padding: 4px 12px;
+        max-width: 247%;
+        padding: 4px 0px;
+        width: fit-content;
     }
 
     .sub-head .item {
