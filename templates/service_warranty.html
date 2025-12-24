@@ -27129,6 +27129,12 @@
 
                         <!--========================|| Sidebar Pages Here ||========================-->
                         <aside class="my-radius-md sidebar-wrap " id="portal-sidebar">
+
+                            <!-- mobile show title -->
+                            <div class="desktop-hide mobile-show my-pt-5 my-px-2 mobile-sidebar-title">
+                                <h4 class="my-text-red my-text-uppercase">Customer Portal</h4>
+                            </div>
+
                             <div class="sidebar  my-has-scrollbar-sm">
                                 <!-- genaral Menu -->
                                 <div>
@@ -27179,7 +27185,7 @@
                                                         <circle cx="12" cy="7" r="4"></circle>
                                                         <path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path>
                                                     </svg>
-                                                    Profile
+                                                    User Profile
                                                 </div>
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </a>
@@ -27233,7 +27239,7 @@
                                                         <rect x="19" y="10" width="4" height="7" rx="2"></rect>
                                                         <path d="M12 19v2a2 2 0 0 0 2 2h2"></path>
                                                     </svg>
-                                                    HelpDesk
+                                                    HelpDesk &amp; Support
                                                 </div>
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </a>
@@ -27254,7 +27260,7 @@
                                                         <path d="M9 21c0-4 3-7 6-7s6 3 6 7"></path>
                                                     </svg>
 
-                                                    Social Activities
+                                                    Our Social Platform
                                                 </div>
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </a>
@@ -27270,7 +27276,26 @@
                                                         <path d="M12 3l8 4v5c0 5-3.5 9-8 9s-8-4-8-9V7l8-4z"></path>
                                                         <polyline points="9 12 11 14 15 10"></polyline>
                                                     </svg>
-                                                    Service & Warranty
+                                                    Service &amp; Warranty
+                                                </div>
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </a>
+                                        </li>
+
+                                        <!-- accont and finance -->
+                                        <li>
+                                            <a class="item" href="./account_finance.html">
+                                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                        stroke="#1878F2" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                                                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                                                        <path d="M16 15c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2"></path>
+                                                    </svg>
+
+
+                                                    Account &amp; Finance
                                                 </div>
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </a>
@@ -27288,20 +27313,27 @@
                                                         </path>
                                                         <line x1="7" y1="14" x2="17" y2="14"></line>
                                                     </svg>
-                                                    Reports
+                                                    Reports &amp; Analysis
                                                 </div>
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </div>
 
                                             <!-- Dropdown content -->
                                             <div class="report-dropdown">
-                                                <a href="./my_ledger_report.html">My Ledger Report <span><i
-                                                            class="fa-solid fa-angle-right"></i></span></a>
+                                                <a href="./my_ledger_report.html">My Ledger Report
+                                                    <span><i class="fa-solid fa-angle-right"></i></span>
+                                                </a>
+                                                <a href="./my_ledger_report.html">My Payment Report
+                                                    <span><i class="fa-solid fa-angle-right"></i></span>
+                                                </a>
+                                                <a href="./my_ledger_report.html">MIT Point Report
+                                                    <span><i class="fa-solid fa-angle-right"></i></span>
+                                                </a>
                                                 <a href="#">Complain Receive Analysis <span><i
                                                             class="fa-solid fa-angle-right"></i></span></a>
                                                 <a href="#">Customer Delivery Analysis <span><i
                                                             class="fa-solid fa-angle-right"></i></span></a>
-                                                <a href="./payment_report.html">Payment Report <span><i
+                                                <a href="./payment_report.html">Product Review Call Report <span><i
                                                             class="fa-solid fa-angle-right"></i></span></a>
                                             </div>
                                         </li>
@@ -27433,23 +27465,35 @@
 
                         <!--========================|| Portal Right ||========================-->
                         <div class="portal-right my-flex-column my-gap-4">
-                            <!--==============||  User Head ||==============-->
+                            <!--==============|| User Head ||==============-->
                             <div class="head">
                                 <div class="left my-d-flex my-gap-3 my-align-center">
                                     <img class="profile-img-xl"
                                         src="https://munshiganjit.com.bd/mit_website/static/images/avatar.jpg" alt=""
                                         loading="lazy">
                                     <div>
-                                        <div class="name">MD Tanvir Ahmed</div>
-                                        <p class="user-id my-mt-2"> <span class="">User ID</span> : 23232</p>
+                                        <div class="name">MD Foysal Ahmed</div>
+                                        <a href="mailto:example@gmail.com" class="e my-mt-1"><span>
+                                                example@gmail.com</span></a>
+                                        <a class=" e" href="tel:+880123456789">
+                                            <span>+880 1701957298</span></a>
+                                        <p class="user-id my-mt-1"> <span class="">User Id</span> : 23232</p>
                                         <div class="grade">Grade: <span class="grade-value">A+</span></div>
                                     </div>
                                 </div>
+
+
+                                <!-- address here -->
+                                <p class="address-phones"><i class="fa-solid fa-location-dot"></i> <span> 12 123, MIT
+                                        Computer
+                                        Shop, Dhaka, Bangladesh</span>
+                                </p>
 
                                 <div class="meddle my-flex-center">
                                     <h1 class="portal-name">
                                         Customer Portal
                                     </h1>
+
                                 </div>
 
                                 <div class="right">
@@ -27459,7 +27503,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class=" my-radius-md orders-page tab-area flex-1 my-flex-column">
                                 <!--==============|| Body Content Here ||==============-->
