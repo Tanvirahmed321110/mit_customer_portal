@@ -4,178 +4,79 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Social Activities Page</title>
-
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+        <title>Clipped Image Cards</title>
         <style>
             body {
-                margin: 0;
-                font-family: "Roboto", sans-serif;
-                background: #f5f5f5;
-                color: #333;
-            }
-
-            h1.section-title {
-                text-align: center;
-                margin-top: 50px;
-                margin-bottom: 10px;
-                font-size: 32px;
-            }
-
-            p.sub-text {
-                text-align: center;
-                margin-bottom: 40px;
-                color: #777;
-            }
-
-            /* -------- SOCIAL BANNER DESIGNS WITH BG IMAGE -------- */
-            .social-banner-section {
-                padding: 60px 20px;
-                background: #f5f5f5;
-            }
-
-            .social-banner-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 30px;
-            }
-
-            .social-banner {
-                position: relative;
-                padding: 45px 25px;
-                border-radius: 18px;
-                color: white;
-                text-decoration: none;
-                height: 220px;
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                overflow: hidden;
-                transition: 0.3s ease;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: linear-gradient(135deg, #f7e08b, #f07b72);
+                font-family: Arial, sans-serif;
             }
 
-            /* Background image */
-            .social-banner::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background-size: cover;
-                background-position: center;
-                z-index: 1;
-                transition: 0.3s ease;
-            }
-
-            /* Dark gradient overlay */
-            .social-banner::after {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(180deg,
-                        rgba(0, 0, 0, 0.0) 0%,
-                        rgba(0, 0, 0, 0.55) 100%);
-                z-index: 2;
-            }
-
-            /* Content on top */
-            .social-banner .content {
+            .card {
                 position: relative;
-                z-index: 3;
+                width: 250px;
+                height: 250px;
+                overflow: hidden;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                /* trapezoid-like shape */
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             }
 
-            .social-banner h2 {
-                margin-top: 10px;
-                font-size: 24px;
-                font-weight: 600;
+            .card:hover {
+                transform: scale(1.05);
             }
 
-            .social-banner i {
-                font-size: 48px;
+            .card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
             }
 
-            /* Hover effect */
-            .social-banner:hover {
-                transform: translateY(-6px);
+            .initial {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                width: 40px;
+                height: 40px;
+                background-color: #d95c43;
+                color: #fff;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             }
 
-            .social-banner:hover::before {
-                transform: scale(1.08);
-            }
-
-            /* Background images for each card */
-            .fb-bg::before {
-                background-image: url('https://i.ibb.co/rb8HKW9/facebook-bg.jpg');
-            }
-
-            .yt-bg::before {
-                background-image: url('https://i.ibb.co/sJt4VQs/youtube-bg.jpg');
-            }
-
-            .insta-bg::before {
-                background-image: url('https://i.ibb.co/smF7cp5/instagram-bg.jpg');
-            }
-
-            .tt-bg::before {
-                background-image: url('https://i.ibb.co/HF2w5dn/tiktok-bg.jpg');
-            }
-
-            .wp-bg::before {
-                background-image: url('https://i.ibb.co/znMbWpg/whatsapp-bg.jpg');
+            .card.right .initial {
+                left: auto;
+                right: 10px;
+                background-color: #f07b72;
             }
         </style>
     </head>
 
     <body>
 
-        <h1 class="section-title">Our Social Activities</h1>
-        <p class="sub-text">Follow & stay connected with us across social media platforms</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+                alt="Tiger">
+            <div class="initial">T</div>
+        </div>
 
-        <section class="social-banner-section">
-            <div class="social-banner-grid">
-
-                <!-- Facebook Banner -->
-                <a href="#" class="social-banner fb-bg">
-                    <div class="content">
-                        <i class="fa-brands fa-facebook"></i>
-                        <h2>Follow us on Facebook</h2>
-                    </div>
-                </a>
-
-                <!-- YouTube Banner -->
-                <a href="#" class="social-banner yt-bg">
-                    <div class="content">
-                        <i class="fa-brands fa-youtube"></i>
-                        <h2>Subscribe on YouTube</h2>
-                    </div>
-                </a>
-
-                <!-- Instagram Banner -->
-                <a href="#" class="social-banner insta-bg">
-                    <div class="content">
-                        <i class="fa-brands fa-instagram"></i>
-                        <h2>Follow Instagram</h2>
-                    </div>
-                </a>
-
-                <!-- TikTok Banner -->
-                <a href="#" class="social-banner tt-bg">
-                    <div class="content">
-                        <i class="fa-brands fa-tiktok"></i>
-                        <h2>Watch on TikTok</h2>
-                    </div>
-                </a>
-
-                <!-- WhatsApp Banner -->
-                <a href="#" class="social-banner wp-bg">
-                    <div class="content">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <h2>WhatsApp Support</h2>
-                    </div>
-                </a>
-
-            </div>
-        </section>
+        <div class="card right">
+            <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+                alt="Wolf">
+            <div class="initial">W</div>
+        </div>
 
     </body>
 

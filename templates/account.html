@@ -27174,6 +27174,26 @@
                                             </a>
                                         </li>
 
+
+                                        <!-- My Offers -->
+                                        <li>
+                                            <a class="item" href="./offers.html">
+                                                <div class="left my-gap-2 my-d-flex my-align-center">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                        stroke="#1878F2" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path
+                                                            d="M20.59 13.41L11 3H4v7l9.59 9.59a2 2 0 0 0 2.82 0l4.18-4.18a2 2 0 0 0 0-2.82z">
+                                                        </path>
+                                                        <circle cx="7.5" cy="7.5" r="1.5"></circle>
+                                                    </svg>
+                                                    My Offers
+                                                </div>
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </a>
+                                        </li>
+
+
                                         <!-- Accounts -->
                                         <li>
                                             <a class="item active" href="./account.html">
@@ -27536,6 +27556,12 @@
                                                     <i class="fa-solid fa-building"></i>
                                                 </span>
                                                 Courporate Details
+                                            </li>
+
+                                            <li class="item" data-tab="personal-info">
+                                                <span><i class="fa-solid fa-person-breastfeeding"></i>
+                                                </span>
+                                                Personal Info
                                             </li>
 
                                             <li class="item" data-tab="change-password">
@@ -27913,7 +27939,59 @@
                                             </div>
                                         </div>
 
+                                        <!--============|| Change Password ||===========-->
+                                        <div class="tab-content" data-tab="personal-info">
+                                            <div
+                                                class="my-p-4 other-card my-flex-column my-pt-3 my-border my-shadow-2  my-radius-md">
+                                                <h3 class="my-text-primary">Personal Information</h3>
+                                                <p class="my-text-gray">Please fillup your personal info.</p>
 
+
+                                                <form action="" method="post" class="my-flex-column my-mt-5 my-gap-3">
+                                                    <!--  -->
+                                                    <div class="my-input-control">
+                                                        <label for="marital_status"
+                                                            class="my-fw-medium my-fs-sm">Married Status</label>
+                                                        <div class="my-mt-2 my-d-flex my-gap-4">
+                                                            <label class="my-flex-center my-gap-2">
+                                                                <input type="radio" name="marital_status" value="single"
+                                                                    checked>
+                                                                Single
+                                                            </label>
+
+                                                            <label>
+                                                                <input type="radio" name="marital_status"
+                                                                    value="married">
+                                                                Married
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Married Date -->
+                                                    <div class="my-input-control">
+                                                        <label for="married-date">Married Date</label>
+                                                        <input class="my-mt-2" type="date" name="married_date"
+                                                            id="married-date" placeholder="Select Married Date">
+                                                    </div>
+
+                                                    <!-- Date of birth -->
+                                                    <div class="my-input-control">
+                                                        <label for="date-of-birth">Date of Birth</label>
+                                                        <input class="my-mt-2" type="date" name="date_of_birth"
+                                                            id="date-of-birth" placeholder="Select Date of Birth">
+                                                    </div>
+
+
+                                                    <!-- Error Message -->
+                                                    <div class="error-message active">Error Message Here</div>
+
+                                                    <div class="my-d-flex my-justify-end">
+                                                        <button
+                                                            class="my-btn my-mt-1  my-primary-btn my-fs-lg ">Submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
 
                                         <!--============|| Change Password ||===========-->
                                         <div class="tab-content" data-tab="change-password">
