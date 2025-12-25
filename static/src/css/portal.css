@@ -371,7 +371,8 @@
     border: 1px solid transparent;
     box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.076);
     position: relative;
-    padding-left: 40px;
+    padding-left: 32px;
+    padding-top: 36px;
 }
 
 
@@ -420,7 +421,9 @@
     color: #777;
     font-size: 13px;
     word-spacing: 2px;
-    font-weight: 400 !important;
+    font-weight: 500;
+    font-size: var(--fs-sm);
+
 }
 
 .portal .p-body .cart-item .left .icon {
