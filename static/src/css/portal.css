@@ -718,10 +718,14 @@ footer {
 
 .notices .notice-card .bottom-content {
     padding: 12px;
+    margin-top: 8px;
 }
 
 .notices .notice-card .desc {
     color: var(--gray);
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
 }
 
 /*********   Overview Page   **********/
@@ -1643,7 +1647,7 @@ select {
 
     .portal .sidebar .item {
         padding: 8px 12px;
-        font-size: 13px;
+        font-size: var(--fs-md);
     }
 
     .portal .sidebar .item svg,
@@ -1675,8 +1679,8 @@ select {
     :root {
         /*______  Font Size  ______ */
         --fs-xs: 10px;
-        --fs-sm: 11px;
-        --fs-md: 12px;
+        --fs-sm: 12px;
+        --fs-md: 14px;
         --fs-lg: 16px;
         --fs-xl: 18px;
         --fs-xxl: 22px;
@@ -1706,7 +1710,7 @@ select {
     .pagination-2 .page,
     .pagination-2 .next-prev {
         width: 36px;
-        height: 36px;
+        height: 34px;
     }
 
     .portal .p-body {
@@ -1723,6 +1727,7 @@ select {
 
     .account-tables .right {
         width: 100%;
+        justify-content: space-between;
     }
 
     .portal .head .grade-value {
@@ -1761,6 +1766,12 @@ select {
         clip-path: unset;
     }
 
+    .portal .head .e {
+        font-size: 13px;
+        color: var(--primary-color);
+        line-height: 19px;
+    }
+
     .no-result {
         margin-top: 20px;
     }
@@ -1781,18 +1792,19 @@ select {
 
     .portal .head {
         background-color: var(--white);
-        padding: 0 10px;
+        padding: 0 12px;
         margin-top: 2px;
     }
 
     .portal-right .head .left {
-        flex-basis: 66%;
+        flex-basis: 78%;
     }
 
     .portal .head .left img {
         border: 4px solid var(--white-off2);
-        height: 60px;
-        width: 60px;
+        height: 54px;
+        width: 54px !important;
+        flex-shrink: 0;
     }
 
     .portal .head .left .user-id {
@@ -1809,23 +1821,25 @@ select {
 
 
     .portal .p-body .cart-item {
-        padding: 16px 12px;
+        padding: 8px 12px;
+        padding-right: 8px;
         align-items: flex-start;
         gap: 8px;
+        padding-top: 40px;
     }
 
     .portal .p-body .cart-item .cart-title {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .portal .p-body .cart-item .val {
-        font-size: 15px;
+        font-size: var(--fs-lg);
         line-height: 16px;
     }
 
     .portal .recent-orders .orders td {
         padding: 8px 10px;
-        font-size: 10px;
+        font-size: var(--fs-sm);
     }
 
     .portal .recent-orders .orders th {
@@ -1833,19 +1847,21 @@ select {
     }
 
     .portal .p-body .cart-item .left .icon {
-        width: 20px;
-        height: 20px;
+        width: 32px;
+        height: 32px;
         background-color: transparent;
-        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         box-shadow: unset;
+        background-color: white;
+        outline: 0;
     }
 
     .portal .p-body .cart-item .left .icon svg {
         width: 20px;
         height: 20px;
+        padding: 3px;
     }
 
     .overview.recent-orders {
@@ -1881,12 +1897,12 @@ select {
     .portal .p-body .payment-date .cart-item {
         gap: 12px;
         padding: 16px;
+        padding-top: 36px;
     }
 
     .portal .p-body .payment-date .cart-item .left .icon {
         width: 42px;
         height: 42px;
-        border-radius: 50%;
         background-color: var(--white);
     }
 
@@ -1904,7 +1920,7 @@ select {
     }
 
     .slidebar-title-name {
-        font-size: 10px;
+        font-size: var(--fs-sm);
     }
 
     .portal .head .right .point {
@@ -1925,7 +1941,8 @@ select {
     }
 
     .my-input-control label {
-        font-size: 12px;
+        font-size: var(--fs-md);
+        font-weight: 500;
     }
 
     .sub-head ul {
@@ -1935,7 +1952,8 @@ select {
     }
 
     .sub-head .item {
-        font-size: 12px;
+        font-size: var(--fs-md);
+        font-weight: 600;
     }
 
     .sub-head .item i {
@@ -1947,6 +1965,9 @@ select {
         color: var(--gray2);
     }
 
+    .notices .notice-card .bottom-content {
+        padding-left: 8px;
+    }
 
     .account-finance .item:nth-child(2) {
         margin-top: 0px;
@@ -1985,6 +2006,16 @@ select {
         border-right: none;
         border-radius: 0px 6px 0px 16px;
         font-size: 12px;
+    }
+
+    .account-tables .name-img {
+        align-items: flex-start;
+    }
+
+    .account-tables .name-img h5 {
+        font-size: var(--fs-md);
+        font-weight: 600;
+        color: var(--after);
     }
 }
 
