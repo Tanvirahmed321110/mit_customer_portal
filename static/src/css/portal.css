@@ -525,6 +525,7 @@ footer {
     padding: 18px 16px;
     border-bottom: 1px solid #f5eeee;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .portal .recent-orders .orders td {
@@ -1572,6 +1573,7 @@ select {
     .portal .recent-orders .orders td {
         padding: 8px 12px;
         font-size: 14PX;
+        white-space: nowrap;
     }
 
     .portal .p-body {
@@ -1592,7 +1594,6 @@ select {
         overflow-y: hidden;
         display: block;
         -webkit-overflow-scrolling: touch;
-        width: 460px;
     }
 
     .table-wrap table {
@@ -1682,6 +1683,54 @@ select {
     }
 }
 
+@media (max-width:1080px) {
+    .mobile-show {
+        display: block
+    }
+
+    .orders-page {
+        max-width: 100% !important;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sub-head ul {
+        max-width: 247%;
+        padding: 4px 0px;
+        width: fit-content;
+    }
+
+    .other-card.edit-profile .form-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 200px 1fr;
+    }
+
+    .portal .head .left,
+    .portal .head .meddle,
+    .portal .head .right {
+        flex-basis: 40%;
+    }
+
+    .portal .head .right {
+        flex-basis: 20%;
+    }
+
+    .other-card {
+        width: 100%;
+    }
+
+    .portal .head .meddle .portal-name {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .mobile-sidebar-title {
+        padding-top: 28px;
+    }
+}
+
 
 
 /* Mobile Responsive Here */
@@ -1697,6 +1746,10 @@ select {
         --fs-xxxl: 30px;
     }
 
+    /* .my-input-control input {
+        max-width: 400px;
+    } */
+
     .notices .notice-card img {
         width: 100%;
         height: 100%;
@@ -1705,6 +1758,10 @@ select {
 
     .open-ticket {
         padding: 16px;
+    }
+
+    .mobile-sidebar-title {
+        padding-top: 20px;
     }
 
     .portal .my-container {
@@ -1955,11 +2012,6 @@ select {
         font-weight: 500;
     }
 
-    .sub-head ul {
-        max-width: 247%;
-        padding: 4px 0px;
-        width: fit-content;
-    }
 
     .sub-head .item {
         font-size: var(--fs-md);
