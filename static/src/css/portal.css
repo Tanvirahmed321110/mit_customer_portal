@@ -683,7 +683,7 @@ footer {
 }
 
 .notices .notice-card:hover::after {
-    background: linear-gradient(to right, gold, var(--green));
+    background: linear-gradient(to right, var(--input), var(--before));
     transition: background .2s ease;
 }
 
@@ -749,9 +749,10 @@ footer {
     border: 1px solid var(--my-white-off2);
     font-weight: 500;
     min-width: 110px;
-    /* background-color: var(--primary-color);
-    background-color: var(--primary-hover-color); */
 }
+
+
+
 
 .portal .sort-by select {
     padding: 10px 16px;
