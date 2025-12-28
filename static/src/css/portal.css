@@ -679,7 +679,7 @@ footer {
     height: 100%;
     width: 6px;
     z-index: 2;
-    background: linear-gradient(to right, var(--green), gold);
+    background: linear-gradient(to right, var(--before), var(--input));
 }
 
 .notices .notice-card:hover::after {
@@ -1307,6 +1307,12 @@ select {
 /* offer page */
 .offers .offer-banner img {
     border-radius: 8px;
+    transition: .2s ease;
+}
+
+.offers .offer-banner img:hover {
+    transform: scale(.98);
+    box-shadow: var(--shadow-2);
 }
 
 
@@ -1692,7 +1698,7 @@ select {
 
     .notices .notice-card img {
         width: 100%;
-        height: 180px;
+        height: 100%;
         border-radius: 12px;
     }
 
