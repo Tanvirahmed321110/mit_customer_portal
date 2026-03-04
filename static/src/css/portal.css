@@ -376,14 +376,15 @@
 }
 
 
-.portal .p-body .cart-item:hover .left.icon {
-    background-color: var(--primary-color);
+.portal .p-body .cart-item:hover {
+    transform: scale(1.04);
+    overflow: hidden;
 }
 
-/* On hover of the card */
-.portal .p-body .cart-item:hover {
-    background-color: var(--input);
+.portal .p-body .cart-item:hover .left .icon {
+    border: 0px solid #fff;
 }
+
 
 .portal .p-body .cart-item:hover .cart-title,
 .portal .p-body .cart-item:hover .val {
@@ -657,8 +658,8 @@ footer {
 }
 
 .notices .notice-card {
-    padding: 8px;
-    padding-left: 12px;
+    padding: 12px;
+    padding-left: 16px;
     border-radius: 16px;
     box-shadow: 0px 4px 16px 0px #0000001F;
     transition: .2s ease;
