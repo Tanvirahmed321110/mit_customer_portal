@@ -373,6 +373,7 @@
     position: relative;
     padding-left: 32px;
     padding-top: 36px;
+    overflow: hidden;
 }
 
 
@@ -441,7 +442,6 @@
     position: absolute;
     left: -1px;
     top: -1px;
-    border: 6px solid #f1f1f1;
     box-shadow: unset;
     border-radius: 0 1px 16px 0;
 }
@@ -482,6 +482,7 @@
     background: linear-gradient(110deg, #ed326113, #ff7b0020);
     border: 1px solid transparent !important;
     transition: background .9s ease;
+    transform: scale(1);
 }
 
 
